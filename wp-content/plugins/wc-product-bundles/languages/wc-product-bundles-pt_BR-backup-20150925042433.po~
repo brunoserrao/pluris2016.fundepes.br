@@ -1,0 +1,199 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WC Product Bundles\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Fri Sep 25 2015 01:05:42 GMT-0300 (BRT)\n"
+"PO-Revision-Date: Fri Sep 25 2015 01:20:51 GMT-0300 (BRT)\n"
+"Last-Translator: bruno <brunosserrao@gmail.com>\n"
+"Language-Team: \n"
+"Language: Portuguese (Brazil)\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: pt_BR\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Author of the plugin
+msgid "Saravana Kumar K"
+msgstr "Saravana Kumar K"
+
+#. Author URI of the plugin
+msgid "http://www.iamsark.com"
+msgstr "http://www.iamsark.com"
+
+#. Name of the plugin
+msgid "WC Product Bundles"
+msgstr "WC Product Bundles"
+
+#. URI of the plugin
+msgid ""
+"http://sarkware.com/wc-product-bundle-bundle-products-together-and-sell-them-"
+"with-a-discounted-rate"
+msgstr ""
+"http://sarkware.com/wc-product-bundle-bundle-products-together-and-sell-them-"
+"with-a-discounted-rate"
+
+#. Description of the plugin
+msgid ""
+"Bundle two or more woocommerce products together and sell them at a "
+"discounted rate."
+msgstr "Empacote dois ou mais produtos e os venda com taxa reduzida."
+
+#: ../classes/admin-form.php:21
+msgid "Bundled"
+msgstr "Empacotado"
+
+#: ../classes/admin-form.php:27
+msgid "Products Bundled"
+msgstr "Produtos empacotados"
+
+#: ../classes/admin-form.php:40
+msgid "Bundle Price"
+msgstr "Preço do pacote"
+
+#: ../classes/admin-form.php:40
+msgid ""
+"Enter your discounted price for this bundle, otherwise the price will be the "
+"sum of included products."
+msgstr ""
+"Entre com o valor promocional para este pacote, caso contrário o preço "
+"assumido será a soma dos produtos incluídos no pacote."
+
+#: ../classes/admin-form.php:52
+msgid "Show on Product Page"
+msgstr "Exibir na página de produtos"
+
+#: ../classes/admin-form.php:52
+msgid "Un check if you want to hide the bundle on product page."
+msgstr "Desmarcar para não exibir o pacote na página de produtos"
+
+#: ../classes/admin-form.php:53
+msgid "Show on Cart Page"
+msgstr "Exibir no carrinho"
+
+#: ../classes/admin-form.php:53
+msgid "Un check if you want to hide the bundle on cart."
+msgstr "Desmarcar para não exibir o pacote no carrinho"
+
+#: ../classes/admin-form.php:54
+msgid "Show on Order"
+msgstr "Exibir nas compras"
+
+#: ../classes/admin-form.php:54
+msgid "Un check if you want to hide the bundle on order."
+msgstr "Desmarcar para não exibir o pacote nas compras"
+
+#: ../classes/admin-form.php:64
+msgid "Search Products"
+msgstr "Procurar produtos"
+
+#: ../classes/admin-form.php:72
+msgid "Close all"
+msgstr "Fecgar"
+
+#: ../classes/admin-form.php:73
+msgid "Expand all"
+msgstr "Expandir"
+
+#: ../classes/admin-form.php:74
+msgid "Add Products"
+msgstr "Adicionar produtos"
+
+#: ../classes/builder.php:88 ../classes/builder.php:88
+msgid "Remove"
+msgstr "Remover"
+
+#: ../classes/builder.php:88
+msgid "from bundle"
+msgstr "para empacotar"
+
+#: ../classes/builder.php:91
+msgid "Show Thumbnail"
+msgstr "Exibir miniatura"
+
+#: ../classes/builder.php:91
+msgid "Check if you want to show the thumbnail of this product."
+msgstr "Marque se deseja exibir a miniatura do produto"
+
+#: ../classes/builder.php:92
+msgid "Include Tax"
+msgstr "Incluir taxas"
+
+#: ../classes/builder.php:92
+msgid "Check if you want to include the tax with price."
+msgstr "Marque se deseja incluir as taxas no valor"
+
+#: ../classes/builder.php:94
+msgid "Quantity"
+msgstr "Quantidade"
+
+#: ../classes/builder.php:94
+msgid ""
+"How many quantity should be added to the bundle. If you leave it blank, by "
+"default it will be 1"
+msgstr ""
+"Quantos produtos devem ser adicionados ao pacote ? Caso deixe em branco, o "
+"padrão será 1"
+
+#: ../classes/builder.php:95
+msgid "Title"
+msgstr "Titulo"
+
+#: ../classes/builder.php:95
+msgid "Give a special title, otherwise original title will be used instead."
+msgstr ""
+"Dê um título especial, caso contrário, o título original será utilizado em "
+"seu lugar."
+
+#: ../classes/builder.php:96
+msgid "Short Description"
+msgstr "Descrição curta"
+
+#: ../classes/builder.php:96
+msgid ""
+"Give short description, otherwise original product's excerpt will be used "
+"instead."
+msgstr ""
+"Dê uma curta descrição, caso contrário a descrição original será utilizada "
+"em seu lugar."
+
+#: ../classes/builder.php:104
+msgid ""
+"Search for products, select as many as product you want and add those to "
+"bundle using \"Add Products\". Only \"Simple\" or \"variable\" product are allowed "
+"to add. You can also drag drop to re arrange the order of bundled products "
+"in product page.!"
+msgstr ""
+"Procure por produtos, selecione quantos você deseja adicionar e aqueles para "
+"agrupar usando \"Adicionar produtos\". Apenas \"Produtos Simples\" ou produto "
+"\"Variável\" estão autorizadas a adicionar. Você também pode arrastar soltar "
+"para reordenar produtos agrupados na página do produto."
+
+#: ../classes/product-form.php:84
+msgid "instock"
+msgstr "Em estoque"
+
+#: ../classes/product-form.php:86
+msgid "out of stock"
+msgstr "Fora de estoque"
+
+#: ../classes/product-form.php:197
+msgid "Bundle Includes"
+msgstr "Pacotes incluidos"
+
+#: ../classes/product-form.php:303
+msgid "Combo"
+msgstr "Combo"
+
+#: ../classes/product-form.php:319
+msgid "You cannot add that amount of quantity, because there is not enough stock"
+msgstr "Você não pode adicionar esta quantidade porque não há o suficiente em estoque"
