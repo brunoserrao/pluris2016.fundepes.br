@@ -5,6 +5,17 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+	<meta property="fb:app_id" content="241836669338742"/>
+	<meta property="og:locale" content="pt_BR"/>
+	<meta property="og:site_name" content="<?php echo bloginfo('site-name') ?>"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:description" content="<?php echo bloginfo('description'); ?>"/>
+	<meta property="og:url" content="<?php echo get_pagenum_link(); ?>"/>
+	<meta property="og:site_name" content="<?php echo bloginfo('site-name') ?>"/>
+	<meta property="og:image" content="<?php echo get_template_directory_uri().'/images/pluris-2016.png'; ?>"/>
+
+	
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
