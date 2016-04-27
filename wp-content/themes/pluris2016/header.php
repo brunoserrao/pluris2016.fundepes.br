@@ -15,10 +15,6 @@
 	<meta property="og:site_name" content="<?php echo bloginfo('site-name') ?>"/>
 	<meta property="og:image" content="<?php echo get_template_directory_uri().'/images/pluris-2016.png'; ?>"/>
 
-	
-	<!--[if lt IE 9]>
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
-	<![endif]-->
 	<?php wp_head(); ?>
 </head>
 
