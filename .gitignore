@@ -19,3 +19,4 @@ thumb/cache/*
 thumb/phpThumb/cache/*
 _FRONTEND/
 _BACKUP
+wp-config.php
