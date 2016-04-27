@@ -2,13 +2,13 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Twenty Fifteen 1.4\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/pluris2016\n"
-"POT-Creation-Date: 2015-12-08 15:14:51+00:00\n"
-"POT-Revision-Date: Fri Apr 08 2016 01:11:12 GMT-0300 (BRT)\n"
+"Project-Id-Version: Pluris 2-16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
+"POT-Revision-Date: Tue Apr 26 2016 22:47:53 GMT-0300 (BRT)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: bruno <brunosserrao@gmail.com>\n"
+"Language-Team: \n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,7 @@ msgstr ""
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: pt_BR\n"
 "X-Generator: Loco - https://localise.biz/"
 
 #: ../404.php:17
@@ -111,52 +112,56 @@ msgstr ""
 msgid "Social Links Menu"
 msgstr ""
 
-#: ../functions.php:133
+#: ../functions.php:138
 msgid "Widget Area"
 msgstr ""
 
-#: ../functions.php:135
+#: ../functions.php:140
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
 #. Translators: If there are characters in your language that are not supported
 #. by Noto Sans, translate this to 'off'. Do not translate into your own language.
-#: ../functions.php:161
+#: ../functions.php:166
 msgctxt "Noto Sans font: on or off"
 msgid "on"
 msgstr ""
 
 #. Translators: If there are characters in your language that are not supported
 #. by Noto Serif, translate this to 'off'. Do not translate into your own language.
-#: ../functions.php:169
+#: ../functions.php:174
 msgctxt "Noto Serif font: on or off"
 msgid "on"
 msgstr ""
 
 #. Translators: If there are characters in your language that are not supported
 #. by Inconsolata, translate this to 'off'. Do not translate into your own language.
-#: ../functions.php:177
+#: ../functions.php:182
 msgctxt "Inconsolata font: on or off"
 msgid "on"
 msgstr ""
 
 #. Translators: To add an additional character subset specific to your language,
 #. translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
-#: ../functions.php:185
+#: ../functions.php:190
 msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
 msgid "no-subset"
 msgstr ""
 
-#: ../functions.php:255
+#: ../functions.php:260
 msgid "expand child menu"
 msgstr ""
 
-#: ../functions.php:256
+#: ../functions.php:261
 msgid "collapse child menu"
 msgstr ""
 
-#: ../functions.php:362
-msgid "Your new button text here"
+#: ../functions.php:367
+msgid "Choose payment method"
+msgstr ""
+
+#: ../functions.php:389
+msgid "Badge Name"
 msgstr ""
 
 #: ../header.php:16
@@ -1323,8 +1328,12 @@ msgstr ""
 msgid "Sorry, this product is unavailable. Please choose a different combination."
 msgstr ""
 
+#: ../woocommerce/single-product/tabs/description.php:24
+msgid "Product Description"
+msgstr ""
+
 #. Name of the theme
-msgid "Twenty Fifteen"
+msgid "Pluris 2-16"
 msgstr ""
 
 #. Theme URI of the theme
@@ -1332,19 +1341,12 @@ msgid "http://brunoserrao.com/"
 msgstr ""
 
 #. Description of the theme
-msgid ""
-"Our 2015 default theme is clean, blog-focused, and designed for clarity. "
-"Twenty Fifteen's simple, straightforward typography is readable on a wide "
-"variety of screen sizes, and suitable for multiple languages. We designed it "
-"using a mobile-first approach, meaning your content takes center-stage, "
-"regardless of whether your visitors arrive by smartphone, tablet, laptop, or "
-"desktop computer."
+msgid "Cliente Fundepes / Pluris 2016"
 msgstr ""
 
 #. Author of the theme
-msgid "the WordPress team"
+msgid "Bruno Serrão"
 msgstr ""
 
-#. Author URI of the theme
-msgid "https://wordpress.org/"
+msgid "Add to cart"
 msgstr ""
