@@ -1,12 +1,12 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Twenty Fifteen 1.4\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/pluris2016\n"
-"POT-Creation-Date: 2015-12-08 15:14:51+00:00\n"
-"PO-Revision-Date: Fri Apr 08 2016 00:59:23 GMT-0300 (BRT)\n"
+"Project-Id-Version: Pluris 2-16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
+"PO-Revision-Date: Tue Apr 26 2016 22:48:13 GMT-0300 (BRT)\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: Spanish (Spain)\n"
+"Language-Team: \n"
+"Language: Portuguese (Brazil)\n"
 "Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,8 +19,8 @@ msgstr ""
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
-"X-Generator: Loco - https://localise.biz/\n"
-"X-Loco-Target-Locale: es_ES"
+"X-Loco-Target-Locale: pt_BR\n"
+"X-Generator: Loco - https://localise.biz/"
 
 #: ../404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -109,47 +109,47 @@ msgstr ""
 msgid "Social Links Menu"
 msgstr ""
 
-#: ../functions.php:133
+#: ../functions.php:138
 msgid "Widget Area"
 msgstr ""
 
-#: ../functions.php:135
+#: ../functions.php:140
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
 #. Translators: If there are characters in your language that are not supported
 #. by Noto Sans, translate this to 'off'. Do not translate into your own language.
-#: ../functions.php:161
+#: ../functions.php:166
 msgctxt "Noto Sans font: on or off"
 msgid "on"
 msgstr ""
 
 #. Translators: If there are characters in your language that are not supported
 #. by Noto Serif, translate this to 'off'. Do not translate into your own language.
-#: ../functions.php:169
+#: ../functions.php:174
 msgctxt "Noto Serif font: on or off"
 msgid "on"
 msgstr ""
 
 #. Translators: If there are characters in your language that are not supported
 #. by Inconsolata, translate this to 'off'. Do not translate into your own language.
-#: ../functions.php:177
+#: ../functions.php:182
 msgctxt "Inconsolata font: on or off"
 msgid "on"
 msgstr ""
 
 #. Translators: To add an additional character subset specific to your language,
 #. translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
-#: ../functions.php:185
+#: ../functions.php:190
 msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
 msgid "no-subset"
 msgstr ""
 
-#: ../functions.php:255
+#: ../functions.php:260
 msgid "expand child menu"
 msgstr ""
 
-#: ../functions.php:256
+#: ../functions.php:261
 msgid "collapse child menu"
 msgstr ""
 
@@ -475,6 +475,10 @@ msgid ""
 "or contact us if you need any help."
 msgstr ""
 
+#: ../woocommerce/cart/cart-totals.php:27
+msgid "Cart Totals"
+msgstr ""
+
 #: ../woocommerce/cart/cart-totals.php:32 ../woocommerce/cart/cart-totals.php:33 .
 #: ./woocommerce/cart/mini-cart.php:79 ../woocommerce/checkout/review-order.php:58
 msgid "Subtotal"
@@ -520,18 +524,6 @@ msgstr ""
 
 #: ../woocommerce/cart/cart.php:90
 msgid "Available on backorder"
-msgstr ""
-
-#: ../woocommerce/cart/cart.php:136
-msgid "Coupon"
-msgstr ""
-
-#: ../woocommerce/cart/cart.php:136 ../woocommerce/checkout/form-coupon.php:39
-msgid "Apply Coupon"
-msgstr ""
-
-#: ../woocommerce/cart/cart.php:142
-msgid "Update Cart"
 msgstr ""
 
 #: ../woocommerce/cart/cross-sells.php:48
@@ -682,33 +674,12 @@ msgid ""
 "again."
 msgstr ""
 
-#: ../woocommerce/checkout/thankyou.php:29 ../woocommerce/myaccount/my-orders.php:
-#: 84
-msgid "Pay"
-msgstr ""
-
-#: ../woocommerce/checkout/thankyou.php:31
-msgid "My Account"
-msgstr ""
-
-#: ../woocommerce/checkout/thankyou.php:37 ../woocommerce/checkout/thankyou.php:68
-msgid "Thank you. Your order has been received."
-msgstr ""
-
-#: ../woocommerce/checkout/thankyou.php:41
-msgid "Order Number:"
-msgstr ""
-
 #: ../woocommerce/checkout/thankyou.php:45
 msgid "Date:"
 msgstr ""
 
 #: ../woocommerce/checkout/thankyou.php:49
 msgid "Total:"
-msgstr ""
-
-#: ../woocommerce/checkout/thankyou.php:54
-msgid "Payment Method:"
 msgstr ""
 
 #: ../woocommerce/emails/admin-cancelled-order.php:27 ..
@@ -819,6 +790,11 @@ msgstr ""
 msgid "Click here to reset your password"
 msgstr ""
 
+#: ../woocommerce/emails/email-addresses.php:25 ../woocommerce/emails/plain/email-
+#: addresses.php:22
+msgid "Billing address"
+msgstr ""
+
 #: ../woocommerce/emails/email-addresses.php:31 ../woocommerce/emails/plain/email-
 #: addresses.php:26
 msgid "Shipping address"
@@ -827,12 +803,6 @@ msgstr ""
 #: ../woocommerce/emails/email-customer-details.php:25 ..
 #: woocommerce/emails/plain/email-customer-details.php:24
 msgid "Customer details"
-msgstr ""
-
-#: ../woocommerce/emails/email-order-details.php:25 ../woocommerce/emails/email-
-#: order-details.php:27
-#, php-format
-msgid "Order #%s"
 msgstr ""
 
 #: ../woocommerce/emails/email-order-items.php:33
@@ -978,6 +948,12 @@ msgid "Save changes"
 msgstr ""
 
 #: ../woocommerce/myaccount/form-edit-address.php:22 ../woocommerce/myaccount/my-
+#: address.php:27 ../woocommerce/myaccount/my-address.php:33 ..
+#: woocommerce/order/order-details-customer.php:57
+msgid "Billing Address"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-edit-address.php:22 ../woocommerce/myaccount/my-
 #: address.php:28 ../woocommerce/order/order-details-customer.php:68
 msgid "Shipping Address"
 msgstr ""
@@ -1038,6 +1014,14 @@ msgid ""
 "account details</a>."
 msgstr ""
 
+#: ../woocommerce/myaccount/my-address.php:25
+msgid "My Addresses"
+msgstr ""
+
+#: ../woocommerce/myaccount/my-address.php:31
+msgid "My Address"
+msgstr ""
+
 #: ../woocommerce/myaccount/my-address.php:43
 msgid "The following addresses will be used on the checkout page by default."
 msgstr ""
@@ -1056,10 +1040,6 @@ msgid "%s download remaining"
 msgid_plural "%s downloads remaining"
 msgstr[0] ""
 msgstr[1] ""
-
-#: ../woocommerce/myaccount/my-orders.php:25
-msgid "Order"
-msgstr ""
 
 #: ../woocommerce/myaccount/my-orders.php:26
 msgid "Date"
@@ -1131,10 +1111,6 @@ msgstr ""
 msgid "Track"
 msgstr ""
 
-#: ../woocommerce/order/order-again.php:24
-msgid "Order Again"
-msgstr ""
-
 #: ../woocommerce/order/order-details-customer.php:22
 msgid "Customer Details"
 msgstr ""
@@ -1154,10 +1130,6 @@ msgstr ""
 #: ../woocommerce/order/order-details-customer.php:60 ../woocommerce/order/order-
 #: details-customer.php:71 ../woocommerce/single-product/meta.php:34
 msgid "N/A"
-msgstr ""
-
-#: ../woocommerce/order/order-details.php:27
-msgid "Order Details"
 msgstr ""
 
 #: ../woocommerce/order/tracking.php:22
@@ -1266,8 +1238,12 @@ msgstr ""
 msgid "Sorry, this product is unavailable. Please choose a different combination."
 msgstr ""
 
+#: ../woocommerce/single-product/tabs/description.php:24
+msgid "Product Description"
+msgstr ""
+
 #. Name of the theme
-msgid "Twenty Fifteen"
+msgid "Pluris 2-16"
 msgstr ""
 
 #. Theme URI of the theme
@@ -1275,73 +1251,99 @@ msgid "http://brunoserrao.com/"
 msgstr ""
 
 #. Description of the theme
-msgid ""
-"Our 2015 default theme is clean, blog-focused, and designed for clarity. "
-"Twenty Fifteen's simple, straightforward typography is readable on a wide "
-"variety of screen sizes, and suitable for multiple languages. We designed it "
-"using a mobile-first approach, meaning your content takes center-stage, "
-"regardless of whether your visitors arrive by smartphone, tablet, laptop, or "
-"desktop computer."
+msgid "Cliente Fundepes / Pluris 2016"
 msgstr ""
 
 #. Author of the theme
-msgid "the WordPress team"
+msgid "Bruno Serrão"
 msgstr ""
 
-#. Author URI of the theme
-msgid "https://wordpress.org/"
-msgstr ""
+msgid "Add to cart"
+msgstr "Inscrever-se"
 
-msgid "Proceed to Paypal"
-msgstr "Pagar con Paypal"
+#: ../functions.php:367
+msgid "Choose payment method"
+msgstr "Escolha a forma de pagamento"
 
-#: ../woocommerce/cart/cart-totals.php:27
-msgid "Cart Totals"
-msgstr "Total"
+#: ../functions.php:389
+msgid "Badge Name"
+msgstr "Nome no crachá"
+
+#: ../woocommerce/cart/cart.php:136
+msgid "Coupon"
+msgstr "Cupom"
 
 #: ../woocommerce/cart/cart.php:136 ../woocommerce/checkout/form-coupon.php:35
 msgid "Coupon code"
-msgstr "Código promocional"
+msgstr "Código do cupom"
+
+#: ../woocommerce/cart/cart.php:136 ../woocommerce/checkout/form-coupon.php:39
+msgid "Apply Coupon"
+msgstr "Aplicar cupom"
+
+#: ../woocommerce/cart/cart.php:142
+msgid "Update Cart"
+msgstr "Atualizar carrinho"
 
 #: ../woocommerce/cart/proceed-to-checkout-button.php:26
 msgid "Proceed to Checkout"
-msgstr "Pasar por la caja"
+msgstr "Próxima etapa"
 
 #: ../woocommerce/checkout/form-billing.php:32
 msgid "Participant Information"
-msgstr "Información del participante"
+msgstr "Informações do participante"
 
 #: ../woocommerce/checkout/form-checkout.php:54
 msgid "Your subscribe"
-msgstr "Su suscribirse"
+msgstr "Suas inscrições"
 
 #: ../woocommerce/checkout/form-coupon.php:27
 msgid "Have a coupon?"
-msgstr "Tiene un cupón ?"
+msgstr "Você tem um cupom de desconto ?"
 
-#: ../woocommerce/emails/email-addresses.php:25 ../woocommerce/emails/plain/email-
-#: addresses.php:22
-msgid "Billing address"
-msgstr "Dirección de Envio"
+#: ../woocommerce/checkout/thankyou.php:29 ../woocommerce/myaccount/my-orders.php:
+#: 84
+msgid "Pay"
+msgstr "Pagar"
+
+#: ../woocommerce/checkout/thankyou.php:31
+msgid "My Account"
+msgstr "Minha conta"
+
+#: ../woocommerce/checkout/thankyou.php:37 ../woocommerce/checkout/thankyou.php:68
+msgid "Thank you. Your order has been received."
+msgstr "Obrigado. A sua inscrição foi realizada."
+
+#: ../woocommerce/checkout/thankyou.php:41
+msgid "Order Number:"
+msgstr "Inscrição número:"
+
+#: ../woocommerce/checkout/thankyou.php:54
+msgid "Payment Method:"
+msgstr "Método de pagamento:"
+
+#: ../woocommerce/emails/email-order-details.php:25 ../woocommerce/emails/email-
+#: order-details.php:27
+#, php-format
+msgid "Order #%s"
+msgstr "Inscrição #%s"
 
 #: ../woocommerce/loop/add-to-cart.php:31
 msgid "Subscribe"
-msgstr "Suscribir"
+msgstr "Inscreva-se"
 
-#: ../woocommerce/myaccount/form-edit-address.php:22 ../woocommerce/myaccount/my-
-#: address.php:27 ../woocommerce/myaccount/my-address.php:33 ..
-#: woocommerce/order/order-details-customer.php:57
-msgid "Billing Address"
-msgstr "Dirección de Envio"
-
-#: ../woocommerce/myaccount/my-address.php:25
-msgid "My Addresses"
-msgstr "Mis direcciones"
-
-#: ../woocommerce/myaccount/my-address.php:31
-msgid "My Address"
-msgstr "Mis direcciones"
+#: ../woocommerce/myaccount/my-orders.php:25
+msgid "Order"
+msgstr "Inscrição"
 
 #: ../woocommerce/myaccount/my-orders.php:42
 msgid "Recent Orders"
-msgstr "Órdenes recientes"
+msgstr "Inscrições"
+
+#: ../woocommerce/order/order-again.php:24
+msgid "Order Again"
+msgstr "Inscrever-se novamente"
+
+#: ../woocommerce/order/order-details.php:27
+msgid "Order Details"
+msgstr "Detalhes da inscrição"

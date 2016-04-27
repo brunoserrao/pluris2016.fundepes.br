@@ -28,6 +28,6 @@ echo apply_filters( 'woocommerce_loop_add_to_cart_link',
 		esc_attr( $product->id ),
 		esc_attr( $product->get_sku() ),
 		esc_attr( isset( $class ) ? $class : 'button' ),
-		esc_html( __( 'Subscribe', 'pluris2016' ) )
+		esc_html( __( 'Add to cart', 'pluris2016' ) )
 	),
 $product );

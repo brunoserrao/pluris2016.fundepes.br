@@ -1561,7 +1561,6 @@ img.aligncenter {
  */
 .entry-title{
 	color: #48887B;
-	font-family: Verdana;
 }
 
 .hentry {
@@ -6052,7 +6051,8 @@ ul.products li.product .price {
 }
 
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
-    font-size: 80%;
+    font-size: 100%;
+    text-transform: inherit;
 }
 
 .woocommerce .posted_in{
@@ -6073,4 +6073,9 @@ ul.products li.product .price {
 
 .woocommerce form.checkout_coupon{
  	display: block !important;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+	background-color: #48887B;
+	color: #FFF;
 }
