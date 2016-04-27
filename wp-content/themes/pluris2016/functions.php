@@ -366,3 +366,31 @@ add_filter( 'woocommerce_order_button_text', 'woo_custom_order_button_text', 1 )
 function woo_custom_order_button_text() {
     return __( 'Choose payment method', 'pluris2016' ); 
 }
+
+
+/**
+* Remove tabs from productsd
+*/
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+function woo_remove_product_tabs( $tabs ) {
+	unset( $tabs['description'] );
+	unset( $tabs['reviews'] );
+	unset( $tabs['additional_information'] );
+
+	return $tabs;
+
+}
+
+/**
+* Renomear Label do campo Company Name
+*/
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+function custom_override_checkout_fields( $fields ) {
+     $fields['billing']['billing_company']['label'] =  __( 'Badge Name', 'pluris2016' );
+     return $fields;
+}
+
+/**
+* Remove order comments from checkout
+*/
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
