@@ -14,6 +14,7 @@
 	<meta property="og:url" content="<?php echo get_pagenum_link(); ?>"/>
 	<meta property="og:site_name" content="<?php echo bloginfo('site-name') ?>"/>
 	<meta property="og:image" content="<?php echo get_template_directory_uri().'/images/pluris-2016.png'; ?>"/>
+	<meta property="og:image" content="<?php echo get_template_directory_uri().'/images/pluris-2016-2.png'; ?>"/>
 
 	<?php wp_head(); ?>
 </head>
