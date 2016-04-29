@@ -100,7 +100,7 @@ function pluris2016_setup() {
 	 * See: https://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
+		'default'
 	) );
 
 	$color_scheme  = pluris2016_get_color_scheme();
