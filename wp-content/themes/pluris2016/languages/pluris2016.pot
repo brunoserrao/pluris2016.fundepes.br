@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Pluris 2-16\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"POT-Revision-Date: Tue Apr 26 2016 22:47:53 GMT-0300 (BRT)\n"
+"POT-Revision-Date: Tue May 03 2016 00:15:20 GMT-0300 (BRT)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
@@ -164,11 +164,15 @@ msgstr ""
 msgid "Badge Name"
 msgstr ""
 
-#: ../header.php:16
+#: ../functions.php:390
+msgid "Instituition Name"
+msgstr ""
+
+#: ../header.php:23
 msgid "Skip to content"
 msgstr ""
 
-#: ../header.php:24
+#: ../header.php:31
 msgid "Menu and widgets"
 msgstr ""
 
@@ -635,7 +639,7 @@ msgid "You must be logged in to checkout."
 msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:54
-msgid "Your subscribe"
+msgid "Payment"
 msgstr ""
 
 #: ../woocommerce/checkout/form-coupon.php:27
@@ -949,8 +953,9 @@ msgctxt "Product quantity input tooltip"
 msgid "Qty"
 msgstr ""
 
-#: ../woocommerce/loop/add-to-cart.php:31
-msgid "Subscribe"
+#: ../woocommerce/loop/add-to-cart.php:31 ../woocommerce/single-product/add-to-
+#: cart/external.php:27 ../woocommerce/single-product/add-to-cart/simple.php:57
+msgid "Add to cart"
 msgstr ""
 
 #: ../woocommerce/loop/no-products-found.php:23
@@ -1346,7 +1351,4 @@ msgstr ""
 
 #. Author of the theme
 msgid "Bruno Serrão"
-msgstr ""
-
-msgid "Add to cart"
 msgstr ""
