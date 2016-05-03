@@ -386,8 +386,9 @@ function woo_remove_product_tabs( $tabs ) {
 */
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 function custom_override_checkout_fields( $fields ) {
-     $fields['billing']['billing_company']['label'] =  __( 'Badge Name', 'pluris2016' );
-     return $fields;
+	$fields['billing']['billing_company']['label'] =  __( 'Badge Name', 'pluris2016' );
+	$fields['billing']['billing_instituition']['label'] =  __( 'Instituition Name', 'pluris2016' );
+	return $fields;
 }
 
 /**
