@@ -5999,11 +5999,6 @@ p > video {
 	}
 }
 
-
-ul.products li.product .price {
-    color: #48887B !important;
-}
-
 .woocommerce .woocommerce-message {
     border-top-color: #48887B;
 }
@@ -6087,4 +6082,8 @@ ul.products li.product .price {
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
 	background-color: #48887B;
 	color: #FFF;
+}
+
+.woocommerce ul.products li.product .price del, p.price del {
+    display: none;
 }
