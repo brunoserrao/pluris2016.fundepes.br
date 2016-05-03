@@ -26,7 +26,7 @@
 		<header id="masthead" class="site-header" role="banner">
 			<div class="site-branding">
 				<a href="<?php echo home_url('/') ?>" title="<?php bloginfo('name'); ?>">
-					<img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+					<img src="<?php echo get_template_directory_uri() ?>/images/pluris-2016-05-a-07-de-outubro-de-2016.png" alt="<?php bloginfo( 'name' ); ?>">
 				</a>
 				<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'pluris2016' ); ?></button>
 			</div>
