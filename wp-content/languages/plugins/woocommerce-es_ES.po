@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-04-25 21:12:59+0000\n"
+"PO-Revision-Date: 2016-04-28 17:21:08+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3461,7 +3461,7 @@ msgstr "Número de referencia de producto inválido"
 
 #: includes/class-wc-ajax.php:211
 msgid "Sorry there was a problem removing this coupon."
-msgstr "Disculpa pero ha habido un problema al eliminar este cupón."
+msgstr "Lo sentimos pero ha habido un problema al eliminar este cupón."
 
 #: includes/class-wc-ajax.php:217
 msgid "Coupon has been removed."
@@ -8117,7 +8117,7 @@ msgstr "Filtrar por cupón"
 
 #: includes/admin/reports/class-wc-report-coupon-usage.php:199
 msgid "Choose coupons&hellip;"
-msgstr "Elija cupones&hellip;"
+msgstr "Elige cupones&hellip;"
 
 #: includes/admin/reports/class-wc-report-coupon-usage.php:200
 msgid "All coupons"
@@ -8599,11 +8599,11 @@ msgstr "Creación de cuentas"
 
 #: includes/admin/settings/class-wc-settings-accounts.php:139
 msgid "Automatically generate username from customer email"
-msgstr "Generación automática de nombre de usuario de correo electrónico del cliente"
+msgstr "Genera automáticamente el nombre de usuario a partir del correo electrónico del cliente"
 
 #: includes/admin/settings/class-wc-settings-accounts.php:148
 msgid "Automatically generate customer password"
-msgstr "Generación automática de contraseña de cliente"
+msgstr "Genera automáticamente la contraseña del cliente"
 
 #: includes/admin/settings/class-wc-settings-api.php:27
 #: includes/admin/settings/class-wc-settings-api.php:68
@@ -8694,7 +8694,7 @@ msgstr "Siguientes pasos"
 
 #: includes/admin/class-wc-admin-setup-wizard.php:763
 msgid "Create your first product!"
-msgstr "¡Crear tu primer producto!"
+msgstr "¡Crea tu primer producto!"
 
 #: includes/admin/class-wc-admin-setup-wizard.php:767
 msgid "Learn More"
@@ -10793,7 +10793,7 @@ msgstr "Tienda"
 
 #: includes/admin/class-wc-admin-setup-wizard.php:233
 msgid "The shop page will display your products."
-msgstr "La página de la tienda mostrará sus productos."
+msgstr "La página de la tienda mostrará tus productos."
 
 #: includes/admin/class-wc-admin-setup-wizard.php:236
 #: includes/class-wc-install.php:243
