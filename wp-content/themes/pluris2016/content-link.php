@@ -53,7 +53,6 @@
 
 	<footer class="entry-footer">
 		<?php pluris2016_entry_meta(); ?>
-		<?php edit_post_link( __( 'Edit', 'pluris2016' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer>
 	<!-- .entry-footer -->
 
