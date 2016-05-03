@@ -90,8 +90,23 @@ html {
 }
 
 body {
-	background: #f1f1f1;
-	background-image: url(images/sidebar-lateral.png);
+	background-image: url(images/bg.jpg);
+    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (min-width: 59.6875em) {
+	body{
+		background-size: 100% auto;	
+	}
+}
+
+@media screen and (max-width: 59.6875em) {
+	body{
+		background-size: auto 100%;
+	}
 }
 
 article,
@@ -4305,8 +4320,8 @@ p > video {
 	.site-header {
 		background-color: transparent;
 		border-bottom: 0;
-		margin: 20% 0;
-		padding: 0 20%;
+		/*margin: 20% 0;*/
+		/*padding: 0 20%;*/
 	}
 
 	.site-branding {
@@ -6022,12 +6037,6 @@ ul.products li.product .price {
     margin-right:0 !important;
     text-align: left;
     padding-bottom: 20px;
-}
-
-@media screen and (max-width: 55em){
-	.site-header{
-		background-image: url(images/sidebar-lateral.png);
-	}
 }
 
 .woocommerce h2, .woocommerce h3{
