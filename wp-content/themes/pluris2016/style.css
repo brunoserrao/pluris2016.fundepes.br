@@ -6087,3 +6087,11 @@ p > video {
 .woocommerce ul.products li.product .price del, p.price del {
     display: none;
 }
+
+.woocommerce-billing-fields h3{
+	display: none;
+}
+
+.wc_payment_methods .about_paypal{
+	display: none;
+}
