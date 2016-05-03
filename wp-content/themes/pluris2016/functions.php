@@ -390,8 +390,3 @@ function custom_override_checkout_fields( $fields ) {
 	$fields['billing']['billing_instituition']['label'] =  __( 'Instituition Name', 'pluris2016' );
 	return $fields;
 }
-
-/**
-* Remove order comments from checkout
-*/
-add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
