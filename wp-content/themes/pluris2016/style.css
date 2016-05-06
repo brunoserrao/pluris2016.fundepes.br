@@ -4990,7 +4990,7 @@ p > video {
 	dl,
 	dd,
 	table {
-		margin-bottom: 1.6842em;
+		margin-bottom: 1.2em;
 		font-size: 0.8em;
 	}
 	blockquote {
@@ -5712,4 +5712,8 @@ p.price del {
     font-size: 10pt;
     text-align: center;
     float: right;
+}
+
+.woocommerce div.product .out-of-stock {
+    color: #b81c23;
 }
