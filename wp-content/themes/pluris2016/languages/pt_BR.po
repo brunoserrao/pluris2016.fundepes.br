@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Pluris 2-16\n"
+"Project-Id-Version: Pluris 2016\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"PO-Revision-Date: Tue May 03 2016 00:15:46 GMT-0300 (BRT)\n"
+"PO-Revision-Date: Thu May 05 2016 22:01:49 GMT-0300 (BRT)\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
 "Language: Portuguese (Brazil)\n"
@@ -72,12 +72,6 @@ msgstr ""
 
 #: ../content-link.php:36 ../content-page.php:25 ../content.php:38 ../image.php:59
 msgid "Pages:"
-msgstr ""
-
-#: ../content-link.php:56 ../content-page.php:35 ../content-search.php:28 ..
-#: content-search.php:33 ../content.php:57 ../image.php:71 ..
-#: woocommerce/myaccount/my-address.php:53
-msgid "Edit"
 msgstr ""
 
 #: ../content-none.php:15
@@ -153,11 +147,11 @@ msgstr ""
 msgid "collapse child menu"
 msgstr ""
 
-#: ../header.php:23
+#: ../header.php:24
 msgid "Skip to content"
 msgstr ""
 
-#: ../header.php:31
+#: ../header.php:32
 msgid "Menu and widgets"
 msgstr ""
 
@@ -169,7 +163,7 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: ../image.php:84
+#: ../image.php:83
 msgctxt "Parent post link"
 msgid ""
 "<span class=\"meta-nav\">Published in</span><span class=\"post-"
@@ -599,10 +593,6 @@ msgstr ""
 msgid "You must be logged in to checkout."
 msgstr ""
 
-#: ../woocommerce/checkout/form-checkout.php:54
-msgid "Payment"
-msgstr "Pagamento"
-
 #: ../woocommerce/checkout/form-login.php:26
 msgid "Returning customer?"
 msgstr ""
@@ -684,12 +674,6 @@ msgstr ""
 
 #: ../woocommerce/checkout/thankyou.php:49
 msgid "Total:"
-msgstr ""
-
-#: ../woocommerce/emails/admin-cancelled-order.php:27 ..
-#: woocommerce/emails/plain/admin-cancelled-order.php:24
-#, php-format
-msgid "The order #%d from %s has been cancelled. The order was as follows:"
 msgstr ""
 
 #: ../woocommerce/emails/admin-failed-order.php:27 ..
@@ -794,11 +778,6 @@ msgstr ""
 msgid "Click here to reset your password"
 msgstr ""
 
-#: ../woocommerce/emails/email-addresses.php:25 ../woocommerce/emails/plain/email-
-#: addresses.php:22
-msgid "Billing address"
-msgstr ""
-
 #: ../woocommerce/emails/email-addresses.php:31 ../woocommerce/emails/plain/email-
 #: addresses.php:26
 msgid "Shipping address"
@@ -813,11 +792,6 @@ msgstr ""
 msgid "Product Image"
 msgstr ""
 
-#: ../woocommerce/emails/plain/admin-new-order.php:24
-#, php-format
-msgid "You have received an order from %s."
-msgstr ""
-
 #: ../woocommerce/emails/plain/customer-new-account.php:27
 #, php-format
 msgid "Your password is <strong>%s</strong>."
@@ -830,18 +804,8 @@ msgid ""
 "below for your reference:"
 msgstr ""
 
-#: ../woocommerce/emails/plain/email-order-details.php:24
-#, php-format
-msgid "Order number: %s"
-msgstr ""
-
 #: ../woocommerce/emails/plain/email-order-details.php:25
 msgid "jS F Y"
-msgstr ""
-
-#: ../woocommerce/emails/plain/email-order-details.php:42
-#, php-format
-msgid "View order: %s"
 msgstr ""
 
 #: ../woocommerce/emails/plain/email-order-items.php:43
@@ -952,23 +916,12 @@ msgid "Save changes"
 msgstr ""
 
 #: ../woocommerce/myaccount/form-edit-address.php:22 ../woocommerce/myaccount/my-
-#: address.php:27 ../woocommerce/myaccount/my-address.php:33 ..
-#: woocommerce/order/order-details-customer.php:57
-msgid "Billing Address"
-msgstr ""
-
-#: ../woocommerce/myaccount/form-edit-address.php:22 ../woocommerce/myaccount/my-
 #: address.php:28 ../woocommerce/order/order-details-customer.php:68
 msgid "Shipping Address"
 msgstr ""
 
 #: ../woocommerce/myaccount/form-edit-address.php:48
 msgid "Save Address"
-msgstr ""
-
-#: ../woocommerce/myaccount/form-login.php:74 ../woocommerce/myaccount/form-login.
-#: php:111
-msgid "Register"
 msgstr ""
 
 #: ../woocommerce/myaccount/form-login.php:83
@@ -1010,24 +963,12 @@ msgstr ""
 msgid "Hello <strong>%1$s</strong> (not %1$s? <a href=\"%2$s\">Sign out</a>)."
 msgstr ""
 
-#: ../woocommerce/myaccount/my-account.php:32
-#, php-format
-msgid ""
-"From your account dashboard you can view your recent orders, manage your "
-"shipping and billing addresses and <a href=\"%s\">edit your password and "
-"account details</a>."
-msgstr ""
-
-#: ../woocommerce/myaccount/my-address.php:25
-msgid "My Addresses"
-msgstr ""
-
-#: ../woocommerce/myaccount/my-address.php:31
-msgid "My Address"
-msgstr ""
-
 #: ../woocommerce/myaccount/my-address.php:43
 msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: ../woocommerce/myaccount/my-address.php:53
+msgid "Edit"
 msgstr ""
 
 #: ../woocommerce/myaccount/my-address.php:72
@@ -1080,10 +1021,6 @@ msgid ""
 "date\">%s</mark> and is currently <mark class=\"order-status\">%s</mark>."
 msgstr ""
 
-#: ../woocommerce/myaccount/view-order.php:32 ../woocommerce/order/tracking.php:33
-msgid "Order Updates"
-msgstr ""
-
 #: ../woocommerce/myaccount/view-order.php:38 ../woocommerce/order/tracking.php:39
 msgid "l jS \\o\\f F Y, h:ia"
 msgstr ""
@@ -1093,10 +1030,6 @@ msgid ""
 "To track your order please enter your Order ID in the box below and press "
 "the \"Track\" button. This was given to you on your receipt and in the "
 "confirmation email you should have received."
-msgstr ""
-
-#: ../woocommerce/order/form-tracking.php:30
-msgid "Order ID"
 msgstr ""
 
 #: ../woocommerce/order/form-tracking.php:30
@@ -1134,11 +1067,6 @@ msgstr ""
 #: ../woocommerce/order/order-details-customer.php:60 ../woocommerce/order/order-
 #: details-customer.php:71 ../woocommerce/single-product/meta.php:34
 msgid "N/A"
-msgstr ""
-
-#: ../woocommerce/order/tracking.php:22
-#, php-format
-msgid "Order #%s which was made %s has the status &ldquo;%s&rdquo;"
 msgstr ""
 
 #: ../woocommerce/order/tracking.php:22
@@ -1247,7 +1175,7 @@ msgid "Product Description"
 msgstr ""
 
 #. Name of the theme
-msgid "Pluris 2-16"
+msgid "Pluris 2016"
 msgstr ""
 
 #. Theme URI of the theme
@@ -1261,6 +1189,9 @@ msgstr ""
 #. Author of the theme
 msgid "Bruno Serrão"
 msgstr ""
+
+msgid "Recent registers"
+msgstr "Inscrições recentes"
 
 #: ../functions.php:367
 msgid "Choose payment method"
@@ -1298,6 +1229,10 @@ msgstr "Próxima etapa"
 msgid "Participant Information"
 msgstr "Informações do participante"
 
+#: ../woocommerce/checkout/form-checkout.php:54
+msgid "Payment"
+msgstr "Pagamento"
+
 #: ../woocommerce/checkout/form-coupon.php:27
 msgid "Have a coupon?"
 msgstr "Você tem um cupom de desconto ?"
@@ -1323,16 +1258,67 @@ msgstr "Inscrição número:"
 msgid "Payment Method:"
 msgstr "Método de pagamento:"
 
+#: ../woocommerce/emails/admin-cancelled-order.php:27 ..
+#: woocommerce/emails/plain/admin-cancelled-order.php:24
+#, php-format
+msgid "The order #%d from %s has been cancelled. The order was as follows:"
+msgstr "A inscrição #%d de %s foi cancelada. As inscrições canceladas foram:"
+
+#: ../woocommerce/emails/email-addresses.php:25 ../woocommerce/emails/plain/email-
+#: addresses.php:22
+msgid "Billing address"
+msgstr "Endereço de cobrança"
+
 #: ../woocommerce/emails/email-order-details.php:25 ../woocommerce/emails/email-
 #: order-details.php:27
 #, php-format
 msgid "Order #%s"
 msgstr "Inscrição #%s"
 
-#: ../woocommerce/loop/add-to-cart.php:31 ../woocommerce/single-product/add-to-
-#: cart/external.php:27 ../woocommerce/single-product/add-to-cart/simple.php:57
-msgid "Add to cart"
-msgstr "Inscrever-se"
+#: ../woocommerce/emails/plain/admin-new-order.php:24
+#, php-format
+msgid "You have received an order from %s."
+msgstr "Você recebeu uma inscrição de %s."
+
+#: ../woocommerce/emails/plain/email-order-details.php:24
+#, php-format
+msgid "Order number: %s"
+msgstr "Inscrição número: %s"
+
+#: ../woocommerce/emails/plain/email-order-details.php:42
+#, php-format
+msgid "View order: %s"
+msgstr "Ver inscrição: %s"
+
+#: ../woocommerce/myaccount/form-edit-address.php:22 ../woocommerce/myaccount/my-
+#: address.php:27 ../woocommerce/myaccount/my-address.php:33 ..
+#: woocommerce/order/order-details-customer.php:57
+msgid "Billing Address"
+msgstr "Endereço de cobrança"
+
+#: ../woocommerce/myaccount/form-login.php:74 ../woocommerce/myaccount/form-login.
+#: php:111
+msgid "Register"
+msgstr "Inscreva-se"
+
+#: ../woocommerce/myaccount/my-account.php:32
+#, php-format
+msgid ""
+"From your account dashboard you can view your recent orders, manage your "
+"shipping and billing addresses and <a href=\"%s\">edit your password and "
+"account details</a>."
+msgstr ""
+"No link Minha Conta, você poderá visualizar suas inscrições, gerenciar "
+"pagamentos e endereços de cobrança. <a href=\"%s\">Clique aqui para editar a "
+"sua senha e detalhes da conta.</a>."
+
+#: ../woocommerce/myaccount/my-address.php:25
+msgid "My Addresses"
+msgstr "Meus endereços"
+
+#: ../woocommerce/myaccount/my-address.php:31
+msgid "My Address"
+msgstr "Meu endereço"
 
 #: ../woocommerce/myaccount/my-orders.php:25
 msgid "Order"
@@ -1340,7 +1326,15 @@ msgstr "Inscrição"
 
 #: ../woocommerce/myaccount/my-orders.php:42
 msgid "Recent Orders"
-msgstr "Inscrições"
+msgstr "Inscrições recentes"
+
+#: ../woocommerce/myaccount/view-order.php:32 ../woocommerce/order/tracking.php:33
+msgid "Order Updates"
+msgstr "Atualização das inscrições"
+
+#: ../woocommerce/order/form-tracking.php:30
+msgid "Order ID"
+msgstr "Inscrição ID"
 
 #: ../woocommerce/order/order-again.php:24
 msgid "Order Again"
@@ -1349,3 +1343,8 @@ msgstr "Inscrever-se novamente"
 #: ../woocommerce/order/order-details.php:27
 msgid "Order Details"
 msgstr "Detalhes da inscrição"
+
+#: ../woocommerce/order/tracking.php:22
+#, php-format
+msgid "Order #%s which was made %s has the status &ldquo;%s&rdquo;"
+msgstr "Inscrição #%s realizadas %s estão com o status &ldquo;%s&rdquo;"

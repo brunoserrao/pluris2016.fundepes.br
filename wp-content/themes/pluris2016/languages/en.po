@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Pluris 2-16\n"
+"Project-Id-Version: Pluris 2016\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"PO-Revision-Date: Tue Apr 26 2016 22:49:57 GMT-0300 (BRT)\n"
+"PO-Revision-Date: Thu May 05 2016 21:58:07 GMT-0300 (BRT)\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
 "Language: English\n"
@@ -161,11 +161,15 @@ msgstr ""
 msgid "Badge Name"
 msgstr ""
 
-#: ../header.php:16
+#: ../functions.php:390
+msgid "Instituition Name"
+msgstr ""
+
+#: ../header.php:23
 msgid "Skip to content"
 msgstr ""
 
-#: ../header.php:24
+#: ../header.php:31
 msgid "Menu and widgets"
 msgstr ""
 
@@ -632,7 +636,7 @@ msgid "You must be logged in to checkout."
 msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:54
-msgid "Your subscribe"
+msgid "Payment"
 msgstr ""
 
 #: ../woocommerce/checkout/form-coupon.php:27
@@ -946,10 +950,6 @@ msgctxt "Product quantity input tooltip"
 msgid "Qty"
 msgstr ""
 
-#: ../woocommerce/loop/add-to-cart.php:31
-msgid "Subscribe"
-msgstr ""
-
 #: ../woocommerce/loop/no-products-found.php:23
 msgid "No products were found matching your selection."
 msgstr ""
@@ -1031,11 +1031,6 @@ msgstr ""
 
 #: ../woocommerce/myaccount/form-edit-address.php:48
 msgid "Save Address"
-msgstr ""
-
-#: ../woocommerce/myaccount/form-login.php:74 ../woocommerce/myaccount/form-login.
-#: php:111
-msgid "Register"
 msgstr ""
 
 #: ../woocommerce/myaccount/form-login.php:83
@@ -1126,7 +1121,7 @@ msgstr ""
 
 #: ../woocommerce/myaccount/my-orders.php:42
 msgid "Recent Orders"
-msgstr ""
+msgstr "Recent registers"
 
 #: ../woocommerce/myaccount/my-orders.php:67
 msgctxt "hash before order number"
@@ -1345,5 +1340,12 @@ msgstr ""
 msgid "Bruno Serrão"
 msgstr ""
 
+#: ../woocommerce/myaccount/form-login.php:74 ../woocommerce/myaccount/form-login.
+#: php:111
+msgid "Register"
+msgstr "Register"
+
+#: ../woocommerce/loop/add-to-cart.php:31 ../woocommerce/single-product/add-to-
+#: cart/external.php:27 ../woocommerce/single-product/add-to-cart/simple.php:57
 msgid "Add to cart"
-msgstr "Subscribe"
+msgstr "Register"

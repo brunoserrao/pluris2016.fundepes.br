@@ -2,10 +2,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Pluris 2-16\n"
+"Project-Id-Version: Pluris 2016\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"POT-Revision-Date: Tue May 03 2016 00:15:20 GMT-0300 (BRT)\n"
+"POT-Revision-Date: Thu May 05 2016 22:01:24 GMT-0300 (BRT)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
@@ -75,12 +75,6 @@ msgstr ""
 
 #: ../content-link.php:36 ../content-page.php:25 ../content.php:38 ../image.php:59
 msgid "Pages:"
-msgstr ""
-
-#: ../content-link.php:56 ../content-page.php:35 ../content-search.php:28 ..
-#: /content-search.php:33 ../content.php:57 ../image.php:71 ..
-#: /woocommerce/myaccount/my-address.php:53
-msgid "Edit"
 msgstr ""
 
 #: ../content-none.php:15
@@ -168,11 +162,11 @@ msgstr ""
 msgid "Instituition Name"
 msgstr ""
 
-#: ../header.php:23
+#: ../header.php:24
 msgid "Skip to content"
 msgstr ""
 
-#: ../header.php:31
+#: ../header.php:32
 msgid "Menu and widgets"
 msgstr ""
 
@@ -184,7 +178,7 @@ msgstr ""
 msgid "Next Image"
 msgstr ""
 
-#: ../image.php:84
+#: ../image.php:83
 msgctxt "Parent post link"
 msgid ""
 "<span class=\"meta-nav\">Published in</span><span class=\"post-"
@@ -510,26 +504,26 @@ msgstr ""
 
 #: ../woocommerce/cart/cart-totals.php:91 ../woocommerce/cart/cart-totals.php:92 .
 #: ./woocommerce/cart/cart.php:38 ../woocommerce/cart/cart.php:118 ..
-#: /woocommerce/checkout/review-order.php:26 ../woocommerce/checkout/review-order.
+#: woocommerce/checkout/review-order.php:26 ../woocommerce/checkout/review-order.
 #: php:105 ../woocommerce/myaccount/my-orders.php:28 ../woocommerce/order/order-
 #: details.php:32
 msgid "Total"
 msgstr ""
 
 #: ../woocommerce/cart/cart.php:35 ../woocommerce/cart/cart.php:77 ..
-#: /woocommerce/checkout/form-pay.php:28 ../woocommerce/checkout/review-order.php:
+#: woocommerce/checkout/form-pay.php:28 ../woocommerce/checkout/review-order.php:
 #: 25 ../woocommerce/emails/email-order-details.php:33 ../woocommerce/order/order-
 #: details.php:31
 msgid "Product"
 msgstr ""
 
 #: ../woocommerce/cart/cart.php:36 ../woocommerce/cart/cart.php:95 ..
-#: /woocommerce/emails/email-order-details.php:35
+#: woocommerce/emails/email-order-details.php:35
 msgid "Price"
 msgstr ""
 
 #: ../woocommerce/cart/cart.php:37 ../woocommerce/cart/cart.php:101 ..
-#: /woocommerce/emails/email-order-details.php:34
+#: woocommerce/emails/email-order-details.php:34
 msgid "Quantity"
 msgstr ""
 
@@ -751,13 +745,13 @@ msgid "Payment Method:"
 msgstr ""
 
 #: ../woocommerce/emails/admin-cancelled-order.php:27 ..
-#: /woocommerce/emails/plain/admin-cancelled-order.php:24
+#: woocommerce/emails/plain/admin-cancelled-order.php:24
 #, php-format
 msgid "The order #%d from %s has been cancelled. The order was as follows:"
 msgstr ""
 
 #: ../woocommerce/emails/admin-failed-order.php:27 ..
-#: /woocommerce/emails/plain/admin-failed-order.php:24
+#: woocommerce/emails/plain/admin-failed-order.php:24
 #, php-format
 msgid "Payment for order #%d from %s has failed. The order was as follows:"
 msgstr ""
@@ -768,7 +762,7 @@ msgid "You have received an order from %s. The order is as follows:"
 msgstr ""
 
 #: ../woocommerce/emails/customer-completed-order.php:27 ..
-#: /woocommerce/emails/plain/customer-completed-order.php:24
+#: woocommerce/emails/plain/customer-completed-order.php:24
 #, php-format
 msgid ""
 "Hi there. Your recent order on %s has been completed. Your order details are "
@@ -776,7 +770,7 @@ msgid ""
 msgstr ""
 
 #: ../woocommerce/emails/customer-invoice.php:28 ..
-#: /woocommerce/emails/plain/customer-invoice.php:25
+#: woocommerce/emails/plain/customer-invoice.php:25
 #, php-format
 msgid ""
 "An order has been created for you on %s. To pay for this order please use "
@@ -788,7 +782,7 @@ msgid "pay"
 msgstr ""
 
 #: ../woocommerce/emails/customer-new-account.php:26 ..
-#: /woocommerce/emails/plain/customer-new-account.php:24
+#: woocommerce/emails/plain/customer-new-account.php:24
 #, php-format
 msgid "Thanks for creating an account on %s. Your username is <strong>%s</strong>."
 msgstr ""
@@ -799,7 +793,7 @@ msgid "Your password has been automatically generated: <strong>%s</strong>"
 msgstr ""
 
 #: ../woocommerce/emails/customer-new-account.php:34 ..
-#: /woocommerce/emails/plain/customer-new-account.php:29
+#: woocommerce/emails/plain/customer-new-account.php:29
 #, php-format
 msgid ""
 "You can access your account area to view your orders and change your "
@@ -807,17 +801,17 @@ msgid ""
 msgstr ""
 
 #: ../woocommerce/emails/customer-note.php:27 ..
-#: /woocommerce/emails/plain/customer-note.php:24
+#: woocommerce/emails/plain/customer-note.php:24
 msgid "Hello, a note has just been added to your order:"
 msgstr ""
 
 #: ../woocommerce/emails/customer-note.php:31 ..
-#: /woocommerce/emails/plain/customer-note.php:32
+#: woocommerce/emails/plain/customer-note.php:32
 msgid "For your reference, your order details are shown below."
 msgstr ""
 
 #: ../woocommerce/emails/customer-processing-order.php:27 ..
-#: /woocommerce/emails/plain/customer-processing-order.php:24
+#: woocommerce/emails/plain/customer-processing-order.php:24
 msgid ""
 "Your order has been received and is now being processed. Your order details "
 "are shown below for your reference:"
@@ -834,23 +828,23 @@ msgid "Hi there. Your order on %s has been refunded."
 msgstr ""
 
 #: ../woocommerce/emails/customer-reset-password.php:26 ..
-#: /woocommerce/emails/plain/customer-reset-password.php:24
+#: woocommerce/emails/plain/customer-reset-password.php:24
 msgid "Someone requested that the password be reset for the following account:"
 msgstr ""
 
 #: ../woocommerce/emails/customer-reset-password.php:27 ..
-#: /woocommerce/emails/plain/customer-reset-password.php:26
+#: woocommerce/emails/plain/customer-reset-password.php:26
 #, php-format
 msgid "Username: %s"
 msgstr ""
 
 #: ../woocommerce/emails/customer-reset-password.php:28 ..
-#: /woocommerce/emails/plain/customer-reset-password.php:27
+#: woocommerce/emails/plain/customer-reset-password.php:27
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr ""
 
 #: ../woocommerce/emails/customer-reset-password.php:29 ..
-#: /woocommerce/emails/plain/customer-reset-password.php:28
+#: woocommerce/emails/plain/customer-reset-password.php:28
 msgid "To reset your password, visit the following address:"
 msgstr ""
 
@@ -869,7 +863,7 @@ msgid "Shipping address"
 msgstr ""
 
 #: ../woocommerce/emails/email-customer-details.php:25 ..
-#: /woocommerce/emails/plain/email-customer-details.php:24
+#: woocommerce/emails/plain/email-customer-details.php:24
 msgid "Customer details"
 msgstr ""
 
@@ -953,11 +947,6 @@ msgctxt "Product quantity input tooltip"
 msgid "Qty"
 msgstr ""
 
-#: ../woocommerce/loop/add-to-cart.php:31 ../woocommerce/single-product/add-to-
-#: cart/external.php:27 ../woocommerce/single-product/add-to-cart/simple.php:57
-msgid "Add to cart"
-msgstr ""
-
 #: ../woocommerce/loop/no-products-found.php:23
 msgid "No products were found matching your selection."
 msgstr ""
@@ -1002,7 +991,7 @@ msgid "Last name"
 msgstr ""
 
 #: ../woocommerce/myaccount/form-edit-account.php:40 ..
-#: /woocommerce/myaccount/form-login.php:90
+#: woocommerce/myaccount/form-login.php:90
 msgid "Email address"
 msgstr ""
 
@@ -1028,7 +1017,7 @@ msgstr ""
 
 #: ../woocommerce/myaccount/form-edit-address.php:22 ../woocommerce/myaccount/my-
 #: address.php:27 ../woocommerce/myaccount/my-address.php:33 ..
-#: /woocommerce/order/order-details-customer.php:57
+#: woocommerce/order/order-details-customer.php:57
 msgid "Billing Address"
 msgstr ""
 
@@ -1103,6 +1092,10 @@ msgstr ""
 
 #: ../woocommerce/myaccount/my-address.php:43
 msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: ../woocommerce/myaccount/my-address.php:53
+msgid "Edit"
 msgstr ""
 
 #: ../woocommerce/myaccount/my-address.php:72
@@ -1338,7 +1331,7 @@ msgid "Product Description"
 msgstr ""
 
 #. Name of the theme
-msgid "Pluris 2-16"
+msgid "Pluris 2016"
 msgstr ""
 
 #. Theme URI of the theme
@@ -1351,4 +1344,7 @@ msgstr ""
 
 #. Author of the theme
 msgid "Bruno Serrão"
+msgstr ""
+
+msgid "Recent registers"
 msgstr ""
