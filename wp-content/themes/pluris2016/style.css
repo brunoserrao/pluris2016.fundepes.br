@@ -59,7 +59,63 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * work of Eric Meyer, Nicolas Gallagher, Jonathan Neal, and Blueprint.
  */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
 	border: 0;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 100%;
@@ -91,20 +147,18 @@ html {
 
 body {
 	background-image: url(images/bg.jpg);
-    
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
-
 @media screen and (min-width: 59.6875em) {
-	body{
-		background-size: 100% auto;	
+	body {
+		background-size: 100% auto;
 	}
 }
 
 @media screen and (max-width: 59.6875em) {
-	body{
+	body {
 		background-size: auto 100%;
 	}
 }
@@ -421,7 +475,8 @@ table {
 	border-spacing: 0;
 	border-width: 1px 0 0 1px;
 	margin: 0 0 1.6em;
-	table-layout: fixed; /* Prevents HTML tables from becoming too wide */
+	table-layout: fixed;
+	/* Prevents HTML tables from becoming too wide */
 	width: 100%;
 }
 
@@ -441,7 +496,8 @@ td {
 	border-width: 0 1px 1px 0;
 }
 
-th, td {
+th,
+td {
 	padding: 0.4em;
 }
 
@@ -461,6 +517,7 @@ del {
 	opacity: 0.8;
 }
 
+
 /* Placeholder text color -- selectors need to be separate to work. */
 
 ::-webkit-input-placeholder {
@@ -473,7 +530,8 @@ del {
 
 ::-moz-placeholder {
 	color: rgba(51, 51, 51, 0.7);
-	opacity: 1; /* Since FF19 lowers the opacity of the placeholder by default */
+	opacity: 1;
+	/* Since FF19 lowers the opacity of the placeholder by default */
 }
 
 :-ms-input-placeholder {
@@ -510,7 +568,8 @@ input {
 
 input,
 textarea {
-	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Removing the inner shadow on iOS inputs */
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+	/* Removing the inner shadow on iOS inputs */
 	border: 1px solid #eaeaea;
 	border: 1px solid rgba(51, 51, 51, 0.1);
 	color: #707070;
@@ -731,7 +790,8 @@ a:focus {
 	height: 42px;
 	padding: 0;
 	position: absolute;
-	text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
+	text-transform: lowercase;
+	/* Stop screen readers to read the text as capital letters */
 	top: 3px;
 	right: 0;
 	width: 42px;
@@ -919,7 +979,7 @@ a:focus {
 
 .secondary-toggle:before {
 	color: #48887B;
-    background-color: #FFF;
+	background-color: #FFF;
 	content: "\f419";
 	line-height: 40px;
 	width: 40px;
@@ -1021,7 +1081,9 @@ a:focus {
 	text-align: center;
 }
 
+
 /* reset screen-reader-text */
+
 .pagination .current .screen-reader-text {
 	position: static !important;
 }
@@ -1167,7 +1229,9 @@ a:focus {
  * 7.0 Accessibility
  */
 
+
 /* Text meant only for screen readers */
+
 .says,
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -1177,7 +1241,9 @@ a:focus {
 	width: 1px;
 }
 
+
 /* must have higher specificity than alternative color schemes inline styles */
+
 .site .skip-link {
 	background-color: #f1f1f1;
 	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -1387,7 +1453,7 @@ img.aligncenter {
 	/*text-transform: uppercase;*/
 }
 
-.widget > :last-child {
+.widget >:last-child {
 	margin-bottom: 0;
 }
 
@@ -1530,7 +1596,7 @@ img.aligncenter {
 	opacity: 0.8;
 }
 
-.textwidget > :last-child {
+.textwidget >:last-child {
 	margin-bottom: 0;
 }
 
@@ -1574,7 +1640,8 @@ img.aligncenter {
 /**
  * 12.1 Posts and pages
  */
-.entry-title{
+
+.entry-title {
 	color: #48887B;
 }
 
@@ -1602,6 +1669,7 @@ img.aligncenter {
 	display: block;
 	margin-bottom: 2.4em;
 }
+
 .post-thumbnail img {
 	display: block;
 	margin: 0 auto;
@@ -1629,8 +1697,8 @@ a.post-thumbnail:focus {
 	color: #48887B;
 }
 
-.entry-content > :last-child,
-.entry-summary > :last-child {
+.entry-content >:last-child,
+.entry-summary >:last-child {
 	margin-bottom: 0;
 }
 
@@ -1830,7 +1898,7 @@ a.post-thumbnail:focus {
 	border-bottom: 0;
 }
 
-.author-description > :last-child {
+.author-description >:last-child {
 	margin-bottom: 0;
 }
 
@@ -2007,7 +2075,7 @@ a.post-thumbnail:focus {
 	border-bottom: 0;
 }
 
-.taxonomy-description > :last-child {
+.taxonomy-description >:last-child {
 	margin-bottom: 0;
 }
 
@@ -2016,7 +2084,7 @@ a.post-thumbnail:focus {
 	padding: 7.6923%;
 }
 
-.page-content > :last-child {
+.page-content >:last-child {
 	margin-bottom: 0;
 }
 
@@ -2090,7 +2158,7 @@ a.post-thumbnail:focus {
 	word-wrap: break-word;
 }
 
-.entry-caption > :last-child {
+.entry-caption >:last-child {
 	margin-bottom: 0;
 }
 
@@ -2140,7 +2208,7 @@ a.post-thumbnail:focus {
 	padding: 7.6923%;
 }
 
-.comments-area > :last-child {
+.comments-area >:last-child {
 	margin-bottom: 0;
 }
 
@@ -2266,7 +2334,7 @@ a.post-thumbnail:focus {
 	margin-bottom: 0;
 }
 
-.comment-content > :last-child {
+.comment-content >:last-child {
 	margin-bottom: 0;
 }
 
@@ -2652,8 +2720,8 @@ p > video {
 	font-size: inherit;
 }
 
-.widecolumn .mu_register > :last-child,
-.widecolumn form > :last-child {
+.widecolumn .mu_register >:last-child,
+.widecolumn form >:last-child {
 	margin-bottom: 0;
 }
 
@@ -2662,12 +2730,14 @@ p > video {
  * 16.0 Media Queries
  */
 
+
 /*
  * Does the same thing as <meta name="viewport" content="width=device-width">,
  * but in the future W3C standard way. -ms- prefix is required for IE10+ to
  * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
  * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
  */
+
 @-ms-viewport {
 	width: device-width;
 }
@@ -2675,6 +2745,7 @@ p > video {
 @viewport {
 	width: device-width;
 }
+
 
 /**
  * 16.1 Mobile Large 620px
@@ -2685,184 +2756,147 @@ p > video {
 	ol {
 		margin-left: 0;
 	}
-
 	li > ul,
 	li > ol,
 	blockquote > ul,
 	blockquote > ol {
 		margin-left: 1.3333em;
 	}
-
 	blockquote {
 		margin-left: -1em;
 	}
-
 	blockquote > blockquote {
 		margin-left: 0;
 	}
-
 	.site-branding {
 		min-height: 3.2em;
 	}
-
 	.site-title {
 		font-size: 22px;
 		font-size: 2.2rem;
 		line-height: 1.0909;
 	}
-
 	.site-description {
 		display: block;
 	}
-
 	.secondary {
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 		margin: 7.6923% 7.6923% 0;
 		padding: 7.6923% 7.6923% 0;
 	}
-
 	.main-navigation {
 		margin-bottom: 11.1111%;
 	}
-
 	.main-navigation ul {
 		border-top: 1px solid rgba(51, 51, 51, 0.1);
 		border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 	}
-
 	.main-navigation ul ul {
 		border-top: 0;
 		border-bottom: 0;
 	}
-
 	.social-navigation {
 		margin-bottom: 11.1111%;
 	}
-
 	.social-navigation {
 		margin-top: 0;
 	}
-
 	.widget-area {
 		margin-top: 0;
 	}
-
 	.widget {
 		margin-bottom: 11.1111%;
 	}
-
 	.site-main {
 		padding: 7.6923% 0;
 	}
-
 	.hentry.sticky:not(.has-post-thumbnail) {
 		padding-top: inherit;
 	}
-
 	.hentry,
 	.page-header,
 	.page-content {
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 		margin: 0 7.6923%;
 	}
-
 	.hentry + .hentry,
 	.page-header + .hentry,
 	.page-header + .page-content {
 		margin-top: 7.6923%;
 	}
-
 	.hentry + .hentry {
 		border-top: 0;
 	}
-
 	.post-thumbnail {
 		margin-bottom: 2.4em;
 	}
-
 	.entry-header {
 		padding: 0 9.0909%;
 	}
-
 	.entry-content,
 	.entry-summary {
 		padding: 0 9.0909% 9.0909%;
 	}
-
 	.entry-footer {
 		padding: 4.5454% 9.0909%;
 	}
-
 	.page-header {
 		border-bottom: 0;
 		border-left: 7px solid #333;
 		padding: 3.8461% 7.6923%;
 	}
-
 	.page-title,
 	.taxonomy-description {
 		margin-left: -7px;
 	}
-
 	.page-content {
 		padding: 9.0909%;
 	}
-
 	.site-footer {
 		border-top: 0;
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 		margin: 0 7.6923%;
 		padding: 3.84615% 7.6923%;
 	}
-
 	.post-navigation {
 		border-top: 0;
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 		margin: 7.6923% 7.6923% 0;
 	}
-
 	.post-navigation a {
 		padding: 4.5454% 9.0909%;
 	}
-
 	.pagination {
 		border-top: 0;
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 		margin: 7.6923% 7.6923% 0;
 		padding: 0;
 	}
-
 	/* restore screen-reader-text */
 	.pagination .current .screen-reader-text {
 		position: absolute !important;
 	}
-
 	.pagination .page-numbers {
 		display: inline-block;
 	}
-
 	.image-navigation {
 		padding: 0 9.0909%;
 	}
-
 	.comments-area {
 		border-top: 0;
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 		margin: 7.6923% 7.6923% 0;
 	}
-
 	.comment-content ul,
 	.comment-content ol {
 		margin-left: 0;
 	}
-
 	.comment-content li > ul,
 	.comment-content li > ol,
 	.comment-content blockquote > ul,
 	.comment-content blockquote > ol {
 		margin-left: 1.3333em;
 	}
-
 	.widecolumn {
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 		margin: 7.6923%;
@@ -2884,12 +2918,10 @@ p > video {
 		font-size: 1.7rem;
 		line-height: 1.6471;
 	}
-
 	button,
 	input {
 		line-height: normal;
 	}
-
 	p,
 	address,
 	pre,
@@ -2901,7 +2933,6 @@ p > video {
 	table {
 		margin-bottom: 1.6471em;
 	}
-
 	blockquote {
 		font-size: 20px;
 		font-size: 2rem;
@@ -2910,22 +2941,18 @@ p > video {
 		margin-left: -1.05em;
 		padding-left: 0.85em;
 	}
-
 	blockquote p {
 		margin-bottom: 1.75em;
 	}
-
 	blockquote cite,
 	blockquote small {
 		font-size: 17px;
 		font-size: 1.7rem;
 		line-height: 1.6471;
 	}
-
 	pre {
 		line-height: 1.2353;
 	}
-
 	button,
 	input[type="button"],
 	input[type="reset"],
@@ -2937,7 +2964,6 @@ p > video {
 		font-size: 1.4rem;
 		padding: 0.8214em 1.6429em;
 	}
-
 	input[type="text"],
 	input[type="email"],
 	input[type="url"],
@@ -2946,46 +2972,37 @@ p > video {
 	textarea {
 		padding: 0.5em;
 	}
-
 	.main-navigation {
 		font-size: 14px;
 		font-size: 1.4rem;
 		line-height: 1.5;
 	}
-
 	.main-navigation a {
 		padding: 1em 0;
 	}
-
 	.main-navigation ul ul {
 		margin-left: 1em;
 	}
-
 	.main-navigation .menu-item-description {
 		font-size: 14px;
 		font-size: 1.4rem;
 		line-height: 1.5;
 	}
-
 	.social-navigation ul {
 		margin-bottom: -1.4706em;
 	}
-
 	.social-navigation a {
 		height: 2.8824em;
 		width: 2.8824em;
 	}
-
 	.secondary-toggle {
 		height: 56px;
 		width: 56px;
 	}
-
 	.secondary-toggle:before {
 		line-height: 54px;
 		width: 54px;
 	}
-
 	.post-password-form label,
 	.post-navigation .meta-nav,
 	.image-navigation,
@@ -3012,84 +3029,70 @@ p > video {
 		font-size: 14px;
 		font-size: 1.4rem;
 	}
-
 	.pagination .nav-links {
 		min-height: 3.2941em;
 	}
-
 	.pagination .page-numbers {
 		line-height: 3.2941em;
 		padding: 0 0.8235em;
 	}
-
 	.pagination .prev,
 	.pagination .next {
 		height: 56px;
 		padding: 0;
 		width: 56px;
 	}
-
 	.pagination .prev:before,
 	.pagination .next:before {
 		height: 56px;
 		line-height: 56px;
 		width: 56px;
 	}
-
 	.image-navigation .nav-previous a:before,
 	.image-navigation .nav-next a:after,
 	.comment-navigation .nav-previous a:before,
 	.comment-navigation .nav-next a:after {
 		top: 2px;
 	}
-
 	blockquote.alignleft,
 	.wp-caption.alignleft,
 	img.alignleft {
 		margin: 0.4118em 1.6471em 1.6471em 0;
 	}
-
 	blockquote.alignright,
 	.wp-caption.alignright,
 	img.alignright {
 		margin: 0.4118em 0 1.6471em 1.6471em;
 	}
-
 	blockquote.aligncenter,
 	.wp-caption.aligncenter,
 	img.aligncenter {
 		margin-top: 0.4118em;
 		margin-bottom: 1.6471em;
 	}
-
 	.wp-caption.alignleft,
 	.wp-caption.alignright,
 	.wp-caption.aligncenter {
 		margin-bottom: 1.2353em;
 	}
-
 	.site-branding {
 		min-height: 3.7059em;
 		padding-right: 66px;
 	}
-
 	.site-title {
 		font-size: 29px;
 		font-size: 2.9rem;
 		line-height: 1.2069;
 	}
-
 	.site-description {
 		font-size: 14px;
 		font-size: 1.4rem;
 	}
-
 	.widget {
 		font-size: 14px;
 		font-size: 1.4rem;
 		line-height: 1.5;
 	}
-
 	.widget p,
 	.widget address,
 	.widget hr,
@@ -3101,12 +3104,10 @@ p > video {
 	.widget pre {
 		margin-bottom: 1.5em;
 	}
-
 	.widget li > ul,
 	.widget li > ol {
 		margin-bottom: 0;
 	}
-
 	.widget blockquote {
 		font-size: 17px;
 		font-size: 1.7rem;
@@ -3115,39 +3116,32 @@ p > video {
 		margin-left: -1.2353em;
 		padding-left: 1em;
 	}
-
 	.widget blockquote p {
 		margin-bottom: 1.6471em;
 	}
-
 	.widget blockquote cite,
 	.widget blockquote small {
 		font-size: 14px;
 		font-size: 1.4rem;
 		line-height: 1.5;
 	}
-
 	.widget blockquote > blockquote {
 		margin-left: 0;
 	}
-
 	.widget pre {
 		line-height: 1.5;
 		padding: 0.75em;
 	}
-
 	.widget button,
 	.widget input,
 	.widget select,
 	.widget textarea {
 		line-height: 1.75;
 	}
-
 	.widget button,
 	.widget input {
 		line-height: normal;
 	}
-
 	.widget button,
 	.widget input[type="button"],
 	.widget input[type="reset"],
@@ -3156,7 +3150,6 @@ p > video {
 		font-size: 1.4rem;
 		padding: 0.8214em 1.6429em;
 	}
-
 	.widget input[type="text"],
 	.widget input[type="email"],
 	.widget input[type="url"],
@@ -3165,45 +3158,37 @@ p > video {
 	.widget textarea {
 		padding: 0.5625em;
 	}
-
 	.widget blockquote.alignleft,
 	.widget .wp-caption.alignleft,
 	.widget img.alignleft {
 		margin: 0.5em 1.5em 1.5em 0;
 	}
-
 	.widget blockquote.alignright,
 	.widget .wp-caption.alignright,
 	.widget img.alignright {
 		margin: 0.5em 0 1.5em 1.5em;
 	}
-
 	.widget blockquote.aligncenter,
 	.widget .wp-caption.aligncenter,
 	.widget img.aligncenter {
 		margin-top: 0.5em;
 		margin-bottom: 1.5em;
 	}
-
 	.widget .wp-caption.alignleft,
 	.widget .wp-caption.alignright,
 	.widget .wp-caption.aligncenter {
 		margin-bottom: 1em;
 	}
-
 	.widget-title {
 		margin: 0 0 1.5em;
 	}
-
 	.widget_calendar td,
 	.widget_calendar th {
 		line-height: 2.9286;
 	}
-
 	.widget_calendar caption {
 		margin: 0 0 1.5em;
 	}
-
 	.widget_archive li,
 	.widget_categories li,
 	.widget_links li,
@@ -3214,27 +3199,22 @@ p > video {
 	.widget_recent_entries li {
 		padding: 0.9643em 0;
 	}
-
 	.widget_categories .children,
 	.widget_nav_menu .sub-menu,
 	.widget_pages .children {
 		margin: 0.9643em 0 0 1em;
 		padding-top: 0.9643em;
 	}
-
 	.widget_rss li {
 		margin-bottom: 1.5em;
 	}
-
 	.widget_rss .rss-date,
 	.widget_rss cite {
 		line-height: 1.75;
 	}
-
 	.post-thumbnail {
 		margin-bottom: 3em;
 	}
-
 	.entry-title,
 	.widecolumn h2 {
 		font-size: 35px;
@@ -3242,7 +3222,6 @@ p > video {
 		line-height: 1.2;
 		margin-bottom: 1.2em;
 	}
-
 	.entry-content h1,
 	.entry-summary h1,
 	.page-content h1,
@@ -3253,7 +3232,6 @@ p > video {
 		margin-top: 1.6em;
 		margin-bottom: 0.8em;
 	}
-
 	.entry-content h2,
 	.entry-summary h2,
 	.page-content h2,
@@ -3264,7 +3242,6 @@ p > video {
 		margin-top: 1.931em;
 		margin-bottom: 0.9655em;
 	}
-
 	.entry-content h3,
 	.entry-summary h3,
 	.page-content h3,
@@ -3275,7 +3252,6 @@ p > video {
 		margin-top: 2.3333em;
 		margin-bottom: 1.1667em;
 	}
-
 	.entry-content h4,
 	.entry-summary h4,
 	.page-content h4,
@@ -3286,7 +3262,6 @@ p > video {
 		margin-top: 2.8em;
 		margin-bottom: 1.4em;
 	}
-
 	.entry-content h5,
 	.entry-content h6,
 	.entry-summary h5,
@@ -3301,28 +3276,23 @@ p > video {
 		margin-top: 3.2941em;
 		margin-bottom: 1.6471em;
 	}
-
 	.entry-content .more-link:after,
 	.entry-summary .more-link:after {
 		font-size: 24px;
 		top: 2px;
 	}
-
 	.author-info {
 		margin: 0 9.0909%;
 		padding: 9.0909% 0;
 	}
-
 	.author-info .avatar {
 		height: 42px;
 		margin: 0 1.6471em 1.6471em 0;
 		width: 42px;
 	}
-
 	.author-link:after {
 		top: 3px;
 	}
-
 	.posted-on:before,
 	.byline:before,
 	.cat-links:before,
@@ -3333,11 +3303,9 @@ p > video {
 	.full-size-link:before {
 		top: 3px;
 	}
-
 	.taxonomy-description {
 		padding-top: 0.4118em;
 	}
-
 	.page-title,
 	.comments-title,
 	.comment-reply-title,
@@ -3346,20 +3314,16 @@ p > video {
 		font-size: 2.4rem;
 		line-height: 1.1667;
 	}
-
 	.page-links {
 		margin-bottom: 1.4117em;
 	}
-
 	.page-links a,
 	.page-links > span {
 		margin: 0 0.2857em 0.2857em 0;
 	}
-
 	.entry-attachment {
 		margin-bottom: 1.6471em;
 	}
-
 	.format-aside .entry-title,
 	.format-image .entry-title,
 	.format-video .entry-title,
@@ -3374,38 +3338,30 @@ p > video {
 		line-height: 1.4;
 		margin-bottom: 1.4em;
 	}
-
 	.format-link .entry-title a:after {
 		top: 0.0833em;
 	}
-
 	.comments-title {
 		margin-bottom: 1.4em;
 	}
-
 	.comment-list article,
 	.comment-list .pingback,
 	.comment-list .trackback {
 		padding: 1.6471em 0;
 	}
-
 	.comment-list + .comment-respond,
 	.comment-navigation + .comment-respond {
 		padding-top: 1.6471em;
 	}
-
 	.comment-list .children > li {
 		padding-left: 1.2353em;
 	}
-
 	.comment-meta {
 		position: relative;
 	}
-
 	.comment-author {
 		margin-bottom: 0;
 	}
-
 	.comment-author .avatar {
 		height: 42px;
 		margin-right: 1.64705em;
@@ -3413,45 +3369,36 @@ p > video {
 		top: 5px;
 		width: 42px;
 	}
-
 	.comment-metadata .edit-link:before {
 		top: 2px;
 	}
-
 	.pingback .edit-link:before {
 		top: 6px;
 	}
-
 	.bypostauthor > article .fn:after {
 		top: 7px;
 		left: 6px;
 	}
-
 	.comment-content ul,
 	.comment-content ol {
 		margin-bottom: 1.6471em;
 	}
-
 	.comment-list .reply a {
 		padding: 0.4286em 0.8571em;
 	}
-
 	.comment-form,
 	.no-comments {
 		padding-top: 1.6471em;
 	}
-
 	.comment-reply-title small a:before {
 		top: -1px;
 	}
-
 	embed,
 	iframe,
 	object,
 	video {
 		margin-bottom: 1.6471em;
 	}
-
 	.wp-audio-shortcode,
 	.wp-video,
 	.wp-playlist.wp-audio-playlist {
@@ -3459,24 +3406,19 @@ p > video {
 		font-size: 1.7rem;
 		margin-bottom: 1.6471em;
 	}
-
 	.wp-caption,
 	.gallery {
 		margin-bottom: 1.6471em;
 	}
-
 	.widecolumn .mu_alert {
 		margin-bottom: 1.6471em;
 	}
-
 	.widecolumn p {
 		margin: 1.6471em 0;
 	}
-
 	.widecolumn p + h2 {
 		margin-top: 1.6em;
 	}
-
 	.widecolumn #key,
 	.widecolumn .mu_register #blog_title,
 	.widecolumn .mu_register #user_email,
@@ -3486,7 +3428,6 @@ p > video {
 		font-size: 1.7rem;
 		line-height: normal;
 	}
-
 	.widecolumn .mu_register #blog_title,
 	.widecolumn .mu_register #user_email,
 	.widecolumn .mu_register #user_name {
@@ -3509,12 +3450,10 @@ p > video {
 		font-size: 1.9rem;
 		line-height: 1.6842;
 	}
-
 	button,
 	input {
 		line-height: normal;
 	}
-
 	p,
 	address,
 	pre,
@@ -3526,7 +3465,6 @@ p > video {
 	table {
 		margin-bottom: 1.6842em;
 	}
-
 	blockquote {
 		font-size: 22px;
 		font-size: 2.2rem;
@@ -3535,22 +3473,18 @@ p > video {
 		margin-left: -1.0909em;
 		padding-left: 0.9091em;
 	}
-
 	blockquote p {
 		margin-bottom: 1.8182em;
 	}
-
 	blockquote cite,
 	blockquote small {
 		font-size: 19px;
 		font-size: 1.9rem;
 		line-height: 1.6842;
 	}
-
 	pre {
 		line-height: 1.2632;
 	}
-
 	button,
 	input[type="button"],
 	input[type="reset"],
@@ -3562,7 +3496,6 @@ p > video {
 		font-size: 1.6rem;
 		padding: 0.8125em 1.625em;
 	}
-
 	input[type="text"],
 	input[type="email"],
 	input[type="url"],
@@ -3571,42 +3504,34 @@ p > video {
 	textarea {
 		padding: 0.5278em;
 	}
-
 	.main-navigation {
 		font-size: 16px;
 		font-size: 1.6rem;
 		line-height: 1.5;
 	}
-
 	.main-navigation a {
 		padding: 0.75em 0;
 	}
-
 	.main-navigation .menu-item-description {
 		font-size: 16px;
 		font-size: 1.6rem;
 		line-height: 1.5;
 	}
-
 	.social-navigation ul {
 		margin-bottom: -1.2632em;
 	}
-
 	.social-navigation a {
 		height: 2.5263em;
 		width: 2.5263em;
 	}
-
 	.secondary-toggle {
 		height: 64px;
 		width: 64px;
 	}
-
 	.secondary-toggle:before {
 		line-height: 62px;
 		width: 62px;
 	}
-
 	.post-password-form label,
 	.post-navigation .meta-nav,
 	.comment-navigation,
@@ -3633,30 +3558,25 @@ p > video {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
-
 	.pagination .nav-links {
 		min-height: 3.3684em;
 	}
-
 	.pagination .page-numbers {
 		line-height: 3.3684em;
 		padding: 0 0.8421em;
 	}
-
 	.pagination .prev,
 	.pagination .next {
 		height: 64px;
 		padding: 0;
 		width: 64px;
 	}
-
 	.pagination .prev:before,
 	.pagination .next:before {
 		height: 64px;
 		line-height: 64px;
 		width: 64px;
 	}
-
 	.image-navigation .nav-previous a:before,
 	.image-navigation .nav-next a:after,
 	.comment-navigation .nav-previous a:before,
@@ -3664,53 +3584,44 @@ p > video {
 		font-size: 24px;
 		top: -1px;
 	}
-
 	blockquote.alignleft,
 	.wp-caption.alignleft,
 	img.alignleft {
 		margin: 0.4211em 1.6842em 1.6842em 0;
 	}
-
 	blockquote.alignright,
 	.wp-caption.alignright,
 	img.alignright {
 		margin: 0.4211em 0 1.6842em 1.6842em;
 	}
-
 	blockquote.aligncenter,
 	.wp-caption.aligncenter,
 	img.aligncenter {
 		margin-top: 0.4211em;
 		margin-bottom: 1.6842em;
 	}
-
 	.wp-caption.alignleft,
 	.wp-caption.alignright,
 	.wp-caption.aligncenter {
 		margin-bottom: 1.2632em;
 	}
-
 	.site-branding {
 		min-height: 3.7895em;
 		padding-right: 74px;
 	}
-
 	.site-title {
 		font-size: 32px;
 		font-size: 3.2rem;
 		line-height: 1.25;
 	}
-
 	.site-description {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
-
 	.widget {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
-
 	.widget blockquote {
 		font-size: 19px;
 		font-size: 1.9rem;
@@ -3719,29 +3630,24 @@ p > video {
 		margin-left: -1.2632em;
 		padding-left: 1.0526em;
 	}
-
 	.widget blockquote p {
 		margin-bottom: 1.6842em;
 	}
-
 	.widget blockquote cite,
 	.widget blockquote small {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
-
 	.widget button,
 	.widget input,
 	.widget select,
 	.widget textarea {
 		line-height: 1.5;
 	}
-
 	.widget button,
 	.widget input {
 		line-height: normal;
 	}
-
 	.widget button,
 	.widget input[type="button"],
 	.widget input[type="reset"],
@@ -3750,7 +3656,6 @@ p > video {
 		font-size: 1.6rem;
 		padding: 0.8125em 1.625em;
 	}
-
 	.widget input[type="text"],
 	.widget input[type="email"],
 	.widget input[type="url"],
@@ -3759,17 +3664,14 @@ p > video {
 	.widget textarea {
 		padding: 0.75em;
 	}
-
 	.widget .wp-caption-text,
 	.widget .gallery-caption {
 		line-height: 1.5;
 	}
-
 	.widget_calendar td,
 	.widget_calendar th {
 		line-height: 2.9375;
 	}
-
 	.widget_archive li,
 	.widget_categories li,
 	.widget_links li,
@@ -3780,25 +3682,21 @@ p > video {
 	.widget_recent_entries li {
 		padding: 0.7188em 0;
 	}
-
 	.widget_categories .children,
 	.widget_nav_menu .sub-menu,
 	.widget_pages .children {
 		margin: 0.7188em 0 0 1em;
 		padding-top: 0.7188em;
 	}
-
 	.widget_rss .rss-date,
 	.widget_rss cite {
 		font-size: 13px;
 		font-size: 1.3rem;
 		line-height: 1.8462;
 	}
-
 	.post-thumbnail {
 		margin-bottom: 2.9474em;
 	}
-
 	.entry-title,
 	.widecolumn h2 {
 		font-size: 39px;
@@ -3806,7 +3704,6 @@ p > video {
 		line-height: 1.2308;
 		margin-bottom: 1.2308em;
 	}
-
 	.entry-content h1,
 	.entry-summary h1,
 	.page-content h1,
@@ -3817,7 +3714,6 @@ p > video {
 		margin-top: 1.641em;
 		margin-bottom: 0.8205em;
 	}
-
 	.entry-content h2,
 	.entry-summary h2,
 	.page-content h2,
@@ -3828,7 +3724,6 @@ p > video {
 		margin-top: 2em;
 		margin-bottom: 1em;
 	}
-
 	.entry-content h3,
 	.entry-summary h3,
 	.page-content h3,
@@ -3839,7 +3734,6 @@ p > video {
 		margin-top: 2.3704em;
 		margin-bottom: 1.1852em;
 	}
-
 	.entry-content h4,
 	.entry-summary h4,
 	.page-content h4,
@@ -3850,7 +3744,6 @@ p > video {
 		margin-top: 2.9091em;
 		margin-bottom: 1.4545em;
 	}
-
 	.entry-content h5,
 	.entry-content h6,
 	.entry-summary h5,
@@ -3865,23 +3758,19 @@ p > video {
 		margin-top: 3.3684em;
 		margin-bottom: 1.6842em;
 	}
-
 	.entry-content .more-link:after,
 	.entry-summary .more-link:after {
 		top: 3px;
 	}
-
 	.author-info .avatar {
 		height: 56px;
 		margin: 0 1.6842em 1.6842em 0;
 		width: 56px;
 	}
-
 	.author-link:after {
 		font-size: 24px;
 		top: 0;
 	}
-
 	.posted-on:before,
 	.byline:before,
 	.cat-links:before,
@@ -3892,11 +3781,9 @@ p > video {
 	.full-size-link:before {
 		top: 4px;
 	}
-
 	.taxonomy-description {
 		padding-top: 0.4211em;
 	}
-
 	.page-title,
 	.comments-title,
 	.comment-reply-title,
@@ -3905,20 +3792,16 @@ p > video {
 		font-size: 2.7rem;
 		line-height: 1.1852;
 	}
-
 	.page-links {
 		margin-bottom: 1.4736em;
 	}
-
 	.page-links a,
 	.page-links > span {
 		margin: 0 0.25em 0.25em 0;
 	}
-
 	.entry-attachment {
 		margin-bottom: 1.6842em
 	}
-
 	.format-aside .entry-title,
 	.format-image .entry-title,
 	.format-video .entry-title,
@@ -3933,74 +3816,59 @@ p > video {
 		line-height: 1.4545;
 		margin-bottom: 1.4545em;
 	}
-
 	.format-link .entry-title a:after {
 		top: 0.125em;
 	}
-
 	.comments-title {
 		margin-bottom: 1.4545em;
 	}
-
 	.comment-list article,
 	.comment-list .pingback,
 	.comment-list .trackback {
 		padding: 1.6842em 0;
 	}
-
 	.comment-list + .comment-respond,
 	.comment-navigation + .comment-respond {
 		padding-top: 1.6842em;
 	}
-
 	.comment-list .children > li {
 		padding-left: 1.4737em;
 	}
-
 	.comment-author .avatar {
 		height: 56px;
 		margin-right: 1.6842em;
 		top: 3px;
 		width: 56px;
 	}
-
 	.comment-metadata {
 		line-height: 2;
 	}
-
 	.comment-metadata .edit-link:before {
 		top: 8px;
 	}
-
 	.pingback .edit-link:before {
 		top: 8px;
 	}
-
 	.bypostauthor > article .fn:after {
 		top: 8px;
 	}
-
 	.comment-content ul,
 	.comment-content ol {
 		margin-bottom: 1.6842em;
 	}
-
 	.comment-list .reply a {
 		padding: 0.4375em 0.875em;
 	}
-
 	.comment-form,
 	.no-comments {
 		padding-top: 1.6842em;
 	}
-
 	embed,
 	iframe,
 	object,
 	video {
 		margin-bottom: 1.6842em;
 	}
-
 	.wp-audio-shortcode,
 	.wp-video,
 	.wp-playlist.wp-audio-playlist {
@@ -4008,24 +3876,19 @@ p > video {
 		font-size: 1.9rem;
 		margin-bottom: 1.6842em;
 	}
-
 	.wp-caption,
 	.gallery {
 		margin-bottom: 1.6842em;
 	}
-
 	.widecolumn .mu_alert {
 		margin-bottom: 1.6842em;
 	}
-
 	.widecolumn p {
 		margin: 1.6842em 0;
 	}
-
 	.widecolumn p + h2 {
 		margin-top: 1.641em;
 	}
-
 	.widecolumn #key,
 	.widecolumn .mu_register #blog_title,
 	.widecolumn .mu_register #user_email,
@@ -4034,7 +3897,6 @@ p > video {
 		font-size: 19px;
 		font-size: 1.9rem;
 	}
-
 	.widecolumn .mu_register #blog_title,
 	.widecolumn .mu_register #user_email,
 	.widecolumn .mu_register #user_name {
@@ -4058,12 +3920,10 @@ p > video {
 		width: 29.4118%;
 		z-index: 0;
 	}
-
 	.site {
 		margin: 0 auto;
 		max-width: 1403px;
 	}
-
 	.sidebar {
 		float: left;
 		margin-right: -100%;
@@ -4074,7 +3934,6 @@ p > video {
 		background-color: #FFF;
 		top: 0px !important;
 	}
-
 	.secondary {
 		background-color: transparent;
 		box-shadow: none;
@@ -4082,24 +3941,20 @@ p > video {
 		margin: 0;
 		padding: 0;
 	}
-
 	.site-main {
 		padding: 8.3333% 0;
 	}
-
 	.site-content {
 		display: block;
 		float: left;
 		margin-left: 29.4118%;
 		width: 70.5882%;
 	}
-
 	body {
 		font-size: 15px;
 		font-size: 1.5rem;
 		line-height: 1.6;
 	}
-
 	p,
 	address,
 	pre,
@@ -4111,7 +3966,6 @@ p > video {
 	table {
 		margin-bottom: 1.6em;
 	}
-
 	blockquote {
 		font-size: 18px;
 		font-size: 1.8rem;
@@ -4120,18 +3974,15 @@ p > video {
 		margin-left: -1.3333em;
 		padding-left: 1.1111em;
 	}
-
 	blockquote cite,
 	blockquote small {
 		font-size: 15px;
 		font-size: 1.5rem;
 		line-height: 1.6;
 	}
-
 	pre {
 		line-height: 1.2;
 	}
-
 	button,
 	input,
 	select,
@@ -4140,12 +3991,10 @@ p > video {
 		font-size: 1.6rem;
 		line-height: 1.5;
 	}
-
 	button,
 	input {
 		line-height: normal;
 	}
-
 	button,
 	input[type="button"],
 	input[type="reset"],
@@ -4157,7 +4006,6 @@ p > video {
 		font-size: 1.2rem;
 		padding: 0.7917em 1.5833em;
 	}
-
 	input[type="text"],
 	input[type="email"],
 	input[type="url"],
@@ -4166,58 +4014,46 @@ p > video {
 	textarea {
 		padding: 0.375em;
 	}
-
 	.main-navigation {
 		font-size: 12px;
 		font-size: 1.2rem;
 		margin: 0 20% 20%;
 	}
-
 	.main-navigation a {
 		padding: 0.5em 0;
 	}
-
 	.main-navigation .menu-item-has-children > a {
 		padding-right: 30px;
 	}
-
 	.main-navigation .menu-item-description {
 		font-size: 12px;
 		font-size: 1.2rem;
 		line-height: 1.5;
 	}
-
 	.dropdown-toggle {
 		height: 24px;
 		width: 24px;
 	}
-
 	.dropdown-toggle:after {
 		font-size: 16px;
 		line-height: 24px;
 		width: 24px;
 	}
-
 	.social-navigation {
 		margin: 0 20% 20%;
 	}
-
 	.social-navigation ul {
 		margin-bottom: -1.6em;
 	}
-
 	.social-navigation li {
 		width: 25%;
 	}
-
 	.social-navigation a {
 		height: 3.2em;
 	}
-
 	.secondary-toggle {
 		display: none;
 	}
-
 	.post-password-form label,
 	.post-navigation .meta-nav,
 	.comment-navigation,
@@ -4244,42 +4080,34 @@ p > video {
 		font-size: 12px;
 		font-size: 1.2rem;
 	}
-
 	.post-navigation {
 		margin: 8.3333% 8.3333% 0;
 	}
-
 	.post-navigation a {
 		padding: 5% 10%;
 	}
-
 	.pagination {
 		margin: 8.333% 8.333% 0;
 	}
-
 	.pagination .nav-links {
 		min-height: 3.2em;
 	}
-
 	.pagination .page-numbers {
 		line-height: 3.2em;
 		padding: 0 0.8em;
 	}
-
 	.pagination .prev,
 	.pagination .next {
 		height: 48px;
 		padding: 0;
 		width: 48px;
 	}
-
 	.pagination .prev:before,
 	.pagination .next:before {
 		height: 48px;
 		line-height: 48px;
 		width: 48px;
 	}
-
 	.image-navigation .nav-previous a:before,
 	.image-navigation .nav-next a:after,
 	.comment-navigation .nav-previous a:before,
@@ -4287,23 +4115,19 @@ p > video {
 		font-size: 16px;
 		top: 0;
 	}
-
 	.image-navigation {
 		padding: 0 10%;
 	}
-
 	blockquote.alignleft,
 	.wp-caption.alignleft,
 	img.alignleft {
 		margin: 0.4em 1.6em 1.6em 0;
 	}
-
 	blockquote.alignright,
 	.wp-caption.alignright,
 	img.alignright {
 		margin: 0.4em 0 1.6em 1.6em;
 	}
-
 	blockquote.aligncenter,
 	.wp-caption.aligncenter,
 	img.aligncenter {
@@ -4311,43 +4135,36 @@ p > video {
 		margin-top: 0.4em;
 		margin-bottom: 1.6em;
 	}
-
 	.wp-caption.alignleft,
 	.wp-caption.alignright,
 	.wp-caption.aligncenter {
 		margin-bottom: 1.2em;
 	}
-
 	.site-header {
 		background-color: transparent;
 		border-bottom: 0;
 		/*margin: 20% 0;*/
 		/*padding: 0 20%;*/
 	}
-
 	.site-branding {
 		min-height: 0;
 		padding: 0;
 	}
-
 	.site-title {
 		font-size: 22px;
 		font-size: 2.2rem;
 		line-height: 1.3636;
 	}
-
 	.site-description {
 		font-size: 12px;
 		font-size: 1.2rem;
 	}
-
 	.widget {
 		font-size: 12px;
 		font-size: 1.2rem;
 		margin: 0 0 20%;
 		padding: 0 20%;
 	}
-
 	.widget blockquote {
 		font-size: 12px;
 		font-size: 1.2rem;
@@ -4356,21 +4173,17 @@ p > video {
 		margin-left: -1.5em;
 		padding-left: 1.1667em;
 	}
-
 	.widget blockquote p {
 		margin-bottom: 1.5em;
 	}
-
 	.widget blockquote cite,
 	.widget blockquote small {
 		font-size: 12px;
 		font-size: 1.2rem;
 	}
-
 	.widget pre {
 		padding: 0.5em;
 	}
-
 	.widget button,
 	.widget input,
 	.widget select,
@@ -4378,7 +4191,6 @@ p > video {
 		font-size: 12px;
 		font-size: 1.2rem;
 	}
-
 	.widget button,
 	.widget input[type="button"],
 	.widget input[type="reset"],
@@ -4387,7 +4199,6 @@ p > video {
 		font-size: 1.2rem;
 		padding: 0.5417em 1.0833em;
 	}
-
 	.widget input[type="text"],
 	.widget input[type="email"],
 	.widget input[type="url"],
@@ -4396,18 +4207,15 @@ p > video {
 	.widget textarea {
 		padding: 0.4583em;
 	}
-
 	.widget .wp-caption-text,
 	.widget .gallery-caption {
 		font-size: 12px;
 		font-size: 1.2rem;
 	}
-
 	.widget_calendar td,
 	.widget_calendar th {
 		line-height: 1.9167;
 	}
-
 	.widget_archive li,
 	.widget_categories li,
 	.widget_links li,
@@ -4418,45 +4226,37 @@ p > video {
 	.widget_recent_entries li {
 		padding: 0.4583em 0;
 	}
-
 	.widget_categories .children,
 	.widget_nav_menu .sub-menu,
 	.widget_pages .children {
 		margin: 0.4583em 0 0 1em;
 		padding-top: 0.4583em;
 	}
-
 	.widget_rss .rss-date,
 	.widget_rss cite {
 		font-size: 12px;
 		font-size: 1.2rem;
 		line-height: 1.5;
 	}
-
 	.hentry,
 	.page-header,
 	.page-content {
 		margin: 0 8.3333%;
 	}
-
 	.hentry {
 		padding-top: 8.3333%;
 	}
-
 	.hentry + .hentry,
 	.page-header + .hentry,
 	.page-header + .page-content {
 		margin-top: 8.3333%;
 	}
-
 	.post-thumbnail {
 		margin-bottom: 2.4em;
 	}
-
 	.entry-header {
 		padding: 0 10%;
 	}
-
 	.entry-title,
 	.widecolumn h2 {
 		font-size: 31px;
@@ -4464,12 +4264,10 @@ p > video {
 		line-height: 1.1613;
 		margin-bottom: 1.1613em;
 	}
-
 	.entry-content,
 	.entry-summary {
 		padding: 0 10% 10%;
 	}
-
 	.entry-content h1,
 	.entry-summary h1,
 	.page-content h1,
@@ -4480,7 +4278,6 @@ p > video {
 		margin-top: 1.5484em;
 		margin-bottom: 0.7742em;
 	}
-
 	.entry-content h2,
 	.entry-summary h2,
 	.page-content h2,
@@ -4491,7 +4288,6 @@ p > video {
 		margin-top: 1.8462em;
 		margin-bottom: 0.9231em;
 	}
-
 	.entry-content h3,
 	.entry-summary h3,
 	.page-content h3,
@@ -4502,7 +4298,6 @@ p > video {
 		margin-top: 2.1818em;
 		margin-bottom: 1.0909em;
 	}
-
 	.entry-content h4,
 	.entry-summary h4,
 	.page-content h4,
@@ -4513,7 +4308,6 @@ p > video {
 		margin-top: 2.6667em;
 		margin-bottom: 1.3333em;
 	}
-
 	.entry-content h5,
 	.entry-content h6,
 	.entry-summary h5,
@@ -4528,33 +4322,27 @@ p > video {
 		margin-top: 3.2em;
 		margin-bottom: 1.6em;
 	}
-
 	.entry-content .more-link:after,
 	.entry-summary .more-link:after {
 		font-size: 16px;
 		top: 5px;
 	}
-
 	.author-info {
 		margin: 0 10%;
 		padding: 10% 0;
 	}
-
 	.author-info .avatar {
 		height: 36px;
 		margin: 0 1.5em 1.5em 0;
 		width: 36px;
 	}
-
 	.author-link:after {
 		font-size: 16px;
 		top: 1px;
 	}
-
 	.entry-footer {
 		padding: 5% 10%;
 	}
-
 	.posted-on:before,
 	.byline:before,
 	.cat-links:before,
@@ -4565,19 +4353,15 @@ p > video {
 	.full-size-link:before {
 		top: 0;
 	}
-
 	.page-header {
 		padding: 4.1666% 8.3333%;
 	}
-
 	.page-content {
 		padding: 8.3333%;
 	}
-
 	.taxonomy-description {
 		padding-top: 0.4em;
 	}
-
 	.page-title,
 	.comments-title,
 	.comment-reply-title,
@@ -4586,20 +4370,16 @@ p > video {
 		font-size: 1.8rem;
 		line-height: 1.3333;
 	}
-
 	.page-links {
 		margin-bottom: 1.3333em;
 	}
-
 	.page-links a,
 	.page-links > span {
 		margin: 0 0.3333em 0.3333em 0;
 	}
-
 	.entry-attachment {
 		margin-bottom: 1.6em;
 	}
-
 	.format-aside .entry-title,
 	.format-image .entry-title,
 	.format-video .entry-title,
@@ -4614,95 +4394,76 @@ p > video {
 		line-height: 1.3333;
 		margin-bottom: 1.3333em;
 	}
-
 	.format-link .entry-title a:after {
 		top: 0;
 	}
-
 	.comments-area {
 		margin: 8.3333% 8.3333% 0;
 		padding: 8.3333%;
 	}
-
 	.comments-title {
 		margin-bottom: 1.3333em;
 	}
-
 	.comment-list article,
 	.comment-list .pingback,
 	.comment-list .trackback {
 		padding: 1.6em 0;
 	}
-
 	.comment-list + .comment-respond,
 	.comment-navigation + .comment-respond {
 		padding-top: 1.6em;
 	}
-
 	.comment-list .children > li {
 		padding-left: 0.8em;
 	}
-
 	.comment-author {
 		margin-bottom: 0.4em;
 	}
-
 	.comment-author .avatar {
 		height: 24px;
 		margin-right: 0.8em;
 		top: 0;
 		width: 24px;
 	}
-
 	.comment-metadata .edit-link:before {
 		top: 3px;
 	}
-
 	.pingback .edit-link:before {
 		top: 5px;
 	}
-
 	.bypostauthor > article .fn:after {
 		top: 5px;
 		left: 3px;
 	}
-
 	.comment-content ul,
 	.comment-content ol {
 		margin-bottom: 2em;
 	}
-
 	.comment-list .reply a {
 		padding: 0.4167em 0.8333em;
 	}
-
 	.comment-form,
 	.no-comments {
 		padding-top: 1.6em;
 	}
-
 	.comment-reply-title small a:before {
 		top: -3px;
 	}
-
 	.site-footer {
 		float: left;
 		margin: 0 0 0 35.2941%;
 		padding: 0;
 		width: 58.8235%;
 	}
-
 	.site-info {
 		padding: 5% 10%;
 	}
-
 	embed,
 	iframe,
 	object,
 	video {
 		margin-bottom: 1.6em;
 	}
-
 	.wp-audio-shortcode,
 	.wp-video,
 	.wp-playlist.wp-audio-playlist {
@@ -4710,29 +4471,23 @@ p > video {
 		font-size: 1.5rem;
 		margin-bottom: 1.6em;
 	}
-
 	.wp-caption,
 	.gallery {
 		margin-bottom: 1.6em;
 	}
-
 	.widecolumn {
 		margin: 8.3333%;
 		padding: 8.3333%;
 	}
-
 	.widecolumn .mu_alert {
 		margin-bottom: 1.6em;
 	}
-
 	.widecolumn p {
 		margin: 1.6em 0;
 	}
-
 	.widecolumn p + h2 {
 		margin-top: 1.5484em;
 	}
-
 	.widecolumn #key,
 	.widecolumn .mu_register #blog_title,
 	.widecolumn .mu_register #user_email,
@@ -4741,7 +4496,6 @@ p > video {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
-
 	.widecolumn .mu_register #blog_title,
 	.widecolumn .mu_register #user_email,
 	.widecolumn .mu_register #user_name {
@@ -4764,12 +4518,10 @@ p > video {
 		font-size: 1.7rem;
 		line-height: 1.6471;
 	}
-
 	button,
 	input {
 		line-height: normal;
 	}
-
 	p,
 	address,
 	pre,
@@ -4781,7 +4533,6 @@ p > video {
 	table {
 		margin-bottom: 1.6471em;
 	}
-
 	blockquote {
 		font-size: 20px;
 		font-size: 2rem;
@@ -4790,22 +4541,18 @@ p > video {
 		margin-left: -1.05em;
 		padding-left: 0.85em;
 	}
-
 	blockquote p {
 		margin-bottom: 1.75em;
 	}
-
 	blockquote cite,
 	blockquote small {
 		font-size: 17px;
 		font-size: 1.7rem;
 		line-height: 1.6471;
 	}
-
 	pre {
 		line-height: 1.2353;
 	}
-
 	button,
 	input[type="button"],
 	input[type="reset"],
@@ -4817,7 +4564,6 @@ p > video {
 		font-size: 1.4rem;
 		padding: 0.8214em 1.5714em;
 	}
-
 	input[type="text"],
 	input[type="email"],
 	input[type="url"],
@@ -4826,47 +4572,37 @@ p > video {
 	textarea {
 		padding: 0.5em;
 	}
-
 	.main-navigation {
 		font-size: 14px;
 		font-size: 1.4rem;
 	}
-
 	.main-navigation a {
 		padding: 0.4643em 0;
 	}
-
 	.main-navigation .menu-item-has-children > a {
 		padding-right: 34px;
 	}
-
 	.main-navigation .menu-item-description {
 		line-height: 1.4583;
 		margin-top: 0.25em;
 	}
-
 	.dropdown-toggle {
 		height: 28px;
 		width: 28px;
 	}
-
 	.dropdown-toggle:after {
 		line-height: 28px;
 		width: 28px;
 	}
-
 	.social-navigation ul {
 		margin-bottom: -1.4706em;
 	}
-
 	.social-navigation li {
 		width: 20%;
 	}
-
 	.social-navigation a {
 		height: 2.8824em;
 	}
-
 	.post-password-form label,
 	.post-navigation .meta-nav,
 	.comment-navigation,
@@ -4893,84 +4629,70 @@ p > video {
 		font-size: 14px;
 		font-size: 1.4rem;
 	}
-
 	.pagination .nav-links {
 		min-height: 3.2941em;
 	}
-
 	.pagination .page-numbers {
 		line-height: 3.2941em;
 		padding: 0 0.8235em;
 	}
-
 	.pagination .prev,
 	.pagination .next {
 		height: 56px;
 		padding: 0;
 		width: 56px;
 	}
-
 	.pagination .prev:before,
 	.pagination .next:before {
 		height: 56px;
 		line-height: 56px;
 		width: 56px;
 	}
-
 	.image-navigation .nav-previous a:before,
 	.image-navigation .nav-next a:after,
 	.comment-navigation .nav-previous a:before,
 	.comment-navigation .nav-next a:after {
 		top: 2px;
 	}
-
 	blockquote.alignleft,
 	.wp-caption.alignleft,
 	img.alignleft {
 		margin: 0.4118em 1.6471em 1.6471em 0;
 	}
-
 	blockquote.alignright,
 	.wp-caption.alignright,
 	img.alignright {
 		margin: 0.4118em 0 1.6471em 1.6471em;
 	}
-
 	blockquote.aligncenter,
 	.wp-caption.aligncenter,
 	img.aligncenter {
 		margin-top: 0.4118em;
 		margin-bottom: 1.6471em;
 	}
-
 	.wp-caption.alignleft,
 	.wp-caption.alignright,
 	.wp-caption.aligncenter {
 		margin-bottom: 1.2353em;
 	}
-
 	.site-title {
 		font-size: 24px;
 		font-size: 2.4rem;
 		line-height: 1.1667;
 	}
-
 	.site-description {
 		font-size: 14px;
 		font-size: 1.4rem;
 	}
-
 	.widget {
 		font-size: 14px;
 		font-size: 1.4rem;
 	}
-
 	.widget blockquote {
 		font-size: 14px;
 		font-size: 1.4rem;
 		padding-left: 1.2143em;
 	}
-
 	.widget button,
 	.widget input,
 	.widget select,
@@ -4978,7 +4700,6 @@ p > video {
 		font-size: 14px;
 		font-size: 1.4rem;
 	}
-
 	.widget button,
 	.widget input[type="button"],
 	.widget input[type="reset"],
@@ -4987,7 +4708,6 @@ p > video {
 		font-size: 1.2rem;
 		padding: 0.75em 1.5em;
 	}
-
 	.widget input[type="text"],
 	.widget input[type="email"],
 	.widget input[type="url"],
@@ -4996,22 +4716,18 @@ p > video {
 	.widget textarea {
 		padding: 0.5em;
 	}
-
 	.widget .wp-caption-text,
 	.widget .gallery-caption {
 		line-height: 1.4583;
 		padding: 0.5833em 0;
 	}
-
 	.widget_calendar caption {
 		margin: 0 0 1.9286em;
 	}
-
 	.widget_calendar td,
 	.widget_calendar th {
 		line-height: 1.9286;
 	}
-
 	.widget_archive li,
 	.widget_categories li,
 	.widget_links li,
@@ -5022,23 +4738,19 @@ p > video {
 	.widget_recent_entries li {
 		padding: 0.4643em 0;
 	}
-
 	.widget_categories .children,
 	.widget_nav_menu .sub-menu,
 	.widget_pages .children {
 		margin: 0.4643em 0 0 1em;
 		padding-top: 0.4643em;
 	}
-
 	.widget_rss .rss-date,
 	.widget_rss cite {
 		line-height: 1.75;
 	}
-
 	.post-thumbnail {
 		margin-bottom: 2.4706em;
 	}
-
 	.entry-title,
 	.widecolumn h2 {
 		font-size: 35px;
@@ -5046,7 +4758,6 @@ p > video {
 		line-height: 1.2;
 		margin-bottom: 1.2em;
 	}
-
 	.entry-content h1,
 	.entry-summary h1,
 	.page-content h1,
@@ -5057,7 +4768,6 @@ p > video {
 		margin-top: 1.6em;
 		margin-bottom: 0.8em;
 	}
-
 	.entry-content h2,
 	.entry-summary h2,
 	.page-content h2,
@@ -5068,7 +4778,6 @@ p > video {
 		margin-top: 1.931em;
 		margin-bottom: 0.9655em;
 	}
-
 	.entry-content h3,
 	.entry-summary h3,
 	.page-content h3,
@@ -5079,7 +4788,6 @@ p > video {
 		margin-top: 2.3333em;
 		margin-bottom: 1.1667em;
 	}
-
 	.entry-content h4,
 	.entry-summary h4,
 	.page-content h4,
@@ -5090,7 +4798,6 @@ p > video {
 		margin-top: 2.8em;
 		margin-bottom: 1.4em;
 	}
-
 	.entry-content h5,
 	.entry-content h6,
 	.entry-summary h5,
@@ -5105,23 +4812,19 @@ p > video {
 		margin-top: 3.2941em;
 		margin-bottom: 1.6471em;
 	}
-
 	.entry-content .more-link:after,
 	.entry-summary .more-link:after {
 		font-size: 24px;
 		top: 2px;
 	}
-
 	.author-info .avatar {
 		height: 42px;
 		margin: 0 1.6471em 1.6471em 0;
 		width: 42px;
 	}
-
 	.author-link:after {
 		top: 3px;
 	}
-
 	.posted-on:before,
 	.byline:before,
 	.cat-links:before,
@@ -5132,11 +4835,9 @@ p > video {
 	.full-size-link:before {
 		top: 3px;
 	}
-
 	.taxonomy-description {
 		padding-top: 0.4118em;
 	}
-
 	.page-title,
 	.comments-title,
 	.comment-reply-title,
@@ -5145,20 +4846,16 @@ p > video {
 		font-size: 2.4rem;
 		line-height: 1.1667;
 	}
-
 	.page-links {
 		margin-bottom: 1.4117em;
 	}
-
 	.page-links a,
 	.page-links > span {
 		margin: 0 0.2857em 0.2857em 0;
 	}
-
 	.entry-attachment {
 		margin-bottom: 1.6471em;
 	}
-
 	.format-aside .entry-title,
 	.format-image .entry-title,
 	.format-video .entry-title,
@@ -5173,79 +4870,63 @@ p > video {
 		line-height: 1.4;
 		margin-bottom: 1.4em;
 	}
-
 	.format-link .entry-title a:after {
 		top: 0.0833em;
 	}
-
 	.comments-title {
 		margin-bottom: 1.4em;
 	}
-
 	.comment-list article,
 	.comment-list .pingback,
 	.comment-list .trackback {
 		padding: 1.6471em 0;
 	}
-
 	.comment-list + .comment-respond,
 	.comment-navigation + .comment-respond {
 		padding-top: 1.6471em;
 	}
-
 	.comment-list .children > li {
 		padding-left: 1.1667em;
 	}
-
 	.comment-author {
 		margin-bottom: 0;
 	}
-
 	.comment-author .avatar {
 		height: 42px;
 		margin-right: 1.64705em;
 		top: 5px;
 		width: 42px;
 	}
-
 	.bypostauthor > article .fn:after {
 		top: 7px;
 		left: 6px;
 	}
-
 	.comment-metadata .edit-link:before {
 		top: 6px;
 	}
-
 	.pingback .edit-link:before {
 		top: 6px;
 	}
-
 	.comment-content ul,
 	.comment-content ol {
 		margin-bottom: 1.6471em;
 	}
-
 	.comment-list .reply a {
 		padding: 0.4286em 0.8571em;
 	}
-
 	.comment-form,
 	.no-comments {
 		padding-top: 1.6471em;
 	}
-
 	.comment-reply-title small a:before {
 		top: -1px;
 	}
-
 	embed,
 	iframe,
 	object,
 	video {
 		margin-bottom: 1.6471em;
 	}
-
 	.wp-audio-shortcode,
 	.wp-video,
 	.wp-playlist.wp-audio-playlist {
@@ -5253,24 +4934,19 @@ p > video {
 		font-size: 1.7rem;
 		margin-bottom: 1.6471em;
 	}
-
 	.wp-caption,
 	.gallery {
 		margin-bottom: 1.6471em;
 	}
-
 	.widecolumn .mu_alert {
 		margin-bottom: 1.6471em;
 	}
-
 	.widecolumn p {
 		margin: 1.6471em 0;
 	}
-
 	.widecolumn p + h2 {
 		margin-top: 1.6em;
 	}
-
 	.widecolumn #key,
 	.widecolumn .mu_register #blog_title,
 	.widecolumn .mu_register #user_email,
@@ -5279,7 +4955,6 @@ p > video {
 		font-size: 17px;
 		font-size: 1.7rem;
 	}
-
 	.widecolumn .mu_register #blog_title,
 	.widecolumn .mu_register #user_email,
 	.widecolumn .mu_register #user_name {
@@ -5302,12 +4977,10 @@ p > video {
 		font-size: 1.9rem;
 		line-height: 1.6842;
 	}
-
 	button,
 	input {
 		line-height: normal;
 	}
-
 	p,
 	address,
 	pre,
@@ -5320,7 +4993,6 @@ p > video {
 		margin-bottom: 1.6842em;
 		font-size: 0.8em;
 	}
-
 	blockquote {
 		font-size: 22px;
 		font-size: 2.2rem;
@@ -5329,22 +5001,18 @@ p > video {
 		margin-left: -1.0909em;
 		padding-left: 0.9091em;
 	}
-
 	blockquote p {
 		margin-bottom: 1.8182em;
 	}
-
 	blockquote cite,
 	blockquote small {
 		font-size: 19px;
 		font-size: 1.9rem;
 		line-height: 1.6842;
 	}
-
 	pre {
 		line-height: 1.2632;
 	}
-
 	button,
 	input[type="button"],
 	input[type="reset"],
@@ -5356,7 +5024,6 @@ p > video {
 		font-size: 1.6rem;
 		padding: 0.8125em 1.625em;
 	}
-
 	input[type="text"],
 	input[type="email"],
 	input[type="url"],
@@ -5365,46 +5032,37 @@ p > video {
 	textarea {
 		padding: 0.5278em;
 	}
-
 	.main-navigation {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
-
 	.main-navigation a {
 		padding: 0.5em 0;
 	}
-
 	.main-navigation .menu-item-has-children > a {
 		padding-right: 38px;
 	}
-
 	.main-navigation .menu-item-description {
 		font-size: 13px;
 		font-size: 1.3rem;
 		line-height: 1.5385;
 		margin-top: 0.3077em;
 	}
-
 	.dropdown-toggle {
 		height: 32px;
 		top: 4px;
 		width: 32px;
 	}
-
 	.dropdown-toggle:after {
 		line-height: 32px;
 		width: 32px;
 	}
-
 	.social-navigation ul {
 		margin-bottom: -1.2632em;
 	}
-
 	.social-navigation a {
 		height: 2.5263em;
 	}
-
 	.post-password-form label,
 	.post-navigation .meta-nav,
 	.comment-navigation,
@@ -5431,30 +5089,25 @@ p > video {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
-
 	.pagination .nav-links {
 		min-height: 3.3684em;
 	}
-
 	.pagination .page-numbers {
 		line-height: 3.3684em;
 		padding: 0 0.8421em;
 	}
-
 	.pagination .prev,
 	.pagination .next {
 		height: 64px;
 		padding: 0;
 		width: 64px;
 	}
-
 	.pagination .prev:before,
 	.pagination .next:before {
 		height: 64px;
 		line-height: 64px;
 		width: 64px;
 	}
-
 	.image-navigation .nav-previous a:before,
 	.image-navigation .nav-next a:after,
 	.comment-navigation .nav-previous a:before,
@@ -5462,61 +5115,51 @@ p > video {
 		font-size: 24px;
 		top: -1px;
 	}
-
 	blockquote.alignleft,
 	.wp-caption.alignleft,
 	img.alignleft {
 		margin: 0.4211em 1.6842em 1.6842em 0;
 	}
-
 	blockquote.alignright,
 	.wp-caption.alignright,
 	img.alignright {
 		margin: 0.4211em 0 1.6842em 1.6842em;
 	}
-
 	blockquote.aligncenter,
 	.wp-caption.aligncenter,
 	img.aligncenter {
 		margin-top: 0.4211em;
 		margin-bottom: 1.6842em;
 	}
-
 	.wp-caption.alignleft,
 	.wp-caption.alignright,
 	.wp-caption.aligncenter {
 		margin-bottom: 1.2632em;
 	}
-
 	.site-title {
 		font-size: 27px;
 		font-size: 2.7rem;
 		line-height: 1.1852;
 	}
-
 	.site-description {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
-
 	.widget {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
-
 	.widget blockquote {
 		font-size: 16px;
 		font-size: 1.6rem;
 		padding-left: 1.25em;
 	}
-
 	.widget blockquote cite,
 	.widget blockquote small {
 		font-size: 13px;
 		font-size: 1.3rem;
 		line-height: 1.8462;
 	}
-
 	.widget button,
 	.widget input,
 	.widget select,
@@ -5524,7 +5167,6 @@ p > video {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
-
 	.widget button,
 	.widget input[type="button"],
 	.widget input[type="reset"],
@@ -5533,7 +5175,6 @@ p > video {
 		font-size: 1.3rem;
 		padding: 0.8462em 1.6923em;
 	}
-
 	.widget input[type="text"],
 	.widget input[type="email"],
 	.widget input[type="url"],
@@ -5542,7 +5183,6 @@ p > video {
 	.widget textarea {
 		padding: 0.5em;
 	}
-
 	.widget .wp-caption-text,
 	.widget .gallery-caption {
 		font-size: 13px;
@@ -5550,16 +5190,13 @@ p > video {
 		line-height: 1.5385;
 		padding: 0.6154em 0;
 	}
-
 	.widget_calendar td,
 	.widget_calendar th {
 		line-height: 1.9375;
 	}
-
 	.widget_calendar caption {
 		margin: 0 0 1.5em;
 	}
-
 	.widget_archive li,
 	.widget_categories li,
 	.widget_links li,
@@ -5570,25 +5207,21 @@ p > video {
 	.widget_recent_entries li {
 		padding: 0.4688em 0;
 	}
-
 	.widget_categories .children,
 	.widget_nav_menu .sub-menu,
 	.widget_pages .children {
 		margin: 0.4688em 0 0 1em;
 		padding-top: 0.4688em;
 	}
-
 	.widget_rss .rss-date,
 	.widget_rss cite {
 		font-size: 13px;
 		font-size: 1.3rem;
 		line-height: 1.8462;
 	}
-
 	.post-thumbnail {
 		margin-bottom: 2.9474em;
 	}
-
 	.entry-title,
 	.widecolumn h2 {
 		font-size: 39px;
@@ -5596,7 +5229,6 @@ p > video {
 		line-height: 1.2308;
 		margin-bottom: 1.2308em;
 	}
-
 	.entry-content h1,
 	.entry-summary h1,
 	.page-content h1,
@@ -5607,7 +5239,6 @@ p > video {
 		margin-top: 1.641em;
 		margin-bottom: 0.8205em;
 	}
-
 	.entry-content h2,
 	.entry-summary h2,
 	.page-content h2,
@@ -5618,7 +5249,6 @@ p > video {
 		margin-top: 2em;
 		margin-bottom: 1em;
 	}
-
 	.entry-content h3,
 	.entry-summary h3,
 	.page-content h3,
@@ -5629,7 +5259,6 @@ p > video {
 		margin-top: 2.3704em;
 		margin-bottom: 1.1852em;
 	}
-
 	.entry-content h4,
 	.entry-summary h4,
 	.page-content h4,
@@ -5640,7 +5269,6 @@ p > video {
 		margin-top: 2.9091em;
 		margin-bottom: 1.4545em;
 	}
-
 	.entry-content h5,
 	.entry-content h6,
 	.entry-summary h5,
@@ -5655,23 +5283,19 @@ p > video {
 		margin-top: 3.3684em;
 		margin-bottom: 1.6842em;
 	}
-
 	.entry-content .more-link:after,
 	.entry-summary .more-link:after {
 		top: 3px;
 	}
-
 	.author-info .avatar {
 		height: 56px;
 		margin: 0 1.6842em 1.6842em 0;
 		width: 56px;
 	}
-
 	.author-link:after {
 		font-size: 24px;
 		top: 0;
 	}
-
 	.posted-on:before,
 	.byline:before,
 	.cat-links:before,
@@ -5682,11 +5306,9 @@ p > video {
 	.full-size-link:before {
 		top: 4px;
 	}
-
 	.taxonomy-description {
 		padding-top: 0.4211em;
 	}
-
 	.page-title,
 	.comments-title,
 	.comment-reply-title,
@@ -5695,20 +5317,16 @@ p > video {
 		font-size: 2.7rem;
 		line-height: 1.1852;
 	}
-
 	.page-links {
 		margin-bottom: 1.4736em;
 	}
-
 	.page-links a,
 	.page-links > span {
 		margin: 0 0.25em 0.25em 0;
 	}
-
 	.entry-attachment {
 		margin-bottom: 1.6842em;
 	}
-
 	.format-aside .entry-title,
 	.format-image .entry-title,
 	.format-video .entry-title,
@@ -5723,70 +5341,56 @@ p > video {
 		line-height: 1.4545;
 		margin-bottom: 1.4545em;
 	}
-
 	.format-link .entry-title a:after {
 		top: 3px;
 	}
-
 	.comments-title {
 		margin-bottom: 1.4545em;
 	}
-
 	.comment-list article,
 	.comment-list .pingback,
 	.comment-list .trackback {
 		padding: 1.6842em 0;
 	}
-
 	.comment-list + .comment-respond,
 	.comment-navigation + .comment-respond {
 		padding-top: 1.6842em;
 	}
-
 	.comment-list .children > li {
 		padding-left: 1.4737em;
 	}
-
 	.comment-author .avatar {
 		height: 56px;
 		margin-right: 1.6842em;
 		top: 3px;
 		width: 56px;
 	}
-
 	.bypostauthor > article .fn:after {
 		top: 8px;
 	}
-
 	.comment-metadata .edit-link:before {
 		top: 8px;
 	}
-
 	.pingback .edit-link:before {
 		top: 8px;
 	}
-
 	.comment-content ul,
 	.comment-content ol {
 		margin-bottom: 1.6842em;
 	}
-
 	.comment-list .reply a {
 		padding: 0.4375em 0.875em;
 	}
-
 	.comment-form,
 	.no-comments {
 		padding-top: 1.6842em;
 	}
-
 	embed,
 	iframe,
 	object,
 	video {
 		margin-bottom: 1.6842em;
 	}
-
 	.wp-audio-shortcode,
 	.wp-video,
 	.wp-playlist.wp-audio-playlist {
@@ -5794,24 +5398,19 @@ p > video {
 		font-size: 1.9rem;
 		margin-bottom: 1.6842em;
 	}
-
 	.wp-caption,
 	.gallery {
 		margin-bottom: 1.6842em;
 	}
-
 	.widecolumn .mu_alert {
 		margin-bottom: 1.6842em;
 	}
-
 	.widecolumn p {
 		margin: 1.6842em 0;
 	}
-
 	.widecolumn p + h2 {
 		margin-top: 1.641em;
 	}
-
 	.widecolumn #key,
 	.widecolumn .mu_register #blog_title,
 	.widecolumn .mu_register #user_email,
@@ -5820,7 +5419,6 @@ p > video {
 		font-size: 19px;
 		font-size: 1.9rem;
 	}
-
 	.widecolumn .mu_register #blog_title,
 	.widecolumn .mu_register #user_email,
 	.widecolumn .mu_register #user_name {
@@ -5847,10 +5445,10 @@ p > video {
 
 @media print {
 	body {
-		background: none !important; /* Brute force since user agents all print differently. */
+		background: none !important;
+		/* Brute force since user agents all print differently. */
 		font-size: 11.25pt;
 	}
-
 	.secondary-toggle,
 	.navigation,
 	.page-links,
@@ -5867,7 +5465,6 @@ p > video {
 	.widecolumn .mu_register form {
 		display: none;
 	}
-
 	.site-header,
 	.site-footer,
 	.hentry,
@@ -5876,9 +5473,9 @@ p > video {
 	.page-content,
 	.comments-area,
 	.widecolumn {
-		background: none !important; /* Make sure color schemes dont't affect to print */
+		background: none !important;
+		/* Make sure color schemes dont't affect to print */
 	}
-
 	body,
 	blockquote,
 	blockquote cite,
@@ -5903,9 +5500,9 @@ p > video {
 	.site-info a,
 	.wp-caption-text,
 	.gallery-caption {
-		color: #000 !important; /* Make sure color schemes don't affect to print */
+		color: #000 !important;
+		/* Make sure color schemes don't affect to print */
 	}
-
 	pre,
 	abbr[title],
 	table,
@@ -5922,78 +5519,63 @@ p > video {
 	.comment-list .pingback,
 	.comment-list .trackback,
 	.no-comments {
-		border-color: #eaeaea !important; /* Make sure color schemes don't affect to print */
+		border-color: #eaeaea !important;
+		/* Make sure color schemes don't affect to print */
 	}
-
 	.site {
 		margin: 0 7.6923%;
 	}
-
 	.sidebar {
-		position: relative !important; /* Make sure sticky sidebar doesn't affect to print */
+		position: relative !important;
+		/* Make sure sticky sidebar doesn't affect to print */
 	}
-
 	.site-branding {
 		padding: 0;
 	}
-
 	.site-header {
 		padding: 7.6923% 0;
 	}
-
 	.site-description {
 		display: block;
 	}
-
 	.hentry + .hentry {
 		margin-top: 7.6923%;
 	}
-
 	.hentry.has-post-thumbnail {
 		padding-top: 7.6923%;
 	}
-
 	.sticky-post {
 		background: #000 !important;
 		color: #fff !important;
 	}
-
 	.entry-header,
 	.entry-footer {
 		padding: 0;
 	}
-
 	.entry-content,
 	.entry-summary {
 		padding: 0 0 7.6923%;
 	}
-
 	.post-thumbnail img {
 		margin: 0;
 	}
-
 	.author-info {
 		margin: 0;
 	}
-
 	.page-content {
 		padding: 7.6923% 0 0;
 	}
-
 	.page-header {
 		padding: 3.84615% 0;
 	}
-
 	.comments-area {
 		border: 0;
 		padding: 7.6923% 0 0;
 	}
-
 	.site-footer {
 		margin-top: 7.6923%;
 		padding: 3.84615% 0;
 	}
-
 	.widecolumn {
 		margin: 7.6923% 0 0;
 		padding: 0;
@@ -6001,105 +5583,133 @@ p > video {
 }
 
 .woocommerce .woocommerce-message {
-    border-top-color: #48887B;
+	border-top-color: #48887B;
 }
 
 .woocommerce .woocommerce-message:before {
-    color: #48887B;
+	color: #48887B;
 }
 
-.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
-    background-color: #48887B;
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	background-color: #48887B;
 }
 
 .woocommerce .woocommerce-info {
-    border-top-color: #48887B;
+	border-top-color: #48887B;
 }
 
 .woocommerce .woocommerce-info:before {
-    color: #48887B;
+	color: #48887B;
 }
 
-.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
-    background-color: #3fb49c;
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: #3fb49c;
 }
+
 
 /* one column checkout page */
-.woocommerce #customer_details.col2-set .col-1, .woocommerce-page #customer_details.col2-set .col-1,
-.woocommerce #customer_details.col2-set .col-2, .woocommerce-page #customer_details.col2-set .col-2 {
-    clear: both;
-    float: none !important;
-    width: 100% !important;
-    margin-right:0 !important;
-    text-align: left;
-    padding-bottom: 20px;
+
+.woocommerce #customer_details.col2-set .col-1,
+.woocommerce-page #customer_details.col2-set .col-1,
+.woocommerce #customer_details.col2-set .col-2,
+.woocommerce-page #customer_details.col2-set .col-2 {
+	clear: both;
+	float: none !important;
+	width: 100% !important;
+	margin-right: 0 !important;
+	text-align: left;
+	padding-bottom: 20px;
 }
 
-.woocommerce h2, .woocommerce h3{
+.woocommerce h2,
+.woocommerce h3 {
 	color: #48887B;
 }
 
 .page-id-7 .woocommerce {
-	width:100%;
+	width: 100%;
 }
 
 .page-id-7 .woocommerce .col-1 {
-	width:100%;	
+	width: 100%;
 }
 
 .page-id-7 .woocommerce .col-2 {
-	width:100%;
+	width: 100%;
 }
 
-#menu-principal a{
+#menu-principal a {
 	color: #48887B;
 }
 
-.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
-    font-size: 100%;
-    text-transform: inherit;
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	font-size: 100%;
+	text-transform: inherit;
 }
 
-.woocommerce .posted_in{
+.woocommerce .posted_in {
 	display: none;
 }
 
-.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
-    width: 100%;
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+	width: 100%;
 }
 
-.pluris2016 .t15wc{
-    float: left;
+.pluris2016 .t15wc {
+	float: left;
 }
 
 .woocommerce-page div.product div.images {
-    width: 100% !important;
+	width: 100% !important;
 }
 
-.woocommerce form.checkout_coupon{
- 	display: block !important;
+.woocommerce form.checkout_coupon {
+	display: block !important;
 }
 
-.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
 	background-color: #48887B;
 	color: #FFF;
 }
 
-.woocommerce ul.products li.product .price del, p.price del {
-    display: none;
-}
-
-.woocommerce-billing-fields h3{
+.woocommerce ul.products li.product .price del,
+p.price del {
 	display: none;
 }
 
-.wc_payment_methods .about_paypal{
+.woocommerce-billing-fields h3 {
 	display: none;
 }
 
-#cnpj{
+.wc_payment_methods .about_paypal {
+	display: none;
+}
+
+#cnpj {
 	text-align: center;
-    background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255, 255, 255, 0.8);
+	font-size: 10pt;
+	padding: 10pt 0pt;
+}
+
+.woocommerce a.cancel {
+	background-color: #b81c23;
     font-size: 10pt;
-    padding: 10pt 0pt; 
+    text-align: center;
+    float: right;
 }
