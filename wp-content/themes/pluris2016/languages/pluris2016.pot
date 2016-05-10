@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Pluris 2016\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"POT-Revision-Date: Thu May 05 2016 22:01:24 GMT-0300 (BRT)\n"
+"POT-Revision-Date: Tue May 10 2016 16:43:30 GMT-0300 (BRT)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
@@ -150,7 +150,7 @@ msgstr ""
 msgid "collapse child menu"
 msgstr ""
 
-#: ../functions.php:367
+#: ../functions.php:367 ../woocommerce/checkout/payment.php:26
 msgid "Choose payment method"
 msgstr ""
 
@@ -160,6 +160,10 @@ msgstr ""
 
 #: ../functions.php:390
 msgid "Instituition Name"
+msgstr ""
+
+#: ../functions.php:399 ../functions.php:399
+msgid "Finish payment"
 msgstr ""
 
 #: ../header.php:24
@@ -504,26 +508,25 @@ msgstr ""
 
 #: ../woocommerce/cart/cart-totals.php:91 ../woocommerce/cart/cart-totals.php:92 .
 #: ./woocommerce/cart/cart.php:38 ../woocommerce/cart/cart.php:118 ..
-#: woocommerce/checkout/review-order.php:26 ../woocommerce/checkout/review-order.
+#: /woocommerce/checkout/review-order.php:26 ../woocommerce/checkout/review-order.
 #: php:105 ../woocommerce/myaccount/my-orders.php:28 ../woocommerce/order/order-
 #: details.php:32
 msgid "Total"
 msgstr ""
 
 #: ../woocommerce/cart/cart.php:35 ../woocommerce/cart/cart.php:77 ..
-#: woocommerce/checkout/form-pay.php:28 ../woocommerce/checkout/review-order.php:
-#: 25 ../woocommerce/emails/email-order-details.php:33 ../woocommerce/order/order-
+#: /woocommerce/emails/email-order-details.php:33 ../woocommerce/order/order-
 #: details.php:31
 msgid "Product"
 msgstr ""
 
 #: ../woocommerce/cart/cart.php:36 ../woocommerce/cart/cart.php:95 ..
-#: woocommerce/emails/email-order-details.php:35
+#: /woocommerce/emails/email-order-details.php:35
 msgid "Price"
 msgstr ""
 
 #: ../woocommerce/cart/cart.php:37 ../woocommerce/cart/cart.php:101 ..
-#: woocommerce/emails/email-order-details.php:34
+#: /woocommerce/emails/email-order-details.php:34
 msgid "Quantity"
 msgstr ""
 
@@ -655,6 +658,11 @@ msgid ""
 "Shipping section."
 msgstr ""
 
+#: ../woocommerce/checkout/form-pay.php:28 ../woocommerce/checkout/review-order.
+#: php:25
+msgid "Registers"
+msgstr ""
+
 #: ../woocommerce/checkout/form-pay.php:29
 msgid "Qty"
 msgstr ""
@@ -679,25 +687,25 @@ msgstr ""
 msgid "Additional Information"
 msgstr ""
 
-#: ../woocommerce/checkout/payment.php:34
+#: ../woocommerce/checkout/payment.php:37
 msgid ""
 "Sorry, it seems that there are no available payment methods for your state. "
 "Please contact us if you require assistance or wish to make alternate "
 "arrangements."
 msgstr ""
 
-#: ../woocommerce/checkout/payment.php:34
+#: ../woocommerce/checkout/payment.php:37
 msgid "Please fill in your details above to see available payment methods."
 msgstr ""
 
-#: ../woocommerce/checkout/payment.php:41
+#: ../woocommerce/checkout/payment.php:44
 msgid ""
 "Since your browser does not support JavaScript, or it is disabled, please "
 "ensure you click the <em>Update Totals</em> button before placing your order."
 " You may be charged more than the amount stated above if you fail to do so."
 msgstr ""
 
-#: ../woocommerce/checkout/payment.php:42
+#: ../woocommerce/checkout/payment.php:45
 msgid "Update totals"
 msgstr ""
 
@@ -745,13 +753,13 @@ msgid "Payment Method:"
 msgstr ""
 
 #: ../woocommerce/emails/admin-cancelled-order.php:27 ..
-#: woocommerce/emails/plain/admin-cancelled-order.php:24
+#: /woocommerce/emails/plain/admin-cancelled-order.php:24
 #, php-format
 msgid "The order #%d from %s has been cancelled. The order was as follows:"
 msgstr ""
 
 #: ../woocommerce/emails/admin-failed-order.php:27 ..
-#: woocommerce/emails/plain/admin-failed-order.php:24
+#: /woocommerce/emails/plain/admin-failed-order.php:24
 #, php-format
 msgid "Payment for order #%d from %s has failed. The order was as follows:"
 msgstr ""
@@ -762,7 +770,7 @@ msgid "You have received an order from %s. The order is as follows:"
 msgstr ""
 
 #: ../woocommerce/emails/customer-completed-order.php:27 ..
-#: woocommerce/emails/plain/customer-completed-order.php:24
+#: /woocommerce/emails/plain/customer-completed-order.php:24
 #, php-format
 msgid ""
 "Hi there. Your recent order on %s has been completed. Your order details are "
@@ -770,7 +778,7 @@ msgid ""
 msgstr ""
 
 #: ../woocommerce/emails/customer-invoice.php:28 ..
-#: woocommerce/emails/plain/customer-invoice.php:25
+#: /woocommerce/emails/plain/customer-invoice.php:25
 #, php-format
 msgid ""
 "An order has been created for you on %s. To pay for this order please use "
@@ -782,7 +790,7 @@ msgid "pay"
 msgstr ""
 
 #: ../woocommerce/emails/customer-new-account.php:26 ..
-#: woocommerce/emails/plain/customer-new-account.php:24
+#: /woocommerce/emails/plain/customer-new-account.php:24
 #, php-format
 msgid "Thanks for creating an account on %s. Your username is <strong>%s</strong>."
 msgstr ""
@@ -793,7 +801,7 @@ msgid "Your password has been automatically generated: <strong>%s</strong>"
 msgstr ""
 
 #: ../woocommerce/emails/customer-new-account.php:34 ..
-#: woocommerce/emails/plain/customer-new-account.php:29
+#: /woocommerce/emails/plain/customer-new-account.php:29
 #, php-format
 msgid ""
 "You can access your account area to view your orders and change your "
@@ -801,17 +809,17 @@ msgid ""
 msgstr ""
 
 #: ../woocommerce/emails/customer-note.php:27 ..
-#: woocommerce/emails/plain/customer-note.php:24
+#: /woocommerce/emails/plain/customer-note.php:24
 msgid "Hello, a note has just been added to your order:"
 msgstr ""
 
 #: ../woocommerce/emails/customer-note.php:31 ..
-#: woocommerce/emails/plain/customer-note.php:32
+#: /woocommerce/emails/plain/customer-note.php:32
 msgid "For your reference, your order details are shown below."
 msgstr ""
 
 #: ../woocommerce/emails/customer-processing-order.php:27 ..
-#: woocommerce/emails/plain/customer-processing-order.php:24
+#: /woocommerce/emails/plain/customer-processing-order.php:24
 msgid ""
 "Your order has been received and is now being processed. Your order details "
 "are shown below for your reference:"
@@ -828,23 +836,23 @@ msgid "Hi there. Your order on %s has been refunded."
 msgstr ""
 
 #: ../woocommerce/emails/customer-reset-password.php:26 ..
-#: woocommerce/emails/plain/customer-reset-password.php:24
+#: /woocommerce/emails/plain/customer-reset-password.php:24
 msgid "Someone requested that the password be reset for the following account:"
 msgstr ""
 
 #: ../woocommerce/emails/customer-reset-password.php:27 ..
-#: woocommerce/emails/plain/customer-reset-password.php:26
+#: /woocommerce/emails/plain/customer-reset-password.php:26
 #, php-format
 msgid "Username: %s"
 msgstr ""
 
 #: ../woocommerce/emails/customer-reset-password.php:28 ..
-#: woocommerce/emails/plain/customer-reset-password.php:27
+#: /woocommerce/emails/plain/customer-reset-password.php:27
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr ""
 
 #: ../woocommerce/emails/customer-reset-password.php:29 ..
-#: woocommerce/emails/plain/customer-reset-password.php:28
+#: /woocommerce/emails/plain/customer-reset-password.php:28
 msgid "To reset your password, visit the following address:"
 msgstr ""
 
@@ -863,7 +871,7 @@ msgid "Shipping address"
 msgstr ""
 
 #: ../woocommerce/emails/email-customer-details.php:25 ..
-#: woocommerce/emails/plain/email-customer-details.php:24
+#: /woocommerce/emails/plain/email-customer-details.php:24
 msgid "Customer details"
 msgstr ""
 
@@ -947,6 +955,13 @@ msgctxt "Product quantity input tooltip"
 msgid "Qty"
 msgstr ""
 
+#: ../woocommerce/loop/add-to-cart.php:31 ../woocommerce/myaccount/form-login.php:
+#: 74 ../woocommerce/myaccount/form-login.php:111 ../woocommerce/single-
+#: product/add-to-cart/external.php:27 ../woocommerce/single-product/add-to-
+#: cart/simple.php:57
+msgid "Register"
+msgstr ""
+
 #: ../woocommerce/loop/no-products-found.php:23
 msgid "No products were found matching your selection."
 msgstr ""
@@ -991,7 +1006,7 @@ msgid "Last name"
 msgstr ""
 
 #: ../woocommerce/myaccount/form-edit-account.php:40 ..
-#: woocommerce/myaccount/form-login.php:90
+#: /woocommerce/myaccount/form-login.php:90
 msgid "Email address"
 msgstr ""
 
@@ -1017,7 +1032,7 @@ msgstr ""
 
 #: ../woocommerce/myaccount/form-edit-address.php:22 ../woocommerce/myaccount/my-
 #: address.php:27 ../woocommerce/myaccount/my-address.php:33 ..
-#: woocommerce/order/order-details-customer.php:57
+#: /woocommerce/order/order-details-customer.php:57
 msgid "Billing Address"
 msgstr ""
 
@@ -1028,11 +1043,6 @@ msgstr ""
 
 #: ../woocommerce/myaccount/form-edit-address.php:48
 msgid "Save Address"
-msgstr ""
-
-#: ../woocommerce/myaccount/form-login.php:74 ../woocommerce/myaccount/form-login.
-#: php:111
-msgid "Register"
 msgstr ""
 
 #: ../woocommerce/myaccount/form-login.php:83
@@ -1126,7 +1136,7 @@ msgid "Status"
 msgstr ""
 
 #: ../woocommerce/myaccount/my-orders.php:42
-msgid "Recent Orders"
+msgid "Recent registers"
 msgstr ""
 
 #: ../woocommerce/myaccount/my-orders.php:67
@@ -1344,7 +1354,4 @@ msgstr ""
 
 #. Author of the theme
 msgid "Bruno Serrão"
-msgstr ""
-
-msgid "Recent registers"
 msgstr ""

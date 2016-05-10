@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Pluris 2016\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"PO-Revision-Date: Tue May 10 2016 16:43:51 GMT-0300 (BRT)\n"
+"PO-Revision-Date: Tue May 10 2016 16:24:04 GMT-0300 (BRT)\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
 "Language: Portuguese (Brazil)\n"
@@ -146,10 +146,6 @@ msgstr ""
 #: ../functions.php:261
 msgid "collapse child menu"
 msgstr ""
-
-#: ../functions.php:399 ../functions.php:399
-msgid "Finish payment"
-msgstr "Finalizar pagamento"
 
 #: ../header.php:24
 msgid "Skip to content"
@@ -500,8 +496,8 @@ msgid "Total"
 msgstr ""
 
 #: ../woocommerce/cart/cart.php:35 ../woocommerce/cart/cart.php:77 ..
-#: woocommerce/emails/email-order-details.php:33 ../woocommerce/order/order-
-#: details.php:31
+#: woocommerce/checkout/form-pay.php:28 ../woocommerce/emails/email-order-
+#: details.php:33 ../woocommerce/order/order-details.php:31
 msgid "Product"
 msgstr ""
 
@@ -635,27 +631,31 @@ msgstr ""
 msgid "Additional Information"
 msgstr ""
 
-#: ../woocommerce/checkout/payment.php:37
+#: ../woocommerce/checkout/payment.php:34
 msgid ""
 "Sorry, it seems that there are no available payment methods for your state. "
 "Please contact us if you require assistance or wish to make alternate "
 "arrangements."
 msgstr ""
 
-#: ../woocommerce/checkout/payment.php:37
+#: ../woocommerce/checkout/payment.php:34
 msgid "Please fill in your details above to see available payment methods."
 msgstr ""
 
-#: ../woocommerce/checkout/payment.php:44
+#: ../woocommerce/checkout/payment.php:41
 msgid ""
 "Since your browser does not support JavaScript, or it is disabled, please "
 "ensure you click the <em>Update Totals</em> button before placing your order."
 " You may be charged more than the amount stated above if you fail to do so."
 msgstr ""
 
-#: ../woocommerce/checkout/payment.php:45
+#: ../woocommerce/checkout/payment.php:42
 msgid "Update totals"
 msgstr ""
+
+#: ../woocommerce/checkout/review-order.php:25
+msgid "Registers"
+msgstr "Inscrições"
 
 #: ../woocommerce/checkout/terms.php:16
 #, php-format
@@ -1193,7 +1193,7 @@ msgstr ""
 msgid "Bruno Serrão"
 msgstr ""
 
-#: ../functions.php:367 ../woocommerce/checkout/payment.php:26
+#: ../functions.php:367
 msgid "Choose payment method"
 msgstr "Escolha a forma de pagamento"
 
@@ -1236,11 +1236,6 @@ msgstr "Pagamento"
 #: ../woocommerce/checkout/form-coupon.php:27
 msgid "Have a coupon?"
 msgstr "Você tem um cupom de desconto ?"
-
-#: ../woocommerce/checkout/form-pay.php:28 ../woocommerce/checkout/review-order.
-#: php:25
-msgid "Registers"
-msgstr "Inscrições"
 
 #: ../woocommerce/checkout/thankyou.php:29 ../woocommerce/myaccount/my-orders.php:
 #: 84

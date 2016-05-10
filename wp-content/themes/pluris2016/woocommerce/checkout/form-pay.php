@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<table class="shop_table">
 		<thead>
 			<tr>
-				<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
+				<th class="product-name"><?php _e( 'Registers', 'pluris2016' ); ?></th>
 				<th class="product-quantity"><?php _e( 'Qty', 'woocommerce' ); ?></th>
 				<th class="product-total"><?php _e( 'Totals', 'woocommerce' ); ?></th>
 			</tr>
