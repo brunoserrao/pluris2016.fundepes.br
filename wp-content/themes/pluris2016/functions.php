@@ -398,6 +398,3 @@ add_filter('woocommerce_order_button_html','custom_woocommerce_order_button_html
 function custom_woocommerce_order_button_html(){
 	return '<input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' .__('Finish payment', 'pluris2016') . '" data-value="' .__('Finish payment', 'pluris2016') . '" />';
 }
-
-// echo apply_filters( 'woocommerce_order_button_html', '<input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />' );
-
