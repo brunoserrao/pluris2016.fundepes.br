@@ -390,3 +390,14 @@ function custom_override_checkout_fields( $fields ) {
 	$fields['billing']['billing_instituition']['label'] =  __( 'Instituition Name', 'pluris2016' );
 	return $fields;
 }
+
+/**
+* Renomear Label do campo Company Name
+*/
+add_filter('woocommerce_order_button_html','custom_woocommerce_order_button_html');
+function custom_woocommerce_order_button_html(){
+	return '<input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' .__('Finish payment', 'pluris2016') . '" data-value="' .__('Finish payment', 'pluris2016') . '" />';
+}
+
+// echo apply_filters( 'woocommerce_order_button_html', '<input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '" />' );
+
