@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-04-28 17:21:08+0000\n"
+"PO-Revision-Date: 2016-05-07 15:24:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8071,7 +8071,7 @@ msgstr "%s descuentos en total"
 
 #: includes/admin/reports/class-wc-report-coupon-usage.php:114
 msgid "%d coupons used in total"
-msgstr "%s cupones usados en total"
+msgstr "%d cupones usados en total"
 
 #: includes/admin/reports/class-wc-report-coupon-usage.php:128
 #: includes/admin/reports/class-wc-report-customers.php:162
@@ -11040,7 +11040,7 @@ msgstr "Ten en cuenta: es posible que aún tenga que añadir las tasas de impues
 
 #: includes/admin/class-wc-admin-setup-wizard.php:524
 msgid "You can edit tax rates later from the %1$stax settings%3$s screen and read more about taxes in %2$sour documentation%3$s."
-msgstr "Puede editar las tasas de impuestos más tarde en la pantalla de 1%$s ajustes de impuestos%3$s y leer más sobre impuestos en%2$s nuestra documentación%3$s."
+msgstr "Puedes modificar las tasas de impuestos más tarde en la pantalla de %1$sajustes de impuestos%3$s y leer más sobre impuestos en%2$snuestra documentación%3$s."
 
 #: includes/admin/class-wc-admin-setup-wizard.php:645
 msgid "WooCommerce can accept both online and offline payments. %2$sAdditional payment methods%3$s can be installed later and managed from the %1$scheckout settings%3$s screen."
