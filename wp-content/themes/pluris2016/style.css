@@ -5707,6 +5707,20 @@ p.price del {
 	padding: 10pt 0pt;
 }
 
+#cnpj ul{
+	display: block;
+	width: 100%;
+	margin: 20px 0px;
+}
+
+#cnpj ul li{
+	display: inline-block;
+}
+
+#cnpj ul li img{
+	margin: 10px 20px;
+}
+
 .woocommerce a.cancel {
 	background-color: #b81c23;
     font-size: 10pt;
