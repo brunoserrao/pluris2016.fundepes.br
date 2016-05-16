@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the 4.5.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-04-14 17:35:45+0000\n"
+"PO-Revision-Date: 2016-05-16 13:10:26+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1293,15 +1293,12 @@ msgid ""
 msgstr ""
 "Olá, ###USERNAME###.\n"
 "\n"
-"Este aviso confirma que o seu e-mail foi alterado em ###SITENAME###.\n"
+"Este aviso confirma que o seu e-mail foi modificado em ###SITENAME###.\n"
 "\n"
-"Caso você não tenha alterado seu e-mail, contate o Administrador do Site em\n"
-"###ADMIN_EMAIL###\n"
-"\n"
-"Este e-mail foi enviado para ###EMAIL###\n"
+"Caso você não tenha alterado seu e-mail, contate a equipe de suporte em ###ADMIN_EMAIL###\n"
 "\n"
 "Atenciosamente,\n"
-"Todos do ###SITENAME###\n"
+"Equipe ###SITENAME###\n"
 "###SITEURL###"
 
 #. translators: Do not translate USERNAME, ADMIN_EMAIL, EMAIL, SITENAME,
@@ -1325,13 +1322,10 @@ msgstr ""
 "\n"
 "Este aviso confirma que a sua senha foi alterada em ###SITENAME###.\n"
 "\n"
-"Caso você não tenha alterado sua senha, contate o Administrador do Site em\n"
-"###ADMIN_EMAIL###\n"
-"\n"
-"Este e-mail foi enviado para ###EMAIL###\n"
+"Caso você não tenha alterado sua senha, contate a equipe de suporte em ###ADMIN_EMAIL###\n"
 "\n"
 "Atenciosamente,\n"
-"Todos do ###SITENAME###\n"
+"Equipe ###SITENAME###\n"
 "###SITEURL###"
 
 #: wp-includes/user.php:1785
@@ -1907,9 +1901,9 @@ msgstr ""
 "Senha: PASSWORD\n"
 "LOGINLINK\n"
 "\n"
-"Obrigado!\n"
-"\n"
-"--A equipe SITE_NAME"
+"Atenciosamente,\n"
+"Equipe SITE_NAME\n"
+"###SITEURL### "
 
 #. translators: Do not translate USERNAME, SITE_NAME, BLOG_URL, PASSWORD: those
 #. are placeholders.
@@ -1941,9 +1935,9 @@ msgstr ""
 "Senha: PASSWORD\n"
 "Faça login aqui: BLOG_URLwp-login.php\n"
 "\n"
-"Esperamos que você aproveite seu novo site! Obrigado\n"
+"Esperamos que você aproveite seu novo site!\n"
 "\n"
-"--A equipe SITE_NAME"
+"--Equipe SITE_NAME"
 
 #: wp-includes/media.php:3351
 msgid "Drag and drop to reorder media files."
@@ -5781,7 +5775,7 @@ msgstr "Mas, antes que você possa começar a usar seu site, <strong>você deve 
 
 #: wp-signup.php:735
 msgid "If you do not activate your site within two days, you will have to sign up again."
-msgstr "Se você não ativar seu site dentro de dois dias, você terá que se registrar novamente."
+msgstr "Se você não ativar seu site dentro de dois dias, você terá que se cadastrar novamente."
 
 #: wp-includes/widgets/class-wp-nav-menu-widget.php:139
 msgid "Select Menu:"
