@@ -123,10 +123,9 @@ class BrunoApi {
 	public function noticias(WP_REST_Request $request) {
 		$id = !empty($request['id']) ? $request['id'] : false;
 		$thumb_size = !empty($id) ? 'full' : 'thumbnail';
-		$paged = !empty($request['paged']) ? $request['paged'] : 1;
 		
 		$this->posts_per_page = !empty($request['posts_per_page']) ? $request['posts_per_page'] : get_option('posts_per_page');
-		$this->paged = !empty($request['posts_per_page']) ? $request['posts_per_page'] : 1;
+		$this->paged = !empty($request['paged']) ? $request['paged'] : 1;
 		
 		if (!empty($request['fields'])) {
 			$this->__merge_fields(explode(',',$request['fields']));
@@ -143,6 +142,7 @@ class BrunoApi {
 		}
 
 		$query_args['post_type'] = 'post';
+		$query_args['paged'] = $this->paged;
 
 		$posts_query = new WP_Query();
 		$query_result = $posts_query->query( $query_args );
@@ -161,9 +161,9 @@ class BrunoApi {
 			$total_posts = $posts_query->found_posts;
 
 			$paging = array(
-				'actual_page' => $paged,
-				'total_pages' => ceil( $total_posts / $this->posts_per_page ),
-				'total_posts' => $total_posts
+				'actual_page' => (int) $this->paged,
+				'total_pages' => (int) ceil( $total_posts / $this->posts_per_page ),
+				'total_posts' => (int) $total_posts
 			);
 
 			$result['paging'] = $paging;
