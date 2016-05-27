@@ -71,12 +71,12 @@ class BrunoApi {
 		$noticias = $this->noticias($request);
 
 		$request['id'] = 2;
-		$apresentacao = $this->pagina($request);
+		$pagina = $this->pagina($request);
 		
 		$result = array(
 			'data' => array(
 				'noticias' 		=> $noticias,
-				'apresentacao'	=> $apresentacao
+				'pagina'	=> $pagina
 			)
 		);
 
