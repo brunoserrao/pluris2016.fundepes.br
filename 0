@@ -1,0 +1,336 @@
+[19-May-2016 14:15:24 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463835369'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[19-May-2016 15:49:07 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463835369'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[19-May-2016 17:19:16 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463846989'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[19-May-2016 17:27:47 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463848028'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[19-May-2016 19:42:24 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463855859'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[20-May-2016 12:53:41 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463916833'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[20-May-2016 13:21:01 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463918836'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[20-May-2016 13:22:24 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463918836'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[20-May-2016 14:44:25 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463924642'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[20-May-2016 14:44:37 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463924642'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[20-May-2016 15:49:09 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463775024'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[20-May-2016 15:50:34 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463775024'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[20-May-2016 19:02:54 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1463775024'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[30-May-2016 15:16:25 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1464790501'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[30-May-2016 17:10:10 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1464796219'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[30-May-2016 17:10:38 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1464796219'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[30-May-2016 17:11:52 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1464796219'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[30-May-2016 17:17:19 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1464797718'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[30-May-2016 17:18:06 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1464796219'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[01-Jun-2016 12:04:44 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1464951798'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
+[01-Jun-2016 17:08:46 UTC] Erro de banco de dados do WordPress Table 'pluris20_banco.wp_posts' doesn't exist para a consulta 
+					
+						SELECT 
+							wp_posts.* 
+						FROM 
+							wp_posts                                        								
+						WHERE 
+							wp_posts.post_parent = '1464969952'  
+                        AND 
+							wp_posts.post_type = 'attachment' 
+						AND 
+							((wp_posts.post_status = 'inherit')) 
+                        ORDER BY 
+							wp_posts.post_date 
+						DESC 
+							LIMIT 0, 1 feita por require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), call_user_func_array, WooCommerce->init, do_action('woocommerce_init'), call_user_func_array, file_during_checkout
