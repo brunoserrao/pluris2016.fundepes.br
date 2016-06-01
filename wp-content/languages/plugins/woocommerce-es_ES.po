@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-05-07 15:24:29+0000\n"
+"PO-Revision-Date: 2016-05-13 10:35:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2189,7 +2189,7 @@ msgstr "[{site_title}] - Cancelada la orden ({order_number})"
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:14
 #: includes/shipping/free-shipping/class-wc-shipping-free-shipping.php:69
 msgid "Enable/Disable"
-msgstr "Habilitar/Inhabilitar"
+msgstr "Activar/Desactivar"
 
 #: includes/emails/class-wc-email-cancelled-order.php:105
 #: includes/emails/class-wc-email-customer-completed-order.php:141
@@ -2198,7 +2198,7 @@ msgstr "Habilitar/Inhabilitar"
 #: includes/emails/class-wc-email-new-order.php:110
 #: includes/emails/class-wc-email.php:483
 msgid "Enable this email notification"
-msgstr "Habilitar esta notificación por correo electrónico"
+msgstr "Activar este aviso por correo electrónico"
 
 #: includes/admin/settings/class-wc-settings-emails.php:235
 #: includes/emails/class-wc-email-cancelled-order.php:109
@@ -2552,7 +2552,7 @@ msgstr "Permite el pago mediante transferencia bancaria."
 
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:76
 msgid "Enable Bank Transfer"
-msgstr "Habilitar transferencia bancaria"
+msgstr "Activar transferencia bancaria"
 
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:80
 #: includes/gateways/cheque/class-wc-gateway-cheque.php:60
@@ -2721,11 +2721,11 @@ msgstr "Permite que sus clientes paguen en efectivo (o por otros medios) cuando 
 
 #: includes/gateways/cod/class-wc-gateway-cod.php:61
 msgid "Enable COD"
-msgstr "Habilitar contra reembolso"
+msgstr "Activar contra reembolso"
 
 #: includes/gateways/cod/class-wc-gateway-cod.php:62
 msgid "Enable Cash on Delivery"
-msgstr "Habilitar contra reembolso"
+msgstr "Activar contra reembolso"
 
 #: includes/gateways/cod/class-wc-gateway-cod.php:77
 msgid "Payment method description that the customer will see on your website."
@@ -2742,11 +2742,11 @@ msgstr "Instrucciones que se añadirán a la página de agradecimiento."
 
 #: includes/gateways/cod/class-wc-gateway-cod.php:89
 msgid "Enable for shipping methods"
-msgstr "Habilitar para métodos de envío"
+msgstr "Activar para métodos de envío"
 
 #: includes/gateways/cod/class-wc-gateway-cod.php:94
 msgid "If COD is only available for certain methods, set it up here. Leave blank to enable for all methods."
-msgstr "Si deseas que el contra reembolso sólo esté disponible para ciertos métodos de envío, establécelo aquí. Déjalo en blanco para habilitarlo para todos los métodos."
+msgstr "Si deseas que el contra reembolso sólo esté disponible para ciertos métodos de envío, establécelo aquí. Déjalo en blanco para activarlo para todos los métodos."
 
 #: includes/gateways/cod/class-wc-gateway-cod.php:98
 msgid "Select shipping methods"
@@ -2858,7 +2858,7 @@ msgstr "Enviar por %s"
 
 #: includes/gateways/paypal/includes/settings-paypal.php:14
 msgid "Enable PayPal standard"
-msgstr "Habilitar PayPal estándar"
+msgstr "Activar PayPal estándar"
 
 #: includes/gateways/paypal/includes/settings-paypal.php:28
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:202
@@ -2883,7 +2883,7 @@ msgstr "Entorno de pruebas de PayPal"
 
 #: includes/gateways/paypal/includes/settings-paypal.php:42
 msgid "Enable PayPal sandbox"
-msgstr "Habilitar el entorno de pruebas de PayPal"
+msgstr "Activar el entorno de pruebas de PayPal"
 
 #: includes/gateways/paypal/includes/settings-paypal.php:44
 msgid "PayPal sandbox can be used to test payments. Sign up for a developer account <a href=\"%s\">here</a>."
@@ -2895,7 +2895,7 @@ msgstr "Registro de depuración"
 
 #: includes/gateways/paypal/includes/settings-paypal.php:49
 msgid "Enable logging"
-msgstr "Habilitar registro"
+msgstr "Permitir registro"
 
 #: includes/gateways/paypal/includes/settings-paypal.php:51
 msgid "Log PayPal events, such as IPN requests, inside <code>%s</code>"
@@ -3115,7 +3115,7 @@ msgstr "Simplify Commerce está habilitado, pero la <a href=\"%s\">opción de fo
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:187
 msgid "Enable Simplify Commerce"
-msgstr "Habilitar Simplify Commerce"
+msgstr "Activar Simplify Commerce"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:196
 msgid "Credit card"
@@ -3127,7 +3127,7 @@ msgstr "Método de pago"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:208
 msgid "Enable Hosted Payments"
-msgstr "Habilitar pagos Alojados"
+msgstr "Activar pagos Alojados"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:210
 msgid "Standard will display the credit card fields on your store (SSL required). %1$s Hosted Payments will display a Simplify Commerce modal dialog on your store (if SSL) or will redirect the customer to Simplify Commerce hosted page (if not SSL). %1$s Note: Hosted Payments need a new API Key pair with the hosted payments flag selected. %2$sFor more details check the Simplify Commerce docs%3$s."
@@ -3151,7 +3151,7 @@ msgstr "Modo de pruebas"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:226
 msgid "Enable Sandbox Mode"
-msgstr "Habilitar modo de pruebas"
+msgstr "Activar modo de pruebas"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:228
 msgid "Place the payment gateway in sandbox mode using sandbox API keys (real payments will not be taken)."
@@ -3367,7 +3367,7 @@ msgstr "El envío local es un método de entrega simple que lleva los pedidos en
 #: includes/shipping/local-delivery/class-wc-shipping-local-delivery.php:89
 #: includes/shipping/local-pickup/class-wc-shipping-local-pickup.php:67
 msgid "Enable"
-msgstr "Habilitar"
+msgstr "Activar"
 
 #: includes/shipping/local-delivery/class-wc-shipping-local-delivery.php:91
 msgid "Enable local delivery"
@@ -3399,7 +3399,7 @@ msgstr "Gastos de envío"
 
 #: includes/shipping/local-delivery/class-wc-shipping-local-delivery.php:117
 msgid "What fee do you want to charge for local delivery, disregarded if you choose free. Leave blank to disable."
-msgstr "Qué cuota deseas cobrar para entregas locales, aunque haya elegido gratis. Dejar en blanco para inhabilitar."
+msgstr "Qué cuota deseas cobrar para entregas locales, aunque haya elegido gratis. Dejar en blanco para desactivar."
 
 #: includes/shipping/local-delivery/class-wc-shipping-local-delivery.php:123
 #: includes/shipping/local-pickup/class-wc-shipping-local-pickup.php:80
@@ -4894,7 +4894,7 @@ msgstr "Obtén remoto"
 
 #: includes/admin/views/html-admin-page-status-report.php:258
 msgid "WooCommerce plugins may use this method of communication when checking for plugin updates."
-msgstr "Plugins WooCommerce pueden utilizar este método de comunicación en la comprobación de actualizaciones del plugin."
+msgstr "Los plugins para WooCommerce pueden utilizar este método de comunicación en la comprobación de actualizaciones del plugin."
 
 #: includes/admin/views/html-admin-page-status-report.php:265
 msgid "wp_remote_get() failed. The WooCommerce plugin updater won't work with your server. Contact your hosting provider."
@@ -5160,7 +5160,7 @@ msgstr "Modo de depuración de envío"
 
 #: includes/admin/views/html-admin-page-status-tools.php:40
 msgid "This tool will disable shipping rate caching."
-msgstr "Esta herramienta va a deshabilitar el caché de la tarifa de envío."
+msgstr "Esta herramienta va a desactivar la caché de la tarifa de envío."
 
 #: includes/admin/views/html-admin-page-status-tools.php:45
 msgid "Template Debug Mode"
@@ -6174,7 +6174,7 @@ msgstr "Webhook topic debe ser válido"
 
 #: includes/admin/settings/class-wc-settings-checkout.php:76
 msgid "Enable the use of coupons"
-msgstr "Habilitar el uso de cupones"
+msgstr "Activa el uso de cupones"
 
 #: includes/admin/settings/class-wc-settings-checkout.php:81
 msgid "Coupons can be applied from the cart and checkout pages."
@@ -6195,11 +6195,11 @@ msgstr "Finalizar compra"
 
 #: includes/admin/settings/class-wc-settings-checkout.php:97
 msgid "Enable guest checkout"
-msgstr "Habilitar comprobación de invitados"
+msgstr "Permitir finalizar compra como invitado"
 
 #: includes/admin/settings/class-wc-settings-checkout.php:98
 msgid "Allows customers to checkout without creating an account."
-msgstr "Permite a los clientes a la comprobación sin crear una cuenta."
+msgstr "Permite a los clientes finalizar la compra sin crear una cuenta de usuario."
 
 #: includes/admin/settings/class-wc-settings-checkout.php:107
 msgid "Force secure checkout"
@@ -6421,7 +6421,7 @@ msgstr "Aviso para la tienda"
 
 #: includes/admin/settings/class-wc-settings-general.php:104
 msgid "Enable site-wide store notice text"
-msgstr "Habilitar un aviso de texto en toda la tienda"
+msgstr "Activa un aviso de texto en toda la tienda"
 
 #: includes/admin/settings/class-wc-settings-general.php:111
 msgid "Store Notice Text"
@@ -6571,11 +6571,11 @@ msgstr "Redirigir a la página del carrito tras añadir productos con éxito"
 
 #: includes/admin/settings/class-wc-settings-products.php:163
 msgid "Enable AJAX add to cart buttons on archives"
-msgstr "Habilitar botones de añadir al carrito en AJAX en los archivos"
+msgstr "Activar botones AJAX de añadir al carrito en los archivos"
 
 #: includes/admin/settings/class-wc-settings-products.php:178
 msgid "These settings affect the display and dimensions of images in your catalog - the display on the front-end will still be affected by CSS styles. After changing these settings you may need to <a href=\"%s\">regenerate your thumbnails</a>."
-msgstr "Estos ajustes afectan a la pantalla y las dimensiones de las imágenes de su catálogo - la pantalla en el front-end seguirá siendo afectado por los estilos CSS. Después de cambiar estos ajustes puede que tenga que <a href=\"%s\">volver a generar las miniaturas</a> ."
+msgstr "Estos ajustes afectan a la visualización y las dimensiones de las imágenes de tu catálogo - la visualización en la tienda seguirá afectada por los estilos CSS. Después de cambiar estos ajustes puede que tengas que <a href=\"%s\">volver a generar tus miniaturas</a> ."
 
 #: includes/admin/settings/class-wc-settings-products.php:183
 msgid "Catalog Images"
@@ -6607,7 +6607,7 @@ msgstr "Galería de imágenes del producto"
 
 #: includes/admin/settings/class-wc-settings-products.php:226
 msgid "Enable Lightbox for product images"
-msgstr "Habilitar la mesa de luz para imágenes de producto"
+msgstr "Activar la mesa de luz para imágenes de producto"
 
 #: includes/admin/settings/class-wc-settings-products.php:229
 msgid "Include WooCommerce's lightbox. Product gallery images will open in a lightbox."
@@ -6619,7 +6619,7 @@ msgstr "Gestionar stock"
 
 #: includes/admin/settings/class-wc-settings-products.php:252
 msgid "Enable stock management"
-msgstr "Habilitar la gestión de stocks"
+msgstr "Activar la gestión de stocks"
 
 #: includes/admin/settings/class-wc-settings-products.php:259
 msgid "Hold Stock (minutes)"
@@ -6747,7 +6747,7 @@ msgstr "Puntuaciones del producto"
 
 #: includes/admin/settings/class-wc-settings-products.php:471
 msgid "Enable ratings on reviews"
-msgstr "Habilitar puntuaciones en las valoraciones"
+msgstr "Activar puntuaciones en las valoraciones"
 
 #: includes/admin/settings/class-wc-settings-products.php:481
 msgid "Ratings are required to leave a review"
@@ -6776,7 +6776,7 @@ msgstr "Habilitar el envío"
 
 #: includes/admin/settings/class-wc-settings-shipping.php:83
 msgid "Enable the shipping calculator on the cart page"
-msgstr "Habilitar la calculadora de envíos en la página de compra"
+msgstr "Activar la calculadora de envíos en la página de compra"
 
 #: includes/admin/settings/class-wc-settings-shipping.php:92
 msgid "Hide shipping costs until an address is entered"
@@ -7154,11 +7154,11 @@ msgstr "Webhook Logs"
 
 #: includes/admin/settings/views/settings-tax.php:12
 msgid "Enable Taxes"
-msgstr "Habilitar impuestos"
+msgstr "Activar impuestos"
 
 #: includes/admin/settings/views/settings-tax.php:13
 msgid "Enable taxes and tax calculations"
-msgstr "Habilitar los impuestos y los cálculos de impuestos"
+msgstr "Activa los impuestos y los cálculos de impuestos"
 
 #: includes/admin/settings/views/settings-tax.php:20
 msgid "Prices Entered With Tax"
@@ -7335,7 +7335,7 @@ msgstr "Vendido Individualmente"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:350
 msgid "Enable this to only allow one of this item to be bought in a single order"
-msgstr "Habilitar esto sólo para que uno de este artículo que se compra en un solo pedido"
+msgstr "Activa esto para permitir que solo se pueda comprar uno de estos artículos en cada pedido "
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:369
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:704
@@ -7457,7 +7457,7 @@ msgstr "Ordenar personalizada posición."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:572
 msgid "Enable reviews"
-msgstr "Habilitar comentarios"
+msgstr "Activa las valoraciones"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:627
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:96
@@ -7988,7 +7988,7 @@ msgstr "Habilite esta opción si un producto no se envía o no hay gastos de env
 
 #: includes/admin/meta-boxes/views/html-variation-admin.php:84
 msgid "Enable this option to enable stock management at variation level"
-msgstr "Active esta opción para habilitar la gestión de existencias en cada variación"
+msgstr "Activa esta opción para permitir la gestión de existencias en cada variación"
 
 #: includes/admin/meta-boxes/views/html-variation-admin.php:93
 msgid "Regular Price:"
@@ -8579,15 +8579,15 @@ msgstr "Opciones de Registro"
 
 #: includes/admin/settings/class-wc-settings-accounts.php:110
 msgid "Enable Registration"
-msgstr "Habilitar registro"
+msgstr "Activar registro"
 
 #: includes/admin/settings/class-wc-settings-accounts.php:111
 msgid "Enable registration on the \"Checkout\" page"
-msgstr "Habilitar registro en la página \"Finalizar compra\""
+msgstr "Activa el registro en la página \"Finalizar compra\""
 
 #: includes/admin/settings/class-wc-settings-accounts.php:120
 msgid "Enable registration on the \"My Account\" page"
-msgstr "Habilitar registro en la página \"Mi cuenta\""
+msgstr "Activa el registro en la página \"Mi cuenta\""
 
 #: includes/admin/settings/class-wc-settings-accounts.php:129
 msgid "Display returning customer login reminder on the \"Checkout\" page"
@@ -8618,7 +8618,7 @@ msgstr "Opciones generales"
 
 #: includes/admin/settings/class-wc-settings-api.php:69
 msgid "Enable the REST API"
-msgstr "Habilitar la API REST"
+msgstr "Activa la API REST"
 
 #: includes/admin/settings/class-wc-settings-checkout.php:28
 msgctxt "Settings tab label"
@@ -8904,7 +8904,7 @@ msgstr "Usar imagen"
 
 #: includes/admin/class-wc-admin-taxonomies.php:276
 msgid "Product categories for your store can be managed here. To change the order of categories on the front-end you can drag and drop to sort them. To see more categories listed click the \"screen options\" link at the top of the page."
-msgstr "Las categorías de producto de tu tienda se pueden gestionar desde aquí. Puedes arrastrar y soltarlas las categorías para cambiarlas de orden en el front-end . Si quieres que se muestren más categorías, pulsa en el enlace \"opciones de pantalla\" en la parte superior de esta página."
+msgstr "Las categorías de producto de tu tienda se pueden gestionar desde aquí. Para cambiar el orden de las categorías en la tienda puedes arrastrarlas y soltarlas aquí. Para ver aquí más categorías haz clic en el enlace de \"opciones de pantalla\" de la parte superior de la página."
 
 #: includes/admin/class-wc-admin-taxonomies.php:283
 msgid "Shipping classes can be used to group products of similar type. These groups can then be used by certain shipping methods to provide different rates to different products."
@@ -9738,7 +9738,7 @@ msgstr "¿Gestión de inventario?"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:305
 msgid "Enable stock management at product level"
-msgstr "Habilitar gestión de inventario por cada producto"
+msgstr "Activa la gestión de inventario por cada producto"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:314
 #: includes/admin/views/html-bulk-edit-product.php:255
@@ -10738,7 +10738,7 @@ msgstr "Localización de la tienda"
 
 #: includes/admin/class-wc-admin-setup-wizard.php:74
 msgid "Shipping &amp; Tax"
-msgstr "Envío &amp; Impuestos"
+msgstr "Envío e Impuestos"
 
 #: includes/admin/class-wc-admin-setup-wizard.php:79
 #: includes/admin/class-wc-admin-setup-wizard.php:643
@@ -11789,7 +11789,7 @@ msgstr "Error: ID de atributo inexistente."
 #: includes/admin/class-wc-admin-attributes.php:271
 #: includes/admin/class-wc-admin-attributes.php:437
 msgid "Name for the attribute (shown on the front-end)."
-msgstr "Nombre para el atributo (mostrado en la tienda)"
+msgstr "Nombre para el atributo (mostrado en la tienda)."
 
 #: includes/admin/class-wc-admin-attributes.php:276
 #: includes/admin/class-wc-admin-attributes.php:357
@@ -11805,7 +11805,7 @@ msgstr "Slug/referencia única para el atributo; debe tener menos de 28 caracter
 #: includes/admin/class-wc-admin-attributes.php:285
 #: includes/admin/class-wc-admin-attributes.php:447
 msgid "Enable Archives?"
-msgstr "¿Habilitar archivo?"
+msgstr "¿Activamos el archivo?"
 
 #: includes/admin/class-wc-admin-attributes.php:289
 #: includes/admin/class-wc-admin-attributes.php:449
@@ -12264,7 +12264,7 @@ msgstr "%s Productos"
 
 #: includes/admin/class-wc-admin-meta-boxes.php:127
 msgid "%s Notes"
-msgstr "%s Notas"
+msgstr "%s notas"
 
 #: includes/admin/class-wc-admin-meta-boxes.php:128
 msgid "Downloadable Product Permissions"
