@@ -94,23 +94,23 @@ class bsEvents {
 		wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
 
 		// Get the location data if its already been entered
-		$data_inicio = get_post_meta($post->ID, '_date_start', true);
-		$hora_inicio = get_post_meta($post->ID, '_time_inicio', true);
+		$date_start = get_post_meta($post->ID, 'date_start', true);
+		$time_start = get_post_meta($post->ID, 'time_start', true);
 
-		$data_fim = get_post_meta($post->ID, '_data_end', true);
-		$hora_fim = get_post_meta($post->ID, '_time_fim', true);
+		$date_end = get_post_meta($post->ID, 'data_end', true);
+		$time_end = get_post_meta($post->ID, 'time_end', true);
 
 		// Echo out the field
 		echo '<div class="bs-date-time-meta-box">';
 			echo '<label>'. __( 'Start Date and Time', 'bs-events' ).'</label>';
 			
-			echo '<input type="date" name="_date_start" value="' . $data_inicio  . '" class="date" />';
-			echo '<input type="time" name="_time_inicio" value="' . $hora_inicio  . '" class="time" />';
+			echo '<input type="date" name="date_start" value="' . $date_start  . '" class="date" />';
+			echo '<input type="time" name="time_start" value="' . $time_start  . '" class="time" />';
 
 			echo '<label>'. __( 'Finish Date and Time', 'bs-events' ).'</label>';
 
-			echo '<input type="date" name="_data_end" value="' . $data_fim  . '" class="date" />';
-			echo '<input type="time" name="_time_fim" value="' . $hora_fim  . '" class="time" />';
+			echo '<input type="date" name="data_end" value="' . $date_end  . '" class="date" />';
+			echo '<input type="time" name="time_end" value="' . $time_end  . '" class="time" />';
 		echo '</div>';
 	}
 
@@ -134,11 +134,11 @@ class bsEvents {
 		// OK, we're authenticated: we need to find and save the data
 		// We'll put it into an array to make it easier to loop though.
 		
-		$events_meta['_date_start'] = sanitize_text_field($_POST['_date_start']);
-		$events_meta['_time_inicio'] = sanitize_text_field($_POST['_time_inicio']);
+		$events_meta['date_start'] = sanitize_text_field($_POST['date_start']);
+		$events_meta['time_start'] = sanitize_text_field($_POST['time_start']);
 		
-		$events_meta['_data_end'] = sanitize_text_field($_POST['_data_end']);
-		$events_meta['_time_fim'] = sanitize_text_field($_POST['_time_fim']);
+		$events_meta['data_end'] = sanitize_text_field($_POST['data_end']);
+		$events_meta['time_end'] = sanitize_text_field($_POST['time_end']);
 
 		// Add values of $events_meta as custom fields
 		
