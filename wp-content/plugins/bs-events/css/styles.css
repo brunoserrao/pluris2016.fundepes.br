@@ -1,0 +1,20 @@
+.bs-date-time-meta-box{
+	display: inline-block;
+}
+
+.bs-date-time-meta-box label{
+	display: block;
+	clear: left;
+}
+
+.bs-date-time-meta-box input{
+	float: left;
+}
+
+.bs-date-time-meta-box input.date{
+	width: 60%;
+}
+
+.bs-date-time-meta-box input.time{
+	width: 38%;
+}
