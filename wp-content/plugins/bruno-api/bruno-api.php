@@ -59,6 +59,20 @@ class BrunoApi {
 				'callback'  => array($this, 'home')
 			)
 		);
+
+		register_rest_route( $this->namespace,'/eventos',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'eventos')
+			)
+		);
+
+		register_rest_route( $this->namespace, '/eventos/(?P<id>[\d]+)',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'eventos')
+			)
+		);
 	}
 
 	/**
@@ -173,6 +187,64 @@ class BrunoApi {
 	}
 
 	/**
+	* Requisitar posts do tipo Eventos
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function eventos(WP_REST_Request $request) {
+		$id = !empty($request['id']) ? $request['id'] : false;
+		$thumb_size = !empty($id) ? 'full' : 'thumbnail';
+		
+		$this->posts_per_page = -1;
+		$this->paged = !empty($request['paged']) ? $request['paged'] : 1;
+		
+		if (!empty($request['fields'])) {
+			$this->__merge_fields(explode(',',$request['fields']));
+		}	
+	
+		if (!empty($request['s'])) {
+			$query_args['s'] = $request['s'];
+		}
+
+		if (!empty($id)) {
+			$query_args = array();
+			array_push($this->default_fields,'post_content');
+			$query_args['p'] = $id;
+		}
+
+		$query_args['post_type'] = 'bs_posts_events';
+		$query_args['paged'] = $this->paged;
+
+		$posts_query = new WP_Query();
+		$query_result = $posts_query->query( $query_args );
+
+		if (empty($query_result)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Invalid resource.' ), array( 'status' => 404 ) );
+		}
+
+		$parse_result = $this->__parse_result($query_result);
+
+		$result = array(
+			'data' => $parse_result
+		);
+
+		if (empty($id)) {
+			$total_posts = $posts_query->found_posts;
+
+			$paging = array(
+				'actual_page' => (int) $this->paged,
+				'total_pages' => (int) ceil( $total_posts / $this->posts_per_page ),
+				'total_posts' => (int) $total_posts
+			);
+
+			$result['paging'] = $paging;
+		}
+		
+		return $result;
+	}
+
+	/**
 	* Requisitar posts ou post por ID
 	*
 	* @param null
@@ -207,7 +279,7 @@ class BrunoApi {
 			}
 
 			if (isset($query_result[$key]->post_content)) {
-				 $query_result[$key]->post_content = wpautop( $query_result[$key]->post_content );
+				$query_result[$key]->post_content = wpautop( $query_result[$key]->post_content );
 			}
 
 			$thumbnail_id = get_post_thumbnail_id( $query_result[$key]->ID );
@@ -216,6 +288,7 @@ class BrunoApi {
 			$query_result[$key]->link = get_permalink( $query_result[$key]->ID );
 			$query_result[$key]->thumbnail = $thumbnail[0];
 			$query_result[$key]->post_date = get_the_date('', $query_result[$key]->ID );
+			$query_result[$key]->metas = get_post_meta( $query_result[$key]->ID );
 		}
 
 		return $query_result;
