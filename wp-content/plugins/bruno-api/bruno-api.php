@@ -228,18 +228,6 @@ class BrunoApi {
 		$result = array(
 			'data' => $parse_result
 		);
-
-		if (empty($id)) {
-			$total_posts = $posts_query->found_posts;
-
-			$paging = array(
-				'actual_page' => (int) $this->paged,
-				'total_pages' => (int) ceil( $total_posts / $this->posts_per_page ),
-				'total_posts' => (int) $total_posts
-			);
-
-			$result['paging'] = $paging;
-		}
 		
 		return $result;
 	}
