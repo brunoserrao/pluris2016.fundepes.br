@@ -97,7 +97,7 @@ class bsEvents {
 		$date_start = get_post_meta($post->ID, 'date_start', true);
 		$time_start = get_post_meta($post->ID, 'time_start', true);
 
-		$date_end = get_post_meta($post->ID, 'data_end', true);
+		$date_end = get_post_meta($post->ID, 'date_end', true);
 		$time_end = get_post_meta($post->ID, 'time_end', true);
 
 		// Echo out the field
@@ -109,7 +109,7 @@ class bsEvents {
 
 			echo '<label>'. __( 'Finish Date and Time', 'bs-events' ).'</label>';
 
-			echo '<input type="date" name="data_end" value="' . $date_end  . '" class="date" />';
+			echo '<input type="date" name="date_end" value="' . $date_end  . '" class="date" />';
 			echo '<input type="time" name="time_end" value="' . $time_end  . '" class="time" />';
 		echo '</div>';
 	}
@@ -137,7 +137,7 @@ class bsEvents {
 		$events_meta['date_start'] = sanitize_text_field($_POST['date_start']);
 		$events_meta['time_start'] = sanitize_text_field($_POST['time_start']);
 		
-		$events_meta['data_end'] = sanitize_text_field($_POST['data_end']);
+		$events_meta['date_end'] = sanitize_text_field($_POST['date_end']);
 		$events_meta['time_end'] = sanitize_text_field($_POST['time_end']);
 
 		// Add values of $events_meta as custom fields
