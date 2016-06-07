@@ -196,7 +196,6 @@ class BrunoApi {
 		$id = !empty($request['id']) ? $request['id'] : false;
 		$thumb_size = !empty($id) ? 'full' : 'thumbnail';
 		
-		$this->posts_per_page = -1;
 		$this->paged = !empty($request['paged']) ? $request['paged'] : 1;
 		
 		if (!empty($request['fields'])) {
@@ -214,7 +213,7 @@ class BrunoApi {
 		}
 
 		$query_args['post_type'] = 'bs_posts_events';
-		$query_args['paged'] = $this->paged;
+		$query_args['posts_per_page'] = -1;
 
 		$posts_query = new WP_Query();
 		$query_result = $posts_query->query( $query_args );
