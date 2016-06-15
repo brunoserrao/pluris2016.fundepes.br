@@ -5731,3 +5731,16 @@ p.price del {
 .woocommerce div.product .out-of-stock {
     color: #b81c23;
 }
+
+@media screen and (min-width: 1024px) {
+	.woocommerce.product-columns-2 ul.products li.product, .woocommerce-page.product-columns-2 ul.products li.product {
+	    clear: none;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.woocommerce.product-columns-2 ul.products li.product, .woocommerce-page.product-columns-2 ul.products li.product {
+		width: 100%;
+	    clear: both;
+	}
+}
