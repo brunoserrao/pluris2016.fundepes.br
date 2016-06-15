@@ -22,10 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $my_orders_columns = apply_filters( 'woocommerce_my_account_my_orders_columns', array(
-	'order-number'  => __( 'Order', 'woocommerce' ),
-	'order-date'    => __( 'Date', 'woocommerce' ),
-	'order-status'  => __( 'Status', 'woocommerce' ),
-	'order-total'   => __( 'Total', 'woocommerce' ),
+	'order-number'  => __( 'Order', 'pluris2016' ),
+	'order-date'    => __( 'Date', 'pluris2016' ),
+	'order-status'  => __( 'Status', 'pluris2016' ),
+	'order-total'   => __( 'Total', 'pluris2016' ),
 	'order-actions' => '&nbsp;',
 ) );
 
@@ -64,7 +64,7 @@ if ( $customer_orders ) : ?>
 
 							<?php elseif ( 'order-number' === $column_id ) : ?>
 								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-									<?php echo _x( '#', 'hash before order number', 'woocommerce' ) . $order->get_order_number(); ?>
+									<?php echo _x( '#', 'hash before order number', 'pluris2016' ) . $order->get_order_number(); ?>
 								</a>
 
 							<?php elseif ( 'order-date' === $column_id ) : ?>
@@ -74,22 +74,22 @@ if ( $customer_orders ) : ?>
 								<?php echo wc_get_order_status_name( $order->get_status() ); ?>
 
 							<?php elseif ( 'order-total' === $column_id ) : ?>
-								<?php echo sprintf( _n( '%s for %s item', '%s for %s items', $item_count, 'woocommerce' ), $order->get_formatted_order_total(), $item_count ); ?>
+								<?php echo sprintf( _n( '%s for %s item', '%s for %s items', $item_count, 'pluris2016' ), $order->get_formatted_order_total(), $item_count ); ?>
 
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
 								<?php
 									$actions = array(
 										'pay'    => array(
 											'url'  => $order->get_checkout_payment_url(),
-											'name' => __( 'Pay', 'woocommerce' )
+											'name' => __( 'Pay', 'pluris2016' )
 										),
 										'view'   => array(
 											'url'  => $order->get_view_order_url(),
-											'name' => __( 'View', 'woocommerce' )
+											'name' => __( 'View', 'pluris2016' )
 										),
 										'cancel' => array(
 											'url'  => $order->get_cancel_order_url( wc_get_page_permalink( 'myaccount' ) ),
-											'name' => __( 'Cancel', 'woocommerce' )
+											'name' => __( 'Cancel', 'pluris2016' )
 										)
 									);
 
