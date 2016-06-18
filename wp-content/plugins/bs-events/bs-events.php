@@ -70,6 +70,25 @@ class bsEvents {
 				)
 			)
 		);
+
+
+		add_filter('manage_bs_posts_events_posts_columns', 'add_new_bs_posts_events', 10);
+		add_action('manage_bs_posts_events_posts_custom_column', 'ST4_columns_content_only_movies', 10, 2);
+
+		function add_new_bs_posts_events($defaults) {
+			 $defaults['btn_notificar'] = __( 'Notificar', 'bs-events' );
+			 return $defaults;
+		}
+
+		function ST4_columns_content_only_movies($column_name, $post_ID) {
+			switch ($column_name) {
+				case 'btn_notificar':
+					echo '<input class="page-title-action" type="button" value="'. __( 'Send notification', 'bs-events' ) .'" />';
+					break;
+				default:
+					break;
+			}
+		}
 	}
 
 	/**
