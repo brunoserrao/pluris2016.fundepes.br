@@ -22,8 +22,8 @@ class bsEvents {
 		add_action( 'save_post', array( $this, 'save_meta_boxes' ), 1, 2 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_plugin_scripts' ),1, 3 );
 
-		add_filter('manage_bs_posts_events_posts_columns', array($this, 'add_new_bs_posts_events'), 10);
-		add_action('manage_bs_posts_events_posts_custom_column', array($this, 'add_bs_posts_events_button_notify'), 10, 2);
+		add_filter('manage_posts_columns', array($this, 'add_new_bs_posts_events'), 10);
+		add_action('manage_posts_custom_column', array($this, 'add_bs_posts_events_button_notify'), 10, 2);
 
 		add_action('wp_ajax_bs_events_send_notification', array($this, 'bs_events_send_ajax_notification'));
 		add_action('wp_ajax_nopriv_bs_events_send_notification', array($this, 'bs_events_send_ajax_notification'));
@@ -58,7 +58,7 @@ class bsEvents {
 		}
 
 		$qtx = new QTX_Translator();
-		
+
 		$args = array(
 			'method' => 'POST',
 			'sslverify' => false,
@@ -89,10 +89,11 @@ class bsEvents {
 		);
 
 		$response = wp_remote_request( $url, $args );
-		// print_r($response);
+		
 		if ( is_wp_error( $response ) ) {
 			echo $response->get_error_message();
 		}
+
 		wp_die();
 	}
 
