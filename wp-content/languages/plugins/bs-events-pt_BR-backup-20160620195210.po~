@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Bruno Eventos\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Thu Jun 02 2016 12:55:50 GMT-0300 (BRT)\n"
-"PO-Revision-Date: Mon Jun 20 2016 16:52:09 GMT-0300 (BRT)\n"
+"PO-Revision-Date: Mon Jun 20 2016 16:51:37 GMT-0300 (BRT)\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
 "Language: Portuguese (Brazil)\n"
@@ -22,9 +22,9 @@ msgstr ""
 "X-Loco-Target-Locale: pt_BR\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: ../../plugins/bs-events/bs-events.php:86
-msgid "Send"
-msgstr "Enviar"
+#: ../../plugins/bs-events/bs-events.php:79
+msgid "Notification"
+msgstr "Notificação"
 
 #. Name of the plugin
 msgid "Bruno Eventos"
@@ -112,9 +112,9 @@ msgstr "Usar como imagem destaque"
 msgid "This is where you can add new events."
 msgstr "Aqui você cria novos eventos."
 
-#: ../../plugins/bs-events/bs-events.php:79
-msgid "Notification"
-msgstr "Notificação"
+#: ../../plugins/bs-events/bs-events.php:86
+msgid "Send notification"
+msgstr "Enviar"
 
 #: ../../plugins/bs-events/bs-events.php:101
 msgid "Event Date"
