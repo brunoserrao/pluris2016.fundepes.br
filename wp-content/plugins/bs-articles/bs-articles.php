@@ -12,7 +12,7 @@ class bsArticles {
 
 	public function __construct() {
 		$this->load_plugin_textdomain();
-		$this->register_post_type();
+		add_action( 'init', array($this, 'register_post_type'), 0 );
 	}
 
 	/**
@@ -58,7 +58,8 @@ class bsArticles {
 					'query_var'           => true,
 					'supports'            => array( 'title', 'editor'),
 					'has_archive'         => true,
-					'show_in_nav_menus'   => true
+					'show_in_nav_menus'   => true,
+					'menu_icon'           => 'dashicons-paperclip'
 				)
 			)
 		);

@@ -12,12 +12,10 @@ class bsEvents {
 
 	public function __construct() {
 		$this->load_plugin_textdomain();
-
+		add_action( 'init', array($this, 'register_post_type'), 0 );
 		add_action( 'add_meta_boxes', array( $this, 'add_events_metaboxes' ), 30 );
 		add_action( 'save_post', array( $this, 'save_meta_boxes' ), 1, 2 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_plugin_scripts' ),1, 3 );
-		
-		$this->register_post_type();
 	}
 
 	/**
@@ -67,7 +65,8 @@ class bsEvents {
 					'query_var'           => true,
 					'supports'            => array( 'title', 'editor', 'thumbnail'),
 					'has_archive'         => true,
-					'show_in_nav_menus'   => true
+					'show_in_nav_menus'   => true,
+					'menu_icon'           => 'dashicons-tickets-alt'
 				)
 			)
 		);
@@ -150,7 +149,7 @@ class bsEvents {
 
 			$value = implode(',', (array)$value);
 
-			if(get_post_meta($post->ID, $key, FALSE)) {
+			if(get_post_meta($post->ID, $key, false)) {
 				update_post_meta($post->ID, $key, $value);
 			} else {
 				add_post_meta($post->ID, $key, $value);
