@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bruno Notifications\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Tue Jul 05 2016 22:19:35 GMT-0300 (BRT)\n"
+"PO-Revision-Date: Tue Jul 05 2016 22:33:25 GMT-0300 (BRT)\n"
+"Last-Translator: bruno <brunosserrao@gmail.com>\n"
+"Language-Team: \n"
+"Language: Portuguese (Brazil)\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../../plugins/bruno-notificacao\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: pt_BR\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the plugin
+msgid "Bruno Notifications"
+msgstr "Bruno Notifications"
+
+#. URI of the plugin
+msgid "http://www.brunoserrao.com/bs-notifications"
+msgstr "http://www.brunoserrao.com/bs-notifications"
+
+#. Description of the plugin
+msgid "Habilitar o botão de notificação nos posts"
+msgstr "Habilitar o botão de notificação nos posts"
+
+#. Author of the plugin
+msgid "Bruno Serrao"
+msgstr "Bruno Serrao"
+
+#. Author URI of the plugin
+msgid "http://www.brunoserrao.com"
+msgstr "http://www.brunoserrao.com"
+
+#: ../../plugins/bruno-notificacao/bruno-notificacao.php:115
+msgid "Settings"
+msgstr "Configurações"
+
+#: ../../plugins/bruno-notificacao/bruno-notificacao.php:125 ../../plugins/bruno-
+#: notificacao/bruno-notificacao.php:126
+msgid "Notification Settings"
+msgstr "Configurar Notificação"
+
+#: ../../plugins/bruno-notificacao/bruno-notificacao.php:148
+msgid "Notification"
+msgstr "Notificação"
+
+#: ../../plugins/bruno-notificacao/bruno-notificacao.php:185
+msgid "Notifications"
+msgstr "Notificações"
+
+#: ../../plugins/bruno-notificacao/bruno-notificacao.php:207
+msgid "Save Changes"
+msgstr "Salvar configurações"
+
+msgid "Send"
+msgstr "Enviar"
+
+msgid "Sent"
+msgstr "Enviado"

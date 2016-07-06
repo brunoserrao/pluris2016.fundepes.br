@@ -87,6 +87,15 @@ class brunoNotificacao {
 			echo $response->get_error_message();
 		}
 
+		// Update status notification
+		if($x = get_post_meta($id, 'notification_send', false)) {
+			update_post_meta($id, 'notification_send', true);
+		} else {
+			add_post_meta($id, 'notification_send', true);
+		}
+
+		die(var_dump($x));
+
 		wp_die();
 	}
 
@@ -95,7 +104,7 @@ class brunoNotificacao {
 	 *
 	 */
 	public function load_plugin_textdomain() {
-		load_plugin_textdomain( 'bs-notifications', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+		load_plugin_textdomain( 'bruno-notificacao', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
 	}
 
 	/**
@@ -113,8 +122,8 @@ class brunoNotificacao {
 	 */
 	public function bs_notifications_admin_menu(){
 		add_options_page(
-			__('Notification Settings', 'bs-notifications'),
-			__('Notification Settings', 'bs-notifications'),
+			__('Notification Settings', 'bruno-notificacao'),
+			__('Notification Settings', 'bruno-notificacao'),
 			'manage_options',
 			'bspostnotifications',
 			array(
@@ -136,7 +145,7 @@ class brunoNotificacao {
 	 * @return  array $defaults
 	 */
 	public function add_new_bs_posts_events($defaults) {
-		 $defaults['btn_notificar'] = __( 'Notification', 'bs-notifications' );
+		 $defaults['btn_notificar'] = __( 'Notification', 'bruno-notificacao' );
 		 return $defaults;
 	}
 
@@ -148,9 +157,13 @@ class brunoNotificacao {
 	 */
 	public function add_bs_posts_button_notify($column_name, $post_ID) {
 		$nonce = wp_create_nonce( 'bs_events_nonce_' . $post_ID );
+		$notification_send = get_post_meta($post_ID, 'notification_send', FALSE);
+		$notification_send_class = empty($notification_send) ? ' dashicons-no-alt' : 'dashicons-yes';
+		$notification_send_label = empty($notification_send) ? ' Send' : 'Sent';
+
 		switch ($column_name) {
 			case 'btn_notificar':
-				echo  '<input class="page-title-action button-notify" type="button" data-id="'.$post_ID.'" data-nonce="'.$nonce.'" value="'. __( 'Send', 'bs-notifications' ) .'" />';
+				echo  '<button class="page-title-action button-notify" type="button" data-id="'. $post_ID .'"><span class="dashicons '. $notification_send_class .'"></span>'.  __( $notification_send_label, 'bruno-notificacao' )  .'</button>';
 				break;
 			default:
 				break;
@@ -169,7 +182,7 @@ class brunoNotificacao {
 	public function settings_page(){
 		?>
 			<div class="wrap">
-				<h2><?php echo __('Notifications', 'bs-notifications')?></h2>
+				<h2><?php echo __('Notifications', 'bruno-notificacao')?></h2>
 
 				<form method="post" action="options.php">
 				<?php settings_fields('bs_notifications_post_group'); ?>
