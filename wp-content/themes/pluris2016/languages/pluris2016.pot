@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Pluris 2016\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"POT-Revision-Date: Thu Jul 07 2016 14:54:11 GMT-0300 (BRT)\n"
+"POT-Revision-Date: Thu Jul 07 2016 15:01:40 GMT-0300 (BRT)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
@@ -669,7 +669,7 @@ msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:73
 #, php-format
-msgid "Select %s articles of his own"
+msgid "Select 1 or %s articles of his own"
 msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:75
