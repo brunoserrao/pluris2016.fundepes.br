@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Pluris 2016\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"POT-Revision-Date: Wed Jul 06 2016 22:49:23 GMT-0300 (BRT)\n"
+"POT-Revision-Date: Thu Jul 07 2016 01:27:25 GMT-0300 (BRT)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
@@ -174,14 +174,16 @@ msgstr ""
 msgid "Finish payment"
 msgstr ""
 
-#: ../functions.php:459 ../woocommerce/checkout/form-checkout.php:55
-msgctxt "Artigos"
+#: ../functions.php:456 ../woocommerce/checkout/form-checkout.php:55
 msgid "Articles"
 msgstr ""
 
-#: ../functions.php:464
-msgctxt "Qtd de artigos"
+#: ../functions.php:461
 msgid "Qty of articles"
+msgstr ""
+
+#: ../functions.php:489
+msgid "Artigos"
 msgstr ""
 
 #: ../header.php:36
@@ -654,7 +656,6 @@ msgid "You must be logged in to checkout."
 msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:59
-msgctxt "Você enviou um artigo ?"
 msgid "Did you sent an article ?"
 msgstr ""
 
@@ -668,18 +669,15 @@ msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:71
 #, php-format
-msgctxt "Selecione %s artigos"
 msgid "Select %s articles"
 msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:73
 #, php-format
-msgctxt "Selecione %s artigo"
 msgid "Select %s article"
 msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:79
-msgctxt "Procure seu artigo nesta lista"
 msgid "Search your article in this list"
 msgstr ""
 
