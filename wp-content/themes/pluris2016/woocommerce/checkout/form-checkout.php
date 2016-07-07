@@ -39,7 +39,9 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 		$posts_query = new WP_Query();
 		$posts_query->query( array(
 			'post_type' => 'bs_posts_articles',
-			'posts_per_page' => -1
+			'posts_per_page' => -1,
+			'orderby' => 'post_title',
+			'order' => 'ASC'
 		));
 	?>
 
