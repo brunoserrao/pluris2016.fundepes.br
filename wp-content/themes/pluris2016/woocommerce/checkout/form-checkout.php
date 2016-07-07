@@ -70,7 +70,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 			<p  id="articles_select" class="form-row form-row form-row-wide">
 				<label for="article_id">
 					<?php if($qty_articles > 1) { ?>
-						<?php echo sprintf(__('Select 1 or %s articles of his own', 'pluris2016'), $qty_articles); ?>
+						<?php echo sprintf(__('Select up to %s items of his own', 'pluris2016'), $qty_articles); ?>
 					<?php } else { ?>
 						<?php echo sprintf(__('Select %s article of his own','pluris2016'), $qty_articles); ?>
 					<?php } ?>
