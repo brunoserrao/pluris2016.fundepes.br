@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Pluris 2016\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"POT-Revision-Date: Thu Jul 07 2016 01:27:25 GMT-0300 (BRT)\n"
+"POT-Revision-Date: Thu Jul 07 2016 14:54:11 GMT-0300 (BRT)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
@@ -174,7 +174,7 @@ msgstr ""
 msgid "Finish payment"
 msgstr ""
 
-#: ../functions.php:456 ../woocommerce/checkout/form-checkout.php:55
+#: ../functions.php:456 ../woocommerce/checkout/form-checkout.php:57
 msgid "Articles"
 msgstr ""
 
@@ -655,33 +655,33 @@ msgstr ""
 msgid "You must be logged in to checkout."
 msgstr ""
 
-#: ../woocommerce/checkout/form-checkout.php:59
+#: ../woocommerce/checkout/form-checkout.php:61
 msgid "Did you sent an article ?"
 msgstr ""
 
-#: ../woocommerce/checkout/form-checkout.php:63
+#: ../woocommerce/checkout/form-checkout.php:65
 msgid "Yes"
 msgstr ""
 
-#: ../woocommerce/checkout/form-checkout.php:64
+#: ../woocommerce/checkout/form-checkout.php:66
 msgid "No"
-msgstr ""
-
-#: ../woocommerce/checkout/form-checkout.php:71
-#, php-format
-msgid "Select %s articles"
 msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:73
 #, php-format
-msgid "Select %s article"
+msgid "Select %s articles of his own"
 msgstr ""
 
-#: ../woocommerce/checkout/form-checkout.php:79
+#: ../woocommerce/checkout/form-checkout.php:75
+#, php-format
+msgid "Select %s article of his own"
+msgstr ""
+
+#: ../woocommerce/checkout/form-checkout.php:81
 msgid "Search your article in this list"
 msgstr ""
 
-#: ../woocommerce/checkout/form-checkout.php:108
+#: ../woocommerce/checkout/form-checkout.php:110
 msgid "Payment"
 msgstr ""
 

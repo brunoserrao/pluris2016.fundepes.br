@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Pluris 2016\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"PO-Revision-Date: Thu Jul 07 2016 01:28:39 GMT-0300 (BRT)\n"
+"PO-Revision-Date: Thu Jul 07 2016 14:54:42 GMT-0300 (BRT)\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
 "Language: Portuguese (Brazil)\n"
@@ -154,18 +154,6 @@ msgstr ""
 #: ../functions.php:261
 msgid "collapse child menu"
 msgstr ""
-
-#: ../functions.php:456 ../woocommerce/checkout/form-checkout.php:55
-msgid "Articles"
-msgstr "Artigos"
-
-#: ../functions.php:461
-msgid "Qty of articles"
-msgstr "Qtd de artigos"
-
-#: ../functions.php:489
-msgid "Artigos"
-msgstr "Artigos"
 
 #: ../header.php:36
 msgid "Skip to content"
@@ -612,31 +600,18 @@ msgstr ""
 msgid "You must be logged in to checkout."
 msgstr ""
 
-#: ../woocommerce/checkout/form-checkout.php:59
-msgid "Did you sent an article ?"
-msgstr "Você enviou um artigo ?"
-
-#: ../woocommerce/checkout/form-checkout.php:63
+#: ../woocommerce/checkout/form-checkout.php:65
 msgid "Yes"
 msgstr ""
 
-#: ../woocommerce/checkout/form-checkout.php:64
+#: ../woocommerce/checkout/form-checkout.php:66
 msgid "No"
 msgstr ""
 
-#: ../woocommerce/checkout/form-checkout.php:71
-#, php-format
-msgid "Select %s articles"
-msgstr "Selecione %s artigos"
-
 #: ../woocommerce/checkout/form-checkout.php:73
 #, php-format
-msgid "Select %s article"
-msgstr "Selecione %s artigo"
-
-#: ../woocommerce/checkout/form-checkout.php:79
-msgid "Search your article in this list"
-msgstr "Procure o seu artigo nesta lista"
+msgid "Select %s articles of his own"
+msgstr "Selecione %s artigos de sua autoria"
 
 #: ../woocommerce/checkout/form-login.php:26
 msgid "Returning customer?"
@@ -1211,6 +1186,18 @@ msgstr "Nome da instituição"
 msgid "Finish payment"
 msgstr "Finalizar pagamento"
 
+#: ../functions.php:456 ../woocommerce/checkout/form-checkout.php:57
+msgid "Articles"
+msgstr "Artigos"
+
+#: ../functions.php:461
+msgid "Qty of articles"
+msgstr "Qtd de artigos"
+
+#: ../functions.php:489
+msgid "Artigos"
+msgstr "Artigos"
+
 #: ../woocommerce/cart/cart.php:136
 msgid "Coupon"
 msgstr "Cupom"
@@ -1235,7 +1222,20 @@ msgstr "Próxima etapa"
 msgid "Participant Information"
 msgstr "Informações do participante"
 
-#: ../woocommerce/checkout/form-checkout.php:108
+#: ../woocommerce/checkout/form-checkout.php:61
+msgid "Did you sent an article ?"
+msgstr "Você enviou um artigo ?"
+
+#: ../woocommerce/checkout/form-checkout.php:75
+#, php-format
+msgid "Select %s article of his own"
+msgstr "Selecione %s artigo de sua autoria"
+
+#: ../woocommerce/checkout/form-checkout.php:81
+msgid "Search your article in this list"
+msgstr "Procure o seu artigo nesta lista"
+
+#: ../woocommerce/checkout/form-checkout.php:110
 msgid "Payment"
 msgstr "Pagamento"
 
