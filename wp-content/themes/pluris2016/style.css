@@ -5721,6 +5721,14 @@ p.price del {
 	margin: 10px 20px;
 }
 
+#checkout_articles #checkout_articles_radio label{
+	display: initial;
+}
+
+#articles_select{
+	visibility: hidden;
+}
+
 .woocommerce a.cancel {
 	background-color: #b81c23;
     font-size: 10pt;

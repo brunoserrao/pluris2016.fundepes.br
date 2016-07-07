@@ -406,3 +406,107 @@ add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
 	add_post_type_support( 'page', 'excerpt' );
 }
+
+
+/**
+* Adicionar apenas um produto no carrinho
+*/
+add_filter ( 'woocommerce_add_to_cart_validation' , 'pluris_only_one_in_cart' );
+function pluris_only_one_in_cart( $cart_item_data ) {
+	global $woocommerce;
+
+	$woocommerce->cart->empty_cart();
+	return $cart_item_data;
+}
+
+/**
+ * Define custom product data fields
+ */
+ add_action('wc_cpdf_init', 'prefix_custom_product_data', 10, 0);
+if(!function_exists('prefix_custom_product_data')) :
+ 
+   function prefix_custom_product_data(){
+ 
+		$current_prod = null;
+			if(isset($_GET['post']) && !empty($_GET['post']) ){
+			$current_prod = $_GET['post'];
+		}
+ 
+     	$custom_product_data_fields = array();
+ 
+		$get_products = get_posts(array(
+			'post_type' 	 => 'product',
+			'post_status'    => 'publish',
+			'posts_per_page' => -1,
+			'fields'         => 'ids',
+			'post__not_in'   => array( $current_prod )
+		));
+
+		$prods = array();
+
+		if ( ! empty( $get_products ) ) :
+			foreach ($get_products as $key => $value) {
+				$prods[$value] = get_the_title($value);
+			}
+		endif;
+
+		$custom_product_data_fields['qty_articles'] = array(
+
+			 array(
+				 'tab_name' => __('Articles', 'pluris2016')
+			 ),
+			 array(
+				 'id'	        => 'qty_articles',
+				 'type'		  	=> 'number',
+				 'label'        => __('Qty of articles', 'pluris2016')
+			 )
+		);
+
+		return $custom_product_data_fields;
+   }
+ 
+endif;
+
+
+/**
+ * Salvar Relacionamento ORDER / Articles
+ */
+add_action('woocommerce_checkout_order_processed','save_articles_to_order');
+function save_articles_to_order($order_id){
+	if (isset($_POST['articles_id']) and !empty($_POST['articles_id'])) {
+		wc_add_order_item_meta($order_id, '_articles_id', json_encode($_POST['articles_id']));
+	}
+}
+
+/**
+ * Adicionar a coluna Artigos nos pedidos
+ */
+add_filter('manage_edit-shop_order_columns', 'woocommerce_order_articles_column', 15);
+function woocommerce_order_articles_column($columns) {
+	$new_columns = (is_array($columns)) ? $columns : array();
+
+	//add column
+	$new_columns['articles'] = __('Artigos', 'pluris2016');
+
+	return $new_columns;
+}
+
+add_action('manage_shop_order_posts_custom_column', 'woocommerce_order_articles_column_values', 10, 2);
+function woocommerce_order_articles_column_values($column) {
+
+	global $post, $woocommerce, $the_order;
+
+	switch ($column) {
+		case 'articles' :
+			$articles_id = json_decode(wc_get_order_item_meta($the_order->id, '_articles_id'));
+			if (!empty($articles_id)) {
+				echo "<ul>";
+				foreach ($articles_id as $article_id) {
+					$title = get_the_title($article_id);
+					echo "<li><a href=".get_the_permalink($article_id)." target='_blank' >".substr($title, 0,30)."...</a></li>";
+				}
+				echo "</ul>";
+			}
+		break;
+	}
+}
