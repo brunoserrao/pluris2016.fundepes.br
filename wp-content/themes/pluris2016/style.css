@@ -5752,3 +5752,7 @@ p.price del {
 	    clear: both;
 	}
 }
+
+.woocommerce-message .wc-forward{
+	display: none !important;
+}
