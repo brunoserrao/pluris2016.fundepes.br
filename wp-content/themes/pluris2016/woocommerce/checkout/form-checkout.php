@@ -67,7 +67,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 				</div>
 			</p>
 
-			<p  id="articles_select" class="form-row form-row form-row-wide">
+			<div id="articles_select" class="form-row form-row form-row-wide">
 				<label for="article_id">
 					<?php if($qty_articles > 1) { ?>
 						<?php echo sprintf(__('Select up to %s items of his own', 'pluris2016'), $qty_articles); ?>
@@ -77,15 +77,19 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 				</label>
 
-				<select id="articles_id" name="articles_id[]" <?php echo $qty_articles > 1 ? 'multiple' : ''; ?> name="article_id" id="article_id" autocomplete="article" class="country_to_state country_select">
-					<option><?php echo __('Search your article in this list', 'pluris2016'); ?></option>
-					<?php while($posts_query->have_posts()){ ?>
-						<?php $posts_query->the_post() ?>
-						<option value="<?php echo get_the_ID();?>"><?php echo get_the_title();?></option>
-					<?php }?>
-					<?php wp_reset_postdata(); ?>
-				</select>
-			</p>
+				<?php for ($i=0; $i < $qty_articles; $i++) { ?>
+					<p>
+						<select id="articles_id_<?php echo $i; ?>" name="articles_id[]" name="article_id" id="article_id" autocomplete="article" class="country_to_state country_select">
+							<option><?php echo __('Search your article in this list', 'pluris2016'); ?></option>
+							<?php while($posts_query->have_posts()){ ?>
+								<?php $posts_query->the_post() ?>
+								<option value="<?php echo get_the_ID();?>"><?php echo get_the_title();?></option>
+							<?php }?>
+							<?php wp_reset_postdata(); ?>
+						</select>
+					</p>
+				<?php } ?>
+			<//div>
 		</div>
 	<?php } ?>	
 
