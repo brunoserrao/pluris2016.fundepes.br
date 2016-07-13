@@ -73,6 +73,13 @@ class BrunoApi {
 				'callback'  => array($this, 'eventos')
 			)
 		);
+
+		register_rest_route( $this->namespace, '/galeria',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'galeria')
+			)
+		);
 	}
 
 	/**
@@ -91,6 +98,58 @@ class BrunoApi {
 			'data' => array(
 				'noticias' 		=> $noticias,
 				'pagina'	=> $pagina
+			)
+		);
+
+		return $result;
+	}
+
+	/**
+	* Requisitar fotos da galeria
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function galeria(WP_REST_Request $request){
+		$pagina_id = 259;
+		$ids = get_post_gallery($pagina_id, false);
+
+		if (empty($ids)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Invalid resource.' ), array( 'status' => 404 ) );
+		}
+
+		$ids = explode(",", $ids['ids']);
+
+		$fotos = array();
+
+		foreach ($ids as $id) {
+			$attachment = wp_prepare_attachment_for_js($id);
+
+			$sub = !empty($attachment['title']) ? $attachment['title'] : '';
+
+			$foto = array(
+				'thumb' => wp_get_attachment_image_src($id, 'thumb_galeria' )[0],
+				'src' => wp_get_attachment_thumb_url($id),
+				'sub' => $sub
+			);
+
+			array_push($fotos, $foto);
+		}
+
+		$wp_query = new WP_Query(array(
+			'post_type' => 'page',
+			'page_id' => $pagina_id
+		));
+
+		// echo "<pre>";
+		// die(print_r($wp_query));
+		// echo "</pre>";
+		
+		$result = array(
+			'data' => array(
+				'fotos' => $fotos,
+				'titulo' => $wp_query->posts[0]->post_title,
+				'texto' => strip_shortcodes($wp_query->posts[0]->post_content)
 			)
 		);
 
