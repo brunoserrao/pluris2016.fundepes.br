@@ -123,6 +123,13 @@ function pluris2016_setup() {
 	 */
 	add_theme_support( 'woocommerce' );
 }
+
+/*
+ * Thumb Cropped
+ */
+add_image_size( 'thumb_galeria', 200, 200, true );
+
+
 endif; // pluris2016_setup
 add_action( 'after_setup_theme', 'pluris2016_setup' );
 
