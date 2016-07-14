@@ -517,3 +517,59 @@ function woocommerce_order_articles_column_values($column) {
 		break;
 	}
 }
+
+
+/**
+ * Add custom media metadata fields
+ *
+ * Be sure to sanitize your data before saving it
+ * http://codex.wordpress.org/Data_Validation
+ *
+ * @param $form_fields An array of fields included in the attachment form
+ * @param $post The attachment record in the database
+ * @return $form_fields The final array of form fields to use
+ */
+function add_image_attachment_fields_to_edit( $form_fields, $post ) {
+	$image_from_gallery = (bool) get_post_meta($post->ID, 'image_from_gallery', true);
+
+	$form_fields['image_from_gallery'] = array(
+		'label' => __('Publicar na galeria'),
+		'input' => "html",
+		'html' => '<input type="checkbox" id="attachments-'.$post->ID.'-image_from_gallery" name="attachments['.$post->ID.'][image_from_gallery]" value="'.$image_from_gallery.'"'.($image_from_gallery ? ' checked="checked"' : '').'/>',
+		'value' => esc_attr( get_post_meta($post->ID, 'image_from_gallery', true) )
+	);
+
+	return $form_fields;
+}
+add_filter('attachment_fields_to_edit', 'add_image_attachment_fields_to_edit', null, 2);
+
+
+/**
+ * Save custom media metadata fields
+ *
+ * Be sure to validate your data before saving it
+ * http://codex.wordpress.org/Data_Validation
+ *
+ * @param $post The $post data for the attachment
+ * @param $attachment The $attachment part of the form $_POST ($_POST[attachments][postID])
+ * @return $post
+ */
+function add_image_attachment_fields_to_save( $post, $attachment ) {
+	$image_from_gallery_meta = (bool) get_post_meta($post['ID'], 'image_from_gallery', true);
+	$image_from_gallery_value = isset( $attachment['image_from_gallery'] ) ? 1 : 0;
+
+	if ($image_from_gallery_meta) {
+		if ($image_from_gallery_value) {
+			update_post_meta( $post['ID'], 'image_from_gallery', true );
+		} else {
+			delete_post_meta( $post['ID'], 'image_from_gallery' );	
+		}	
+	} else {
+		if ($image_from_gallery_value) {
+			update_post_meta( $post['ID'], 'image_from_gallery', true );
+		}
+	}
+
+	return $post;
+}
+add_filter('attachment_fields_to_save', 'add_image_attachment_fields_to_save', null , 2);
