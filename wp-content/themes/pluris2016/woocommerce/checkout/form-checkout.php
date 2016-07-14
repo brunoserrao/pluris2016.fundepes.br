@@ -79,7 +79,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 				<?php for ($i=0; $i < $qty_articles; $i++) { ?>
 					<p>
-						<select id="articles_id_<?php echo $i; ?>" name="articles_id[]" name="article_id" id="article_id" autocomplete="article" class="country_to_state country_select">
+						<select id="articles_id_<?php echo $i; ?>" name="articles_id[]" name="article_id" id="article_id" autocomplete="article" class="country_select">
 							<option><?php echo __('Search your article in this list', 'pluris2016'); ?></option>
 							<?php while($posts_query->have_posts()){ ?>
 								<?php $posts_query->the_post() ?>
