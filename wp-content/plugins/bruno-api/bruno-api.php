@@ -8,7 +8,7 @@
 	Author URI: http://www.brunoserrao.com
 	License: GPL3
 */ 
-class BrunoApi {
+class BrunoApi{
 	private $version;
 	private $namespace;
 	private $default_fields;
@@ -80,6 +80,63 @@ class BrunoApi {
 				'callback'  => array($this, 'galeria')
 			)
 		);
+
+		register_rest_route( $this->namespace, '/galeria/upload',
+			array(
+				'methods'   => 'POST',
+				'callback'  => array($this, 'upload')
+			)
+		);
+
+		register_rest_route( $this->namespace, '/login',
+			array(
+				'methods'   => 'POST',
+				'callback'  => array($this, 'login')
+			)
+		);
+	}
+
+	/**
+	* Verificar se o usuário existe e faz o login
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function login(){
+		if ( !isset( $_SERVER['PHP_AUTH_USER'] ) ) {
+			return false;
+		}
+
+		$username = $_SERVER['PHP_AUTH_USER'];
+		$password = $_SERVER['PHP_AUTH_PW'];
+
+		$wp_authenticate = wp_authenticate( $username, $password );
+
+		if (!is_user_logged_in()) {
+			return new WP_Error( 'rest_type_invalid', __( 'Invalid resource.' ), array( 'status' => 401 ) );
+		}
+
+		$avatar = get_avatar_data($wp_authenticate->data->ID);
+
+		$usuario = array(
+			'ID' 			=> $wp_authenticate->data->ID,
+			'user_login' 	=> $wp_authenticate->data->user_login,
+			'user_nicename' => $wp_authenticate->data->user_nicename,
+			'user_email' 	=> $wp_authenticate->data->user_email,
+			'display_name' 	=> $wp_authenticate->data->display_name,
+			'avatar'		=> array(
+				'url' => $avatar['url'],
+				'found_avatar' => $avatar['found_avatar']
+			)
+		);
+
+		$result = array(
+			'data' => array(
+				'usuario'  => $usuario
+			)
+		);
+
+		return $result;
 	}
 
 	/**
@@ -141,10 +198,54 @@ class BrunoApi {
 			'page_id' => $pagina_id
 		));
 
-		// echo "<pre>";
-		// die(print_r($wp_query));
-		// echo "</pre>";
-		
+		$result = array(
+			'data' => array(
+				'fotos' => $fotos,
+				'titulo' => $wp_query->posts[0]->post_title,
+				'texto' => strip_shortcodes($wp_query->posts[0]->post_content)
+			)
+		);
+
+		return $result;
+	}
+
+	/**
+	* Upload de fotos para a galeria
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function upload(WP_REST_Request $request){
+		$pagina_id = 259;
+		$ids = get_post_gallery($pagina_id, false);
+
+		if (empty($ids)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Invalid resource.' ), array( 'status' => 404 ) );
+		}
+
+		$ids = explode(",", $ids['ids']);
+
+		$fotos = array();
+
+		foreach ($ids as $id) {
+			$attachment = wp_prepare_attachment_for_js($id);
+
+			$sub = !empty($attachment['title']) ? $attachment['title'] : '';
+
+			$foto = array(
+				'thumb' => wp_get_attachment_image_src($id, 'thumb_galeria' )[0],
+				'src' => wp_get_attachment_thumb_url($id),
+				'sub' => $sub
+			);
+
+			array_push($fotos, $foto);
+		}
+
+		$wp_query = new WP_Query(array(
+			'post_type' => 'page',
+			'page_id' => $pagina_id
+		));
+
 		$result = array(
 			'data' => array(
 				'fotos' => $fotos,
