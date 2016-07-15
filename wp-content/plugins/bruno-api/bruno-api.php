@@ -279,6 +279,7 @@ class BrunoApi{
 		$attach_id = wp_insert_attachment( $attachment, $filename );
 		$attach_data = wp_generate_attachment_metadata( $attach_id, $filename );
 		wp_update_attachment_metadata( $attach_id, $attach_data );
+		update_post_meta( $attach_id, 'image_from_gallery', true );
 
 		$result = array(
 			'data' => $attach_id
