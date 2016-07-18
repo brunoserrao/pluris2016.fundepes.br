@@ -88,32 +88,44 @@ class BrunoApi{
 			)
 		);
 
+		register_rest_route( $this->namespace, '/validar',
+			array(
+				'methods'   => 'POST',
+				'callback'  => array($this, 'validar')
+			)
+		);
+
 		register_rest_route( $this->namespace, '/login',
 			array(
 				'methods'   => 'POST',
 				'callback'  => array($this, 'login')
 			)
 		);
+
+		register_rest_route( $this->namespace, '/logout',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'logout')
+			)
+		);
 	}
 
 	/**
-	* Verificar se o usuário existe e faz o login
+	* Verificar se o usuário existe
 	*
 	* @param WP_REST_Request $request
 	* @return array $result
 	*/
-	public function login(WP_REST_Request $request){
-		if ( !isset( $_SERVER['PHP_AUTH_USER'] ) ) {
-			return new WP_Error( 'rest_type_invalid', __( 'Empty Auth User' ), array( 'status' => 404 ) );
-		}
+	public function validar(WP_REST_Request $request){
+		$username = $request['username'];
+		$password = $request['password'];
 
-		$username = $_SERVER['PHP_AUTH_USER'];
-		$password = $_SERVER['PHP_AUTH_PW'];
+		$user = get_user_by('user_email', $username);
 
-		$wp_authenticate = wp_authenticate( $username, $password );
-
-		if (!is_user_logged_in()) {
-			return new WP_Error( 'rest_type_invalid', __( 'Login Fail.' ), array( 'status' => 404 ) );
+		$wp_authenticate = wp_authenticate_email_password( $user, $username, $password );
+		
+		if (is_wp_error($wp_authenticate)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Login Validate Fail.' ), array( 'status' => 404 ) );
 		}
 
 		$avatar = get_avatar_data($wp_authenticate->data->ID);
@@ -124,6 +136,7 @@ class BrunoApi{
 			'user_nicename' => $wp_authenticate->data->user_nicename,
 			'user_email' 	=> $wp_authenticate->data->user_email,
 			'display_name' 	=> $wp_authenticate->data->display_name,
+			'hash'			=> base64_encode($wp_authenticate->data->user_login.':'.$password),
 			'avatar'		=> array(
 				'url' => $avatar['url'],
 				'found_avatar' => $avatar['found_avatar']
@@ -137,6 +150,40 @@ class BrunoApi{
 		);
 
 		return $result;
+	}
+
+	/**
+	* Faz o login do usuario
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	private function login(WP_REST_Request $request){
+		if ( !isset( $_SERVER['PHP_AUTH_USER'] ) ) {
+			return new WP_Error( 'rest_type_invalid', __( 'Empty Auth User' ), array( 'status' => 404 ) );
+		}
+
+		$username = sanitize_text_field($_SERVER['PHP_AUTH_USER']);
+		$password = sanitize_text_field($_SERVER['PHP_AUTH_PW']);
+
+		$wp_authenticate = wp_authenticate( $username, $password );
+
+		if (is_wp_error($wp_authenticate)) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	* Faz o logout do usuario
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function logout(WP_REST_Request $request){
+		wp_logout();
+		return true;
 	}
 
 	/**
@@ -168,13 +215,6 @@ class BrunoApi{
 	* @return array $result
 	*/
 	public function galeria(WP_REST_Request $request){
-		$pagina_id = 259;
-		$ids = get_post_gallery($pagina_id, false);
-
-		if (empty($ids)) {
-			return new WP_Error( 'rest_type_invalid', __( 'Empty gallery.' ), array( 'status' => 404 ) );
-		}
-
 		$role_ids = get_users(
 			array(
 				'fields' => 'ID',
@@ -236,9 +276,7 @@ class BrunoApi{
 	* @return array $result
 	*/
 	public function upload(WP_REST_Request $request){
-		$usuario = $this->login($request);
-
-		if (!is_user_logged_in()) {
+		if (!$this->login($request)) {
 			return new WP_Error( 'rest_type_invalid', __( 'Login Fail.' ), array( 'status' => 404 ) );
 		}
 

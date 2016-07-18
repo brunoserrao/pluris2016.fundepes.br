@@ -4,15 +4,15 @@
  * Release: Working copy
  * Locale: pl-PL, Polish
  * Exported by: Unregistered user
- * Exported at: Mon, 14 Dec 2015 11:00:55 +0000
+ * Exported at: Wed, 06 Jul 2016 12:21:11 +0100
  */
 loco = window.loco||{}, loco.t = function( pairs ){
     
     // named plural forms
     var pluralForms = [
-    "Form 0",
-    "Form 1",
-    "Form 2"
+    "one",
+    "few",
+    "other"
 ];
     
     // calc numeric index of a plural form (0-2)
@@ -40,7 +40,7 @@ loco = window.loco||{}, loco.t = function( pairs ){
     "OK": "OK",
     "Permission denied": "Odmowa dostępu",
     "Settings saved": "Ustawienia zapisane",
-    "%s is not an official WordPress language": "",
+    "%s is not an official WordPress language": "%s nie jest oficjalnym tłumaczeniem WordPress'a",
     "New PO file": "Nowy plik PO",
     "PO file used as template. This will be renamed to %s on first save": "Plik PO użyty jako szablon. Nazwa zostanie zmieniona na % przy pierwszym zapisie",
     "You must specify a valid locale for a new PO file": "Musisz określić właściwy region dla nowego pliku PO",
@@ -61,9 +61,9 @@ loco = window.loco||{}, loco.t = function( pairs ){
     "New language": "Nowy język",
     "%s%% translated": "%s%% przetłumaczono",
     "1 string": {
-        "Form 0": "1 linia",
-        "Form 1": "%s linie",
-        "Form 2": "%s linii"
+        "one": "1 linia",
+        "few": "%s linie",
+        "other": "%s linii"
     },
     "%s fuzzy": "%s niepewnych",
     "%s untranslated": "%s nie przetłumaczone",
@@ -74,7 +74,7 @@ loco = window.loco||{}, loco.t = function( pairs ){
     "Loco Translate": "Loco Translate",
     "Settings": "Ustawienia",
     "File download failed": "Błąd pobierania pliku",
-    "WPLANG is deprecated and should be removed from wp-config.php": "",
+    "WPLANG is deprecated and should be removed from wp-config.php": "WPLANG jest przestarzały i powinien zostać usunięty z wp-config.php",
     "Unknown language": "Nieznany język",
     "Some files not writable": "Niektóre pliki są tylko do odczytu",
     "Some files missing": "Brakujące niektóre pliki",
@@ -85,12 +85,11 @@ loco = window.loco||{}, loco.t = function( pairs ){
     "MO file not found": "Nie znaleziono pliku MO",
     "Folder not writable": "Katalog jest tylko do odczytu",
     "Folder not found": "Nie znaleziono katalogu",
-    "%s does not declare a \"Text Domain\"": "",
-    "Loco has guessed \"%s\"": "",
-    "%s does not declare a \"Domain Path\"": "",
-    "%s has no POT file. Create one at \"%s/%s.pot\" if you need one.": "",
-    "%s has a strange POT file name (%s). A better name would be \"%s.pot\"": "",
-    "PHP extension \"%s\" is not installed. If you experience problems you should install it": "",
+    "%s does not declare a \"Text Domain\"": "%s nie deklaruje \"Tekst Domeny\"",
+    "Loco has guessed \"%s\"": "Loco zgadł \"%s\"",
+    "%s does not declare a \"Domain Path\"": "%s nie deklaruje \"Ścieżka Domeny\"",
+    "%s has no POT file. Create one at \"%s/%s.pot\" if you need one.": "%s nie ma żadnego pliku POT. Stwórz go w \"%s/%s.pot\" jeżeli takowego potrzebujesz.",
+    "%s has a strange POT file name (%s). A better name would be \"%s.pot\"": "%s ma dziwną nazwę pliku POT (%s). Lepszą nazwą byłoby \"%s.pot\"",
     "User does not have permission to manage translations": "Użytkownik nie ma uprawnień do zarządzania tłumaczeniami",
     "Invalid data posted to server": "Błędne dane wysłane do serwera",
     "Failed to compile MO file with %s, check your settings": "Nie udało się skompilować pliku MO używając %s, sprawdź ustawienia",
@@ -102,36 +101,10 @@ loco = window.loco||{}, loco.t = function( pairs ){
     "Cannot create MO file": "Nie można utworzyć pliku MO",
     "Cannot overwrite MO file": "Nie można nadpisać pliku MO",
     "Failed to write MO file": "Błąd zapisu pliku MO",
-    "Unknown error": "Nieznany błąd",
-    "PO file saved": "Plik PO zapisany",
-    "and MO file compiled": "oraz plik MO skompilowany",
-    "Merged from %s": "Połączono z %s",
-    "Merged from source code": "Połączono z kodu źródłowego",
-    "Already up to date with %s": "Już aktualne z %s",
-    "Already up to date with source code": "Już aktualne z kodu źródłowego",
-    "1 new string added": {
-        "Form 0": "1 nowa linia dodana",
-        "Form 1": "%s nowe linie dodano",
-        "Form 2": "%s nowych linii dodano"
-    },
-    "1 obsolete string removed": {
-        "Form 0": "1 zbędna linia usunięta",
-        "Form 1": "%s zbędne linie usunięte",
-        "Form 2": "%s zbędnych linii usunięto"
-    },
-    "Your changes will be lost if you continue without saving": "Utracisz aktualne zmiany jeśli będziesz kontynuował bez zapisywania",
-    "Source text": "Tekst źródłowy",
-    "%s translation": "%s tłumaczenie",
-    "Comments": "Komentarze",
-    "Context": "Kontekst",
-    "Translation": "Tłumaczenie",
-    "No source files in this package, nothing to sync": "Brak plików źródłowych w tej paczce, nic do synchronizacji",
-    "No strings could be extracted from source files": "Żadne linie nie mogą być wyciągnięte z plików źródłowych",
-    "create in <code>%s</code>": "stwórz w <code>%s</code>",
     "Packages": "Paczki",
     "File check": "Sprawdzenie plików",
     "File system permissions for %s": "Uprawnienia systemu plików dla %s",
-    "Other potential issues with %s": "",
+    "Other potential issues with %s": "Inne potencjalne problemy z %s",
     "Back": "Wstecz",
     "Get help": "Pomoc",
     "Package details": "Detale paczki",
@@ -140,9 +113,9 @@ loco = window.loco||{}, loco.t = function( pairs ){
     "File permissions": "Uprawnienia plików",
     "Extends: %s": "Rozszerza: %s",
     "1 language": {
-        "Form 0": "1 język",
-        "Form 1": "%u języki",
-        "Form 2": "%u języków"
+        "one": "1 język",
+        "few": "%u języki",
+        "other": "%u języków"
     },
     "Updated": "Zaktualizowano",
     "Powered by": "Napędzany przez",
@@ -153,7 +126,7 @@ loco = window.loco||{}, loco.t = function( pairs ){
     "Use external command:": "Użyj zewnętrznej komendy:",
     "Enter path to msgfmt on server": "Wpisz ścieżkę do msgfmt na serwerze",
     "Generate hash tables": "Generuj tablice hash",
-    "Include Fuzzy strings": "",
+    "Include Fuzzy strings": "Uwzględniaj niepewne ciągi znaków",
     "Backing up PO files": "Zrób kopię zapasową plików PO",
     "Number of backups to keep of each file:": "Liczba kopii zapasowych każdego pliku do przechowania:",
     "Experimental features": "Funkcje eksperymentalne",
@@ -174,7 +147,7 @@ loco = window.loco||{}, loco.t = function( pairs ){
     "Initialize new translations in %s": "Zainicjuj nowe tłumaczenie w %s",
     "Select from common languages": "Wybierz z częstych języków",
     "or enter any language code": "lub wpisz dowolny kod języka",
-    "create in plugin directory": "",
+    "create in <code>%s</code>": "stwórz w <code>%s</code>",
     "create in global languages directory": "stwórz w globalny, katalogu języków",
     "Start translating": "Zacznij tłumaczyć",
     "New version available": "Nowa wersja jest dostępna",
@@ -183,6 +156,35 @@ loco = window.loco||{}, loco.t = function( pairs ){
     "Themes": "Motywy",
     "Plugins": "Wtyczki",
     "Core": "Silnik",
-    "Translate WordPress plugins and themes directly in your browser": ""
+    "PHP extension \"%s\" is not installed. If you experience problems you should install it": "Rozszerzenie PHP \"%s\" nie jest zainstalowane. Jeżeli doświadczasz pewnych problemów to powinieneś je spróbować zainstalować",
+    "Unknown error": "Nieznany błąd",
+    "PO file saved": "Plik PO zapisany",
+    "and MO file compiled": "oraz plik MO skompilowany",
+    "Merged from %s": "Połączono z %s",
+    "Merged from source code": "Połączono z kodu źródłowego",
+    "Already up to date with %s": "Już aktualne z %s",
+    "Already up to date with source code": "Już aktualne z kodu źródłowego",
+    "1 new string added": {
+        "one": "1 nowa linia dodana",
+        "few": "%s nowe linie dodano",
+        "other": "%s nowych linii dodano"
+    },
+    "1 obsolete string removed": {
+        "one": "1 zbędna linia usunięta",
+        "few": "%s zbędne linie usunięte",
+        "other": "%s zbędnych linii usunięto"
+    },
+    "Your changes will be lost if you continue without saving": "Utracisz aktualne zmiany jeśli będziesz kontynuował bez zapisywania",
+    "Source text": "Tekst źródłowy",
+    "%s translation": "%s tłumaczenie",
+    "Comments": "Komentarze",
+    "Context": "Kontekst",
+    "Translation": "Tłumaczenie",
+    "No source files in this package, nothing to sync": "Brak plików źródłowych w tej paczce, nic do synchronizacji",
+    "No strings could be extracted from source files": "Żadne linie nie mogą być wyciągnięte z plików źródłowych",
+    "Translate WordPress plugins and themes directly in your browser": "Tłumacz wtyczki i skórki WordPress'a bezpośrednio z poziomu przeglądarki",
+    "http://wordpress.org/extend/plugins/loco-translate": "http://wordpress.org/extend/plugins/loco-translate",
+    "Tim Whitlock": "Tim Whitlock",
+    "https://localise.biz/help/wordpress/translate-plugin": "https://localise.biz/help/wordpress/translate-plugin"
 } 
 );
