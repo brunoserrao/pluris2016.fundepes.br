@@ -143,6 +143,13 @@ class BrunoApi{
 				'callback'  => array($this, 'foruns')
 			)
 		);
+
+		register_rest_route( $this->namespace, '/foruns/comentar',
+			array(
+				'methods'   => 'POST',
+				'callback'  => array($this, 'comentar')
+			)
+		);
 	}
 
 	/**
@@ -565,13 +572,65 @@ class BrunoApi{
 			return new WP_Error( 'rest_type_invalid', __( 'Invalid resource.' ), array( 'status' => 404 ) );
 		}
 
+		$comentarios_args = get_comments(
+			array(
+				'post_ID' => $id,
+				'post_type' => 'dwqa-comment',
+				'comment_approved' => 1,
+				'count' => true
+			)
+		);
+
+		$comentarios = get_comments($comentarios_args);
+
 		$parse_result = $this->__parse_result($query_result);
 
 		$result = array(
-			'data' => $parse_result
+			'data' => $parse_result,
+			'comentarios' => $comentarios
 		);
 		
 		return $result;
+	}
+
+	/**
+	* Salvar comentário no Forum
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function comentar(WP_REST_Request $request) {
+		if (!$this->login($request)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Login Fail.' ), array( 'status' => 404 ) );
+		}
+
+		if (empty($request['id']) or empty($request['comentario'])) {
+			return new WP_Error( 'rest_type_invalid', __( 'Invalid post Id or Comment.' ), array( 'status' => 401 ) );
+		}
+
+		$id = sanitize_text_field($request['id']);
+		$user_id = get_current_user_id();
+		$comentario = ($request['comentario']);
+		$user = get_user_meta($user_id);
+
+		$data = array(
+		    'comment_post_ID' => $id,
+		    'comment_content' => $comentario,
+		    'comment_type' => 'dwqa-comment',
+		    'comment_approved' => 1,
+		    'comment_author' => $user['first_name'][0] . ' ' . $user['last_name'][0],
+			'user_id' => $user_id
+		);
+
+		$comentario_id = wp_insert_comment($data);
+
+		if (is_wp_error($comentario_id)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Erro ao criar comentário.' ), array( 'status' => 401 ) );
+		}
+
+		return array(
+			'data' => $comentario_id
+		);
 	}
 
 	/**
