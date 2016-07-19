@@ -129,6 +129,20 @@ class BrunoApi{
 				'callback'  => array($this, 'artigos')
 			)
 		);
+
+		register_rest_route( $this->namespace,'/foruns',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'foruns')
+			)
+		);
+
+		register_rest_route( $this->namespace, '/foruns/(?P<id>[\d]+)',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'foruns')
+			)
+		);
 	}
 
 	/**
@@ -497,6 +511,51 @@ class BrunoApi{
 		}
 
 		$query_args['post_type'] = 'bs_posts_events';
+		$query_args['posts_per_page'] = -1;
+
+		$posts_query = new WP_Query();
+		$query_result = $posts_query->query( $query_args );
+
+		if (empty($query_result)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Invalid resource.' ), array( 'status' => 404 ) );
+		}
+
+		$parse_result = $this->__parse_result($query_result);
+
+		$result = array(
+			'data' => $parse_result
+		);
+		
+		return $result;
+	}
+
+	/**
+	* Requisitar posts do tipo Fórum
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function foruns(WP_REST_Request $request) {
+		$id = !empty($request['id']) ? $request['id'] : false;
+		$thumb_size = !empty($id) ? 'full' : 'thumbnail';
+		
+		$this->paged = !empty($request['paged']) ? $request['paged'] : 1;
+		
+		if (!empty($request['fields'])) {
+			$this->__merge_fields(explode(',',$request['fields']));
+		}	
+	
+		if (!empty($request['s'])) {
+			$query_args['s'] = $request['s'];
+		}
+
+		if (!empty($id)) {
+			$query_args = array();
+			array_push($this->default_fields,'post_content');
+			$query_args['p'] = $id;
+		}
+
+		$query_args['post_type'] = 'dwqa-question';
 		$query_args['posts_per_page'] = -1;
 
 		$posts_query = new WP_Query();
