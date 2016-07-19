@@ -150,6 +150,13 @@ class BrunoApi{
 				'callback'  => array($this, 'comentar')
 			)
 		);
+
+		register_rest_route( $this->namespace,'/contato',
+			array(
+				'methods'   => 'POST',
+				'callback'  => array($this, 'contato')
+			)
+		);
 	}
 
 	/**
@@ -612,9 +619,8 @@ class BrunoApi{
 		}
 
 		$id = sanitize_text_field($request['id']);
-		$user_id = get_current_user_id();
-		$comentario = ($request['comentario']);
-		$user = get_user_meta($user_id);
+		$comentario = esc_textarea($request['comentario']);
+		$user = get_user_meta(get_current_user_id());
 
 		$data = array(
 		    'comment_post_ID' => $id,
@@ -622,7 +628,7 @@ class BrunoApi{
 		    'comment_type' => 'dwqa-comment',
 		    'comment_approved' => 1,
 		    'comment_author' => $user['first_name'][0] . ' ' . $user['last_name'][0],
-			'user_id' => $user_id
+			'user_id' => get_current_user_id()
 		);
 
 		$comentario_id = wp_insert_comment($data);
@@ -633,6 +639,46 @@ class BrunoApi{
 
 		return array(
 			'data' => $comentario_id
+		);
+	}
+
+
+	/**
+	* Enviar formulario de contato
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function contato(WP_REST_Request $request) {
+		if (!$this->login($request)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Login Fail.' ), array( 'status' => 404 ) );
+		}
+
+		if (empty($request['mensagem'])) {
+			return new WP_Error( 'rest_type_invalid', __( 'Empty message.' ), array( 'status' => 401 ) );
+		}
+
+		$user_id = get_current_user_id();
+		$user_data = get_user_by('id', $user_id);
+		$user_meta = get_user_meta($user_id);
+		$assunto = sanitize_text_field($request['assunto']);
+		$mensagem = esc_textarea($request['mensagem']);
+
+		$headers[] = 'From:'. $user_meta['first_name'][0] . ' ' . $user_meta['last_name'][0] . '<'. $user_data->user_email .'>';
+		$admin_emails = get_users(array(
+			'role' => 'Administrator'
+		));
+
+		$emails = array();
+
+		foreach ($admin_emails as $admin) {
+			array_push($emails, $admin->data->user_email);
+		}
+
+		$send = wp_mail( $emails, $assunto, $mensagem, $headers );
+
+		return array(
+			'data' => $send
 		);
 	}
 
