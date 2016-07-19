@@ -108,6 +108,27 @@ class BrunoApi{
 				'callback'  => array($this, 'logout')
 			)
 		);
+
+		register_rest_route( $this->namespace, '/cadastro',
+			array(
+				'methods'   => 'POST',
+				'callback'  => array($this, 'cadastro')
+			)
+		);
+
+		register_rest_route( $this->namespace,'/artigos',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'artigos')
+			)
+		);
+
+		register_rest_route( $this->namespace, '/artigos/(?P<id>[\d]+)',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'artigos')
+			)
+		);
 	}
 
 	/**
@@ -173,6 +194,40 @@ class BrunoApi{
 		}
 
 		return true;
+	}
+
+	/**
+	* Criar conta do usuário
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function cadastro(WP_REST_Request $request){
+		$email = sanitize_text_field($request['email']);
+		$username = explode('@', $email)[0];
+		$name = explode(' ', sanitize_text_field($request['name']));
+		$last_name = sizeof($name) > 0 ? $name[1] : '';
+		$password = sanitize_text_field($request['password']);
+	
+		$data = array(
+			'user_login' => $username,
+			'user_email' => $email,
+			'first_name' => $name[0],
+			'last_name' =>  $last_name,
+			'user_pass' => $password,
+			'role' => 'customer'
+		);
+
+		$user_id = wp_insert_user($data);
+
+		if (is_wp_error($user_id)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Register new user fail.' ), array( 'status' => 401 ) );
+		}
+
+		$request['username'] = $email;
+		$request['password'] = $password;
+
+		return $this->validar($request);
 	}
 
 	/**
@@ -456,6 +511,60 @@ class BrunoApi{
 		$result = array(
 			'data' => $parse_result
 		);
+		
+		return $result;
+	}
+
+	/**
+	* Requisitar posts do tipo Eventos
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function artigos(WP_REST_Request $request) {
+		$id = !empty($request['id']) ? $request['id'] : false;
+		$thumb_size = !empty($id) ? 'full' : 'thumbnail';
+		
+		$paged = !empty($request['paged']) ? $request['paged'] : 1;
+		
+		if (!empty($request['s'])) {
+			$query_args['s'] = $request['s'];
+		}
+
+		if (!empty($id)) {
+			$query_args = array();
+			array_push($this->default_fields,'post_content');
+			$query_args['p'] = $id;
+		}
+
+		$query_args['post_type'] = 'bs_posts_articles';
+		$query_args['paged'] = $paged;
+		$query_args['posts_per_page'] = 10;
+
+		$posts_query = new WP_Query();
+		$query_result = $posts_query->query( $query_args );
+
+		if (empty($query_result)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Invalid resource.' ), array( 'status' => 404 ) );
+		}
+
+		$parse_result = $this->__parse_result($query_result);
+
+		$result = array(
+			'data' => $parse_result
+		);
+
+		if (empty($id)) {
+			$total_posts = $posts_query->found_posts;
+
+			$paging = array(
+				'actual_page' => (int) $paged,
+				'total_pages' => (int) ceil( $total_posts / $this->posts_per_page ),
+				'total_posts' => (int) $total_posts
+			);
+
+			$result['paging'] = $paging;
+		}
 		
 		return $result;
 	}
