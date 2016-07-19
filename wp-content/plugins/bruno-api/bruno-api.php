@@ -292,7 +292,7 @@ class BrunoApi{
 	*/
 	public function galeria(WP_REST_Request $request){
 		$pagina_id = 259;
-		
+
 		$role_ids = get_users(
 			array(
 				'fields' => 'ID',
@@ -574,17 +574,8 @@ class BrunoApi{
 			return new WP_Error( 'rest_type_invalid', __( 'Invalid resource.' ), array( 'status' => 404 ) );
 		}
 
-		$comentarios_args = get_comments(
-			array(
-				'post_ID' => $id,
-				'post_type' => 'dwqa-comment',
-				'comment_approved' => 1,
-				'count' => true
-			)
-		);
-
-		$comentarios = get_comments($comentarios_args);
 		$parse_result = $this->__parse_result($query_result);
+		$comentarios = get_comments(array('post_id' => $id));
 		
 		$result = array(
 			'data' => $parse_result,
