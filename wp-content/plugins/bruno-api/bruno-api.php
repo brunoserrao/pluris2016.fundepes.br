@@ -291,6 +291,8 @@ class BrunoApi{
 	* @return array $result
 	*/
 	public function galeria(WP_REST_Request $request){
+		$pagina_id = 259;
+		
 		$role_ids = get_users(
 			array(
 				'fields' => 'ID',
