@@ -676,7 +676,8 @@ class BrunoApi{
 		);
 
 		if (empty($id)) {
-
+			$total_posts = $posts_query->found_posts;
+			
 			$query_args = array();
 			$query_args['post_type'] = 'page';
 			$query_args['page_id'] = 261;
@@ -685,8 +686,6 @@ class BrunoApi{
 			$query_result = $posts_query->query( $query_args );
 
 			$result['descricao'] = $query_result[0]->post_content;
-
-			$total_posts = $posts_query->found_posts;
 
 			$paging = array(
 				'actual_page' => (int) $paged,
