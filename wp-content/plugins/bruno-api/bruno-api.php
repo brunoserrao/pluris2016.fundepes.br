@@ -660,7 +660,7 @@ class BrunoApi{
 
 		$query_args['post_type'] = 'bs_posts_articles';
 		$query_args['paged'] = $paged;
-		$query_args['posts_per_page'] = 10;
+		$query_args['posts_per_page'] = -1;
 
 		$posts_query = new WP_Query();
 		$query_result = $posts_query->query( $query_args );
@@ -677,7 +677,7 @@ class BrunoApi{
 
 		if (empty($id)) {
 			$total_posts = $posts_query->found_posts;
-			
+
 			$query_args = array();
 			$query_args['post_type'] = 'page';
 			$query_args['page_id'] = 261;
