@@ -582,13 +582,23 @@ class BrunoApi{
 		);
 
 		$comentarios = get_comments($comentarios_args);
-
 		$parse_result = $this->__parse_result($query_result);
-
+		
 		$result = array(
 			'data' => $parse_result,
 			'comentarios' => $comentarios
 		);
+
+		if (empty($id)) {
+			$query_args = array();
+			$query_args['post_type'] = 'page';
+			$query_args['page_id'] = 1011;
+
+			$posts_query = new WP_Query();
+			$query_result = $posts_query->query( $query_args );
+
+			$result['descricao'] = $query_result[0]->post_content;
+		}
 		
 		return $result;
 	}
@@ -673,6 +683,16 @@ class BrunoApi{
 		);
 
 		if (empty($id)) {
+
+			$query_args = array();
+			$query_args['post_type'] = 'page';
+			$query_args['page_id'] = 261;
+
+			$posts_query = new WP_Query();
+			$query_result = $posts_query->query( $query_args );
+
+			$result['descricao'] = $query_result[0]->post_content;
+
 			$total_posts = $posts_query->found_posts;
 
 			$paging = array(
