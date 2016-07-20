@@ -109,6 +109,13 @@ class BrunoApi{
 			)
 		);
 
+		register_rest_route( $this->namespace,'/recuperar-senha',
+			array(
+				'methods'   => 'POST',
+				'callback'  => array($this, 'recuperarSenha')
+			)
+		);
+
 		register_rest_route( $this->namespace, '/cadastro',
 			array(
 				'methods'   => 'POST',
@@ -169,7 +176,7 @@ class BrunoApi{
 		$username = $request['username'];
 		$password = $request['password'];
 
-		$user = get_user_by('user_email', $username);
+		$user = get_user_by('email', $username);
 
 		$wp_authenticate = wp_authenticate_email_password( $user, $username, $password );
 		
@@ -267,6 +274,64 @@ class BrunoApi{
 	public function logout(WP_REST_Request $request){
 		wp_logout();
 		return true;
+	}
+
+	/**
+	* Enviar email para o usuario resetar a senha
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function recuperarSenha(WP_REST_Request $request){
+		$username = sanitize_text_field($request['username']);
+		$user_data = get_user_by('email', $username);
+
+		if (!$user_data) {
+			return new WP_Error( 'rest_type_invalid', __( 'Email not found' ), array( 'status' => 404 ) );
+		}
+
+		global $wpdb, $wp_hasher;
+		
+		do_action('lostpassword_post');
+		
+		$user_login = $user_data->user_login;
+		$user_email = $user_data->user_email;
+		do_action('retreive_password', $user_login);
+		do_action('retrieve_password', $user_login);
+		
+		$allow = apply_filters('allow_password_reset', true, $user_data->ID);
+	
+		$key = wp_generate_password( 20, false );
+		do_action( 'retrieve_password_key', $user_login, $key );
+
+		if ( empty( $wp_hasher ) ) {
+			require_once ABSPATH . 'wp-includes/class-phpass.php';
+			$wp_hasher = new PasswordHash( 8, true );
+		}
+		
+		$hashed = $wp_hasher->HashPassword( $key );    
+		$wpdb->update( $wpdb->users, array( 'user_activation_key' => time().":".$hashed ), array( 'user_login' => $user_login ) );
+		$message = __('Someone requested that the password be reset for the following account:') . "\r\n\r\n";
+		$message .= network_home_url( '/' ) . "\r\n\r\n";
+		$message .= sprintf(__('Username: %s'), $user_login) . "\r\n\r\n";
+		$message .= __('If this was a mistake, just ignore this email and nothing will happen.') . "\r\n\r\n";
+		$message .= __('To reset your password, visit the following address:') . "\r\n\r\n";
+		$message .= '<' . network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user_login), 'login') . ">\r\n";
+	
+		$blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
+
+		$title = sprintf( __('[%s] Password Reset'), $blogname );
+
+		$title = apply_filters('retrieve_password_title', $title);
+		$message = apply_filters('retrieve_password_message', $message, $key);
+
+		if ( $message && !wp_mail($user_email, $title, $message) ){
+			return new WP_Error( 'rest_type_invalid', __( 'Email not found' ), array( 'status' => 404 ) );
+		}
+
+		return array(
+			'data' => $user_email
+		);
 	}
 
 	/**
