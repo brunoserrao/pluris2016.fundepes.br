@@ -620,15 +620,7 @@ class BrunoApi{
 		$id = !empty($request['id']) ? $request['id'] : false;
 		$thumb_size = !empty($id) ? 'full' : 'thumbnail';
 		
-		$this->paged = !empty($request['paged']) ? $request['paged'] : 1;
-		
-		if (!empty($request['fields'])) {
-			$this->__merge_fields(explode(',',$request['fields']));
-		}	
-	
-		if (!empty($request['s'])) {
-			$query_args['s'] = $request['s'];
-		}
+		$query_args = array();
 
 		if (!empty($id)) {
 			$query_args = array();
@@ -647,12 +639,15 @@ class BrunoApi{
 		}
 
 		$parse_result = $this->__parse_result($query_result);
-		$comentarios = get_comments(array('post_id' => $id));
 		
 		$result = array(
-			'data' => $parse_result,
-			'comentarios' => $comentarios
+			'data' => $parse_result
 		);
+
+		if (!empty($id)) {
+			$comentarios = get_comments(array('post_id' => $id));
+			$result['comentarios'] = $comentarios;
+		}
 
 		if (empty($id)) {
 			$query_args = array();
