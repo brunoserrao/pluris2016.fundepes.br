@@ -97,7 +97,7 @@
 
 
 
-			$page = add_submenu_page('woocommerce', __( 'Upload Files During Checkout', 'easy-ufdc' ), __( 'WUFDC', 'easy-ufdc' ), 'manage_woocommerce', 'easy_ufdc', 'easy_ufdc_page' );
+			$page = add_submenu_page('woocommerce', __( 'Upload Files During Checkout', 'easy-ufdc' ), __( 'Easy Upload Files', 'easy-ufdc' ), 'manage_woocommerce', 'easy_ufdc', 'easy_ufdc_page' );
 
 
 
@@ -163,9 +163,8 @@
 		function file_during_checkout(){
 
 
-			global $easy_ufdc_page;
-			
-
+			global $easy_ufdc_page, $woocommerce;
+			//echo $easy_ufdc_page;exit;
 			if(!empty($_POST) && !is_admin()){
 				//pree($_FILES);exit;
 			}
@@ -173,20 +172,10 @@
 			if(!empty($_POST) && !empty($_FILES) && in_array('file_during_checkout', array_keys($_FILES))){
 
 			
-				
-				
-
-
-				
-				
 
 				$file_during_checkout = $_FILES['file_during_checkout']['name'];
 				$file_during_checkout = explode('.', $file_during_checkout);
 				$ext = end($file_during_checkout);
-
-				
-
-				
 
 
 
@@ -194,8 +183,24 @@
 
 				$doctypes=array_map('trim',$doctypes);
 
+			
+
+
+				$cart_url = $woocommerce->cart->get_cart_url();
+				$checkout_url = $woocommerce->cart->get_checkout_url();
 				
-				
+				switch($easy_ufdc_page){
+		
+						case 'checkout':
+							$redir = $checkout_url;
+							break;
+		
+						case 'cart':
+						default:
+							$redir = $cart_url;
+							break;
+		
+				}			
 
 
 				if(!empty($ext) && !in_array($ext, $doctypes)){
@@ -204,15 +209,10 @@
 
 					wc_add_notice(sprintf( __( 'The "%s" file type is not allowed.', 'easy-ufdc'), $ext ), 'error');
 
-
-
-					wp_redirect(get_bloginfo('siteurl').'/'.($easy_ufdc_page!=''?$easy_ufdc_page:'cart'));
-
-
+					wp_redirect($redir);
+					//wp_redirect(get_bloginfo('siteurl').'/'.($easy_ufdc_page!=''?$easy_ufdc_page:'cart'));
 
 					exit;
-
-
 
 				}
 

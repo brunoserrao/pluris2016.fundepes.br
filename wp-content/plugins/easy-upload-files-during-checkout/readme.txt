@@ -5,7 +5,7 @@ Tags: woocommerce, attach files, upload files, during checkout process
 
 Requires at least: 3.0
 Tested up to: 4.5
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Attach files during checkout process on cart page with ease.
@@ -67,6 +67,8 @@ Method-B:
 [Easy Upload Files During Checkout - For Multiple Attachments]: http://shop.androidbubbles.com/product/woocommerce-upload-files-checkout
 
 == Changelog ==
+= 1.0.5 =
+* An important update. [Thanks to Thomas LEFEVRE]
 = 1.0.4 =
 * An important update. [Thanks to Dave Jones]
 = 1.0.3 =
@@ -77,6 +79,8 @@ Method-B:
 * An important update.
 
 == Upgrade Notice ==
+= 1.0.5 =
+An important update.
 = 1.0.4 =
 An important update.
 = 1.0.3 =
