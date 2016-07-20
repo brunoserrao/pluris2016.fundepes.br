@@ -664,7 +664,6 @@ class BrunoApi{
 		$assunto = sanitize_text_field($request['assunto']);
 		$mensagem = esc_textarea($request['mensagem']);
 
-		$headers[] = 'From:'. $user_meta['first_name'][0] . ' ' . $user_meta['last_name'][0] . '<'. $user_data->user_email .'>';
 		$admin_emails = get_users(array(
 			'role' => 'Administrator'
 		));
@@ -675,7 +674,11 @@ class BrunoApi{
 			array_push($emails, $admin->data->user_email);
 		}
 
-		$send = wp_mail( $emails, $assunto, $mensagem, $headers );
+		$send = wp_mail( $emails, $assunto, $mensagem );
+
+		if (!$send) {
+			return new WP_Error( 'rest_type_invalid', __( 'Error sendmail.' ), array( 'status' => 401 ) );
+		}
 
 		return array(
 			'data' => $send
