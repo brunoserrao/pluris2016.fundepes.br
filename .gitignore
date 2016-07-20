@@ -21,5 +21,6 @@ error_log
 .DS_Store
 *.pot~
 .htaccess
+0
 
 thumb/.htaccess
