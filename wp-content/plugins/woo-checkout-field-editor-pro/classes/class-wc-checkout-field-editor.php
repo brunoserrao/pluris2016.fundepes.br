@@ -51,11 +51,13 @@ class WC_Checkout_Field_Editor {
                         	<p><strong><i>WooCommerce Checkout Field Editor Pro</i></strong> premium version provides more features to design your checkout page.</p>
                             <ul>
                             	<li>12 field types available,<br/>(<i>Text, Hidden, Password, Textarea, Radio, Checkbox, Select, Multi-select, Date Picker, Time Picker, Heading, Label</i>).</li>
+                                <li>Conditionally display fields based on cart items and other field(s) values.</li>
+                                <li>Add an extra cost to the cart total based on field selection.</li>
                                 <li>Option to add more sections in addition to the core sections (billing, shipping and additional) in checkout page.</li>
                             </ul>
                         </td>
                         <td>
-                        	<a target="_blank" href="http://themehigh.com" class="">
+                        	<a target="_blank" href="http://www.themehigh.com/product/woocommerce-checkout-field-editor-pro/" class="">
                             	<img src="<?php echo plugins_url( '../assets/css/upgrade-btn.png', __FILE__ ); ?>" />
                             </a>
                         </td>

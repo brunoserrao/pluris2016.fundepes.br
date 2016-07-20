@@ -3,7 +3,7 @@
  * Plugin Name: Woo Checkout Field Editor Pro
  * Description: Customize WooCommerce checkout fields(Add, Edit, Delete and re-arrange fields).
  * Author:      ThemeHiGH
- * Version:     1.0.9
+ * Version:     1.1.0
  * Author URI:  http://www.themehigh.com
  * Plugin URI:  http://www.themehigh.com
  * Text Domain: thwcfd
@@ -122,19 +122,31 @@ if(in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get
 		
 		if(isset($fields['account']) && is_array($fields['account'])){
 			foreach( $fields['account'] as $name => $values ) {
-				$fields['account'][ $name ]['label'] 	   = __($fields['account'][ $name ]['label'], 'woocommerce');
-				$fields['account'][ $name ]['placeholder'] = __($fields['account'][ $name ]['placeholder'], 'woocommerce');
+				if(isset($fields['account'][$name])){
+					if(isset($fields['account'][$name]['label'])){
+						$fields['account'][ $name ]['label'] = __($fields['account'][ $name ]['label'], 'woocommerce');
+					}
+					if(isset($fields['account'][$name]['placeholder'])){
+						$fields['account'][ $name ]['placeholder'] = __($fields['account'][ $name ]['placeholder'], 'woocommerce');
+					}
+				}
 			}
 		}
 		
 		if(isset($fields['order']) && is_array($fields['order'])){
 			foreach( $fields['order'] as $name => $values ) {
-				if (isset($values['enabled']) && $values['enabled'] == false ) {
-					unset( $fields['order'][ $name ] );
-				}else{
-					$fields['order'][ $name ]['label'] 		 = __($fields['order'][ $name ]['label'], 'woocommerce');
-					$fields['order'][ $name ]['placeholder'] = __($fields['order'][ $name ]['placeholder'], 'woocommerce');	
-				}		
+				if(isset($fields['order'][$name])){
+					if (isset($values['enabled']) && $values['enabled'] == false ) {
+						unset( $fields['order'][ $name ] );
+					}else{
+						if(isset($fields['order'][$name]['label'])){
+							$fields['order'][ $name ]['label'] = __($fields['order'][ $name ]['label'], 'woocommerce');
+						}
+						if(isset($fields['order'][ $name ]['placeholder'])){
+							$fields['order'][ $name ]['placeholder'] = __($fields['order'][ $name ]['placeholder'], 'woocommerce');	
+						}
+					}	
+				}	
 			}
 		}
 		
@@ -188,8 +200,12 @@ if(in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get
 				}
 				
 				if(isset($fields[$name])){
-					$fields[ $name ]['label'] 		= __($fields[ $name ]['label'], 'woocommerce');
-					$fields[ $name ]['placeholder'] = __($fields[ $name ]['placeholder'], 'woocommerce');
+					if(isset($fields[$name]['label'])){
+						$fields[ $name ]['label'] = __($fields[ $name ]['label'], 'woocommerce');
+					}
+					if(isset($fields[$name]['placeholder'])){
+						$fields[ $name ]['placeholder'] = __($fields[ $name ]['placeholder'], 'woocommerce');
+					}
 				}
 			}								
 			return $fields;
