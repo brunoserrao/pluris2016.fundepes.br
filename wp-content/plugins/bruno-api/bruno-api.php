@@ -646,6 +646,13 @@ class BrunoApi{
 
 		if (!empty($id)) {
 			$comentarios = get_comments(array('post_id' => $id));
+
+			if (!empty($comentarios)) {
+				foreach ($comentarios as $key => $comentario) {
+					$comentarios[$key]->comment_format_date = date_i18n( get_option( 'date_format' ) , strtotime($comentarios[$key]->comment_date) );
+				}
+			}
+
 			$result['comentarios'] = $comentarios;
 		}
 
@@ -679,7 +686,7 @@ class BrunoApi{
 		}
 
 		$id = sanitize_text_field($request['id']);
-		$comentario = esc_textarea($request['comentario']);
+		$comentario = $request['comentario'];
 		$user = get_user_meta(get_current_user_id());
 
 		$data = array(
@@ -722,7 +729,7 @@ class BrunoApi{
 		$user_data = get_user_by('id', $user_id);
 		$user_meta = get_user_meta($user_id);
 		$assunto = sanitize_text_field($request['assunto']);
-		$mensagem = esc_textarea($request['mensagem']);
+		$mensagem = $request['mensagem'];
 
 		$admin_emails = get_users(array(
 			'role' => 'Administrator'
