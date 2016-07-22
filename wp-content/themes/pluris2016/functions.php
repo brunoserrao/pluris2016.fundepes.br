@@ -573,3 +573,15 @@ function add_image_attachment_fields_to_save( $post, $attachment ) {
 	return $post;
 }
 add_filter('attachment_fields_to_save', 'add_image_attachment_fields_to_save', null , 2);
+
+
+/*
+* Remover a senha forte do Woocommerce
+*
+*/
+function wc_ninja_remove_password_strength() {
+	if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
+		wp_dequeue_script( 'wc-password-strength-meter' );
+	}
+}
+add_action( 'wp_print_scripts', 'wc_ninja_remove_password_strength', 100 );
