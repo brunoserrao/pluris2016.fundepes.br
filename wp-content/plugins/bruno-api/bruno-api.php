@@ -62,7 +62,7 @@ class BrunoApi{
 
 		register_rest_route( $this->namespace,'/eventos',
 			array(
-				'methods'   => 'GET',
+				'methods'   => 'POST',
 				'callback'  => array($this, 'eventos')
 			)
 		);
@@ -574,9 +574,7 @@ class BrunoApi{
 	public function eventos(WP_REST_Request $request) {
 		$id = !empty($request['id']) ? $request['id'] : false;
 		$thumb_size = !empty($id) ? 'full' : 'thumbnail';
-		
-		$this->paged = !empty($request['paged']) ? $request['paged'] : 1;
-		
+
 		if (!empty($request['fields'])) {
 			$this->__merge_fields(explode(',',$request['fields']));
 		}	
@@ -589,6 +587,30 @@ class BrunoApi{
 			$query_args = array();
 			array_push($this->default_fields,'post_content');
 			$query_args['p'] = $id;
+		}
+
+		if (!empty($request['day'])) {
+			switch ($request['day']) {
+				case 1:
+					$start_date = '2016-10-05';
+					break;
+				case 2:
+					$start_date = '2016-10-06';
+					break;
+				case 3:
+					$start_date = '2016-10-07';
+					break;
+				default:
+					break;
+			}
+
+			$query_args['meta_query'] = array(
+				'relation' => 'AND',
+				array(
+					'key' => 'date_start',
+					'value' => $start_date
+				)
+			);
 		}
 
 		$query_args['post_type'] = 'bs_posts_events';
@@ -606,7 +628,18 @@ class BrunoApi{
 		$result = array(
 			'data' => $parse_result
 		);
-		
+
+		if (empty($id)) {
+			$query_args = array();
+			$query_args['post_type'] = 'page';
+			$query_args['page_id'] = 169;
+
+			$posts_query = new WP_Query();
+			$query_result = $posts_query->query( $query_args );
+
+			$result['descricao'] = $query_result[0]->post_content;
+		}
+
 		return $result;
 	}
 
