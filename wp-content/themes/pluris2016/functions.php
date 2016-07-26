@@ -509,8 +509,10 @@ function woocommerce_order_articles_column_values($column) {
 			if (!empty($articles_id)) {
 				echo "<ul>";
 				foreach ($articles_id as $article_id) {
-					$title = get_the_title($article_id);
-					echo "<li><a href=".get_the_permalink($article_id)." target='_blank' >".substr($title, 0,30)."...</a></li>";
+					if ((int)$article_id) {
+						$title = get_the_title($article_id);
+						echo "<li><a href=".get_the_permalink($article_id)." target='_blank' >".substr($title, 0,30)."...</a></li>";
+					}					
 				}
 				echo "</ul>";
 			}
