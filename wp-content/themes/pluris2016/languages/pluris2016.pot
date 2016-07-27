@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Pluris 2016\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Apr 26 2016 21:55:24 GMT-0300 (BRT)\n"
-"POT-Revision-Date: Wed Jul 27 2016 11:58:17 GMT-0300 (BRT)\n"
+"POT-Revision-Date: Wed Jul 27 2016 12:03:33 GMT-0300 (BRT)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: bruno <brunosserrao@gmail.com>\n"
 "Language-Team: \n"
@@ -559,7 +559,7 @@ msgid "You must be logged in to checkout."
 msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:61
-msgid "You is an author or co-author of an approved article ?"
+msgid "Is you an author or co-author of an approved article ?"
 msgstr ""
 
 #: ../woocommerce/checkout/form-checkout.php:65
