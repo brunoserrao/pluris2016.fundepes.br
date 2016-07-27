@@ -58,7 +58,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 			<p class="form-row form-row form-row-wide">
 				<label>
-					<?php echo __('Did you sent an article ?', 'pluris2016'); ?>
+					<?php echo __('You is an author or co-author of an approved article ?', 'pluris2016'); ?>
 				</label>
 
 				<div id="checkout_articles_radio">
