@@ -3,7 +3,7 @@
 	Plugin Name: Easy Upload Files During Checkout
 	Plugin URI: http://www.websitedesignwebsitedevelopment.com/wufdc
 	Description: Attach files during checkout process on cart page with ease.
-	Version: 1.0.5
+	Version: 1.0.6
 	Author: Fahad Mahmood 
 	Author URI: http://www.androidbubbles.com
 	License: GPL3

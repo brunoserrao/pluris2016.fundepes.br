@@ -275,17 +275,17 @@
            			$myposts = $wpdb->get_results("
 					
 						SELECT 
-							wp_posts.* 
+							$wpdb->posts.* 
 						FROM 
-							wp_posts                                        								
+							$wpdb->posts                                        								
 						WHERE 
-							wp_posts.post_parent = '".$wc[1]."'  
+							$wpdb->posts.post_parent = '".$wc[1]."'  
                         AND 
-							wp_posts.post_type = 'attachment' 
+							$wpdb->posts.post_type = 'attachment' 
 						AND 
-							((wp_posts.post_status = 'inherit')) 
+							(($wpdb->posts.post_status = 'inherit')) 
                         ORDER BY 
-							wp_posts.post_date 
+							$wpdb->posts.post_date 
 						DESC 
 							LIMIT 0, 1"
 						);
