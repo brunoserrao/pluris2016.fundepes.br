@@ -581,9 +581,15 @@ add_filter('attachment_fields_to_save', 'add_image_attachment_fields_to_save', n
 * Remover a senha forte do Woocommerce
 *
 */
+add_action( 'wp_print_scripts', 'wc_ninja_remove_password_strength', 100 );
 function wc_ninja_remove_password_strength() {
 	if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
 		wp_dequeue_script( 'wc-password-strength-meter' );
 	}
 }
-add_action( 'wp_print_scripts', 'wc_ninja_remove_password_strength', 100 );
+
+
+/*
+* Habilitar imagem destaque para question
+*/
+add_post_type_support( 'dwqa-question', 'thumbnail' );
