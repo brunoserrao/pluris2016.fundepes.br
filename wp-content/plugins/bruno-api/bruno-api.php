@@ -178,7 +178,7 @@ class BrunoApi{
 
 		$user = get_user_by('email', $username);
 
-		$wp_authenticate = wp_authenticate_email_password( $user, $username, $password );
+		$wp_authenticate = wp_authenticate_email_password( null, $username, $password );
 		
 		if (is_wp_error($wp_authenticate)) {
 			return new WP_Error( 'rest_type_invalid', __( 'Login Validate Fail.' ), array( 'status' => 404 ) );
