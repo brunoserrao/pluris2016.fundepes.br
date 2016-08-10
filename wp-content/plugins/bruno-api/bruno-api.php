@@ -60,6 +60,13 @@ class BrunoApi{
 			)
 		);
 
+		register_rest_route( $this->namespace,'/programacao',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'programacao')
+			)
+		);
+
 		register_rest_route( $this->namespace,'/eventos',
 			array(
 				'methods'   => 'POST',
@@ -71,6 +78,20 @@ class BrunoApi{
 			array(
 				'methods'   => 'GET',
 				'callback'  => array($this, 'eventos')
+			)
+		);
+
+		register_rest_route( $this->namespace, '/eventos/categorias',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'eventos_categorias')
+			)
+		);
+
+		register_rest_route( $this->namespace, '/eventos/categorias/(?P<id>[\d]+)',
+			array(
+				'methods'   => 'GET',
+				'callback'  => array($this, 'eventos_categorias')
 			)
 		);
 
@@ -589,15 +610,15 @@ class BrunoApi{
 			$query_args['p'] = $id;
 		}
 
-		if (!empty($request['day'])) {
-			switch ($request['day']) {
-				case 1:
+		if (!empty($request['dia'])) {
+			switch ($request['dia']) {
+				case 5:
 					$start_date = '2016-10-05';
 					break;
-				case 2:
+				case 6:
 					$start_date = '2016-10-06';
 					break;
-				case 3:
+				case 7:
 					$start_date = '2016-10-07';
 					break;
 				default:
@@ -609,6 +630,17 @@ class BrunoApi{
 				array(
 					'key' => 'date_start',
 					'value' => $start_date
+				)
+			);
+		}
+
+		if (!empty($request['categoria_id'])) {
+			$query_args['tax_query'] = array(
+				'relation' => 'AND',
+				array(
+					'taxonomy' => 'events_categories',
+					'field' => 'term_id',
+					'terms' => $request['categoria_id']
 				)
 			);
 		}
@@ -628,19 +660,46 @@ class BrunoApi{
 		$result = array(
 			'data' => $parse_result
 		);
+		return $result;
+	}
 
-		if (empty($id)) {
-			$query_args = array();
-			$query_args['post_type'] = 'page';
-			$query_args['page_id'] = 169;
+	/**
+	* Requisitar a descrição da programação
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function programacao(){
+		$query_args = array();
+		$query_args['post_type'] = 'page';
+		$query_args['page_id'] = 169;
 
-			$posts_query = new WP_Query();
-			$query_result = $posts_query->query( $query_args );
+		$posts_query = new WP_Query();
+		$query_result = $posts_query->query( $query_args );
 
-			$result['descricao'] = $query_result[0]->post_content;
-		}
+		$result['descricao'] = $query_result[0]->post_content;
 
 		return $result;
+	}
+
+
+	/**
+	* Requisitar as categorias de eventos
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function eventos_categorias(WP_REST_Request $request) {
+		// $taxonomies = get_terms(
+		// 	array(
+		// 		'taxonomy' => 'events_categories'
+		// 	)
+		// );
+
+		// return $taxonomies;
+		$page = get_post(259);
+		echo apply_filters( 'the_content', $page->post_content ); 
+		
 	}
 
 	/**

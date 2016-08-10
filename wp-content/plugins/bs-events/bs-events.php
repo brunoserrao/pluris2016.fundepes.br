@@ -70,6 +70,23 @@ class bsEvents {
 				)
 			)
 		);
+
+		register_taxonomy(  
+			'events_categories',
+			'bs_posts_events',
+			array(
+				'show_ui' 			=> true,
+				'show_in_menu' 		=> true,
+				'show_admin_column' => true,
+				'hierarchical'		=> true,  
+				'label'				=> __('Categories'),
+				'query_var'			=> true,
+				'rewrite'			=> array(
+				'slug'				=> 'events_categories',
+				'with_front'		=> true
+				)
+			)
+		);
 	}
 
 	/**
