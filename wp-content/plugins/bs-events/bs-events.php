@@ -16,6 +16,64 @@ class bsEvents {
 		add_action( 'add_meta_boxes', array( $this, 'add_events_metaboxes' ), 30 );
 		add_action( 'save_post', array( $this, 'save_meta_boxes' ), 1, 2 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_plugin_scripts' ),1, 3 );
+
+		add_action( 'admin_menu', array($this, 'bs_events_admin_menu'));
+		add_action( 'admin_init', array($this,'register_admin_custom_fields'));
+	}
+
+	/**
+	 * Register Menu Settings Link
+	 *
+	 */
+	public function bs_events_admin_menu(){
+		add_submenu_page(
+			'edit.php?post_type=bs_posts_events', 
+			__('Email eventos','bs-events'), 
+			__('Email eventos','bs-events'), 
+			'manage_options', 
+			'bseventsemail', 
+			array(
+				$this,
+				'settings_page'
+			)
+		);
+	}
+
+	/**
+	 * Register Settings Email field
+	 *
+	 */
+	public function register_admin_custom_fields(){
+		register_setting( 'bs_events_post_group', 'bs_events_email');
+	}
+
+	/**
+	 * Register post type events
+	 *
+	 */
+	public function settings_page(){
+		?>
+			<div class="wrap">
+				<h2><?php echo __('E-mail para receber as perguntas', 'bs-events')?></h2>
+
+				<form method="post" action="options.php">
+				<?php settings_fields('bs_events_post_group'); ?>
+
+					<table class="form-table">
+						<tr valign="top">
+							<th scope="row">E-mail</th>
+							<td>
+								<input type="text" class="regular-text" name="bs_events_email" value="<?php echo get_option('bs_events_email') ?>"/>
+							</td>
+						</tr>
+					</table>
+
+					<p class="submit">
+						<input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes');?>">
+					</p>
+				</form>
+			</div>
+		<?php	
 	}
 
 	/**
@@ -66,7 +124,8 @@ class bsEvents {
 					'supports'            => array( 'title', 'editor', 'thumbnail'),
 					'has_archive'         => true,
 					'show_in_nav_menus'   => true,
-					'menu_icon'           => 'dashicons-tickets-alt'
+					'menu_icon'           => 'dashicons-tickets-alt',
+					'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' )
 				)
 			)
 		);
