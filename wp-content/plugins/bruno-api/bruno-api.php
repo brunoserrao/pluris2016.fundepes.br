@@ -95,6 +95,13 @@ class BrunoApi{
 			)
 		);
 
+		register_rest_route( $this->namespace,'/eventos/enviar_pergunta',
+			array(
+				'methods'   => 'POST',
+				'callback'  => array($this, 'enviar_pergunta')
+			)
+		);
+
 		register_rest_route( $this->namespace, '/galeria',
 			array(
 				'methods'   => 'GET',
@@ -664,6 +671,44 @@ class BrunoApi{
 	}
 
 	/**
+	* Enviar pergunta ao participante
+	*
+	* @param WP_REST_Request $request
+	* @return array $result
+	*/
+	public function enviar_pergunta(WP_REST_Request $request) {
+		if (!$this->login($request)) {
+			return new WP_Error( 'rest_type_invalid', __( 'Login Fail.' ), array( 'status' => 404 ) );
+		}
+
+		if (empty($request['form']['mensagem'])) {
+			return new WP_Error( 'rest_type_invalid', __( 'Empty message.' ), array( 'status' => 401 ) );
+		}
+
+		$user_id = get_current_user_id();
+		$user_data = get_user_by('id', $user_id);
+		$user_meta = get_user_meta($user_id);
+		$assunto = 'Pergunta ao palestrante';
+		$mensagem = $request['form']['mensagem'];
+
+		$emails = str_replace(' ','',get_option('bs_events_email'));
+
+		if (strpos($emails, ',')) {
+			$emails = explode(',', $emails);
+		}
+
+		$send = wp_mail( $emails, $assunto, $mensagem );
+
+		if (!$send) {
+			return new WP_Error( 'rest_type_invalid', __( 'Error sendmail.' ), array( 'status' => 401 ) );
+		}
+
+		return array(
+			'data' => $send
+		);
+	}
+
+	/**
 	* Requisitar a descrição da programação
 	*
 	* @param WP_REST_Request $request
@@ -800,7 +845,6 @@ class BrunoApi{
 			'data' => $comentario_id
 		);
 	}
-
 
 	/**
 	* Enviar formulario de contato
