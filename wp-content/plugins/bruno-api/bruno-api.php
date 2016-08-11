@@ -88,9 +88,9 @@ class BrunoApi{
 			)
 		);
 
-		register_rest_route( $this->namespace, '/eventos/categorias/(?P<id>[\d]+)',
+		register_rest_route( $this->namespace, '/eventos/categorias',
 			array(
-				'methods'   => 'GET',
+				'methods'   => 'POST',
 				'callback'  => array($this, 'eventos_categorias')
 			)
 		);
@@ -735,16 +735,45 @@ class BrunoApi{
 	* @return array $result
 	*/
 	public function eventos_categorias(WP_REST_Request $request) {
-		// $taxonomies = get_terms(
-		// 	array(
-		// 		'taxonomy' => 'events_categories'
-		// 	)
-		// );
+		$args = array(
+			'taxonomy'     => 'events_categories',
+			'hierarchical' => false,
+			'hide_empty'   => false,
+			'orderby' => 'name',
+			'parent' => 0
+		);
 
-		// return $taxonomies;
-		$page = get_post(259);
-		echo apply_filters( 'the_content', $page->post_content ); 
-		
+		$categorias = get_categories( $args );
+
+		foreach ($categorias as $key => $categoria) {
+			if ($subcategorias = $this->subcategorias($categoria)) {
+				$categorias[$key]->subcategory = $subcategorias;
+			}
+		}
+
+		return $categorias;
+	}
+
+	private function subcategorias($categoria){
+		$args = array(
+			'taxonomy'     => 'events_categories',
+			'hierarchical' => false,
+			'hide_empty'   => false,
+			'orderby' => 'name',
+			'parent' => $categoria->cat_ID
+		);
+
+		$subcategorias = get_categories( $args );
+
+		if (empty($subcategorias)) {
+			return;
+		}
+
+		foreach ($subcategorias as $key => $subcategoria) {
+			$subcategorias[$key]->subcategory = $this->subcategorias($subcategoria);
+		}
+
+		return $subcategorias;
 	}
 
 	/**
