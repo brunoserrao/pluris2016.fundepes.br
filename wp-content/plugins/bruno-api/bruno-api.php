@@ -88,13 +88,6 @@ class BrunoApi{
 			)
 		);
 
-		register_rest_route( $this->namespace, '/eventos/categorias',
-			array(
-				'methods'   => 'POST',
-				'callback'  => array($this, 'eventos_categorias')
-			)
-		);
-
 		register_rest_route( $this->namespace,'/eventos/enviar_pergunta',
 			array(
 				'methods'   => 'POST',
@@ -743,15 +736,24 @@ class BrunoApi{
 			'parent' => 0
 		);
 
+		if (!empty($request['categoria_id'])) {
+			$args['term_id'] = $request['categoria_id'];
+			unset($args['parent']);
+		}
+
 		$categorias = get_categories( $args );
 
 		foreach ($categorias as $key => $categoria) {
 			if ($subcategorias = $this->subcategorias($categoria)) {
 				$categorias[$key]->subcategory = $subcategorias;
+			} else {
+				$categorias[$key]->subcategory = false;
 			}
 		}
 
-		return $categorias;
+		return array(
+			'data' => $categorias
+		);
 	}
 
 	private function subcategorias($categoria){
