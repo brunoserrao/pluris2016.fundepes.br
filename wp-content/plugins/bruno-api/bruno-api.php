@@ -678,11 +678,24 @@ class BrunoApi{
 			return new WP_Error( 'rest_type_invalid', __( 'Empty message.' ), array( 'status' => 401 ) );
 		}
 
+		$palestra = query_posts(
+			array(
+				'post_type' => 'bs_posts_events',
+				'page_id' => $request['id']
+			)
+		);
+
 		$user_id = get_current_user_id();
 		$user_data = get_user_by('id', $user_id);
 		$user_meta = get_user_meta($user_id);
-		$assunto = 'Pergunta ao palestrante';
-		$mensagem = $request['form']['mensagem'];
+		$assunto   = 'Pergunta ao palestrante';
+		$mensagem .= '<h3>Palestra</h3><br />';
+		$mensagem .= $palestra[0]->post_title.'<br /><br />';
+		$mensagem .= '<h3>Parcicipante</h3><br />';
+		$mensagem .= 'De :'. $user_data->display_name.'<br />';
+		$mensagem .= 'E-mail :'. $user_data->user_email.'<br /><br />';
+		$mensagem .= '<h3>Mensagem</h3><br />';
+		$mensagem .= $request['form']['mensagem'].'<br /><br />';
 
 		$emails = str_replace(' ','',get_option('bs_events_email'));
 
