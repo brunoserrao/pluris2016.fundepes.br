@@ -696,6 +696,7 @@ class BrunoApi{
 		$mensagem .= 'E-mail :'. $user_data->user_email.'<br /><br />';
 		$mensagem .= '<h3>Mensagem</h3><br />';
 		$mensagem .= $request['form']['mensagem'].'<br /><br />';
+		$headers = array('Content-Type: text/html; charset=UTF-8');
 
 		$emails = str_replace(' ','',get_option('bs_events_email'));
 
@@ -703,7 +704,7 @@ class BrunoApi{
 			$emails = explode(',', $emails);
 		}
 
-		$send = wp_mail( $emails, $assunto, $mensagem );
+		$send = wp_mail( $emails, $assunto, $mensagem, $headers );
 
 		if (!$send) {
 			return new WP_Error( 'rest_type_invalid', __( 'Error sendmail.' ), array( 'status' => 401 ) );
