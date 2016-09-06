@@ -4,7 +4,7 @@ Plugin Name: Loco Translate
 Plugin URI: https://wordpress.org/plugins/loco-translate/
 Description: Translate themes and plugins directly in WordPress
 Author: Tim Whitlock
-Version: 2.0.0
+Version: 2.0.5
 Author URI: https://localise.biz/wordpress/plugin
 Text Domain: loco
 Domain Path: /languages/
@@ -45,7 +45,7 @@ function loco_plugin_file(){
  * @return string
  */
 function loco_plugin_version(){
-    return '2.0.0';
+    return '2.0.5';
 }
 
 
@@ -161,7 +161,7 @@ function loco_autoload( $name ){
         require $path;
     }
     else if( file_exists( $path = ABSPATH.'wp-admin/includes/class-'.strtr(strtolower($name),'_','-').'.php' ) ){
-        require $path;
+        require_once $path;
     }
 }
 
@@ -180,7 +180,7 @@ if( LOCO_LANG_DIR ){
 }
 
 
-// initialize hooks for main site or admin screens:
+// initialize hooks for admin screens
 if( is_admin() ){
     Loco_hooks_AdminHooks::init();
 }

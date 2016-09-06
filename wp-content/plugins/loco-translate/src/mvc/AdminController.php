@@ -55,7 +55,12 @@ abstract class Loco_mvc_AdminController extends Loco_mvc_Controller {
      * "update_footer" filter, prints Loco version number in admin footer
      */
     public function filter_update_footer( $text ){
-        return sprintf( 'v%s', loco_plugin_version() );
+        $html = sprintf( '<span>v%s</span>', loco_plugin_version() );
+        if( $this->bench ){
+            $info = $this->get('debug');
+            $html .= sprintf('<span>%sms</span>', number_format($info->time,2) );
+        }
+        return $html;
     }
 
 
@@ -67,7 +72,20 @@ abstract class Loco_mvc_AdminController extends Loco_mvc_Controller {
         if( ! isset($query) ){
             $query = http_build_query( array( 'utm_campaign' => 'wp', 'utm_source' => 'admin', 'utm_content' => $this->get('_route') ), null, '&' );
         }
-        return $url . ( strpos($url,'?') ? '&' : '?' ) . $query;
+        $u = parse_url( $url );
+        if( isset($u['host']) && 'localise.biz' === $u['host'] ){
+            $url = 'https://localise.biz'.$u['path'];
+            if( isset($u['query']) ){
+                $url .= '?'. $u['query'].'&'.$query;
+            }
+            else {
+                $url .= '?'.$query;
+            }
+            if( isset($u['fragment']) ){
+                $url .= '#'.$u['fragment'];
+            }
+        }
+        return $url;
     }
 
 
@@ -111,15 +129,10 @@ abstract class Loco_mvc_AdminController extends Loco_mvc_Controller {
         // common js utils
         $this->enqueueScript('min/admin', array('jquery-ui-dialog') );
         
-        // check all extensions on all pages so admin notices are shown
-        foreach( array('json','mbstring','tokenizer') as $ext ){
+        // check essential extensions on all pages so admin notices are shown
+        foreach( array('json','mbstring') as $ext ){
             loco_check_extension($ext);
         }
-
-        /*/ additional system checks
-        if( 2147483647 === PHP_INT_MAX ){
-            Loco_error_AdminNotices::warn( __("Your operating system is not 64 bit",'loco') );
-        }*/
     }
 
 
@@ -147,6 +160,7 @@ abstract class Loco_mvc_AdminController extends Loco_mvc_Controller {
         $this->view->set( $prop, $value );
         return $this;
     }
+
 
 
     /**

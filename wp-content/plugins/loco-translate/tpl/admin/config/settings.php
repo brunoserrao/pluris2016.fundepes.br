@@ -32,6 +32,22 @@ $this->extend('../layout');
                     </td>
                 </tr>
                 <tr>
+                    <th scope="row"><?php esc_html_e('Extracting strings','loco')?></th>
+                    <td>
+                        <fieldset>
+                            <legend class="screen-reader-text">
+                                <span><?php esc_html_e('Extracting strings','loco')?></span>
+                            </legend>
+                            <p>
+                                <label for="loco--max_php_size">
+                                    <?php esc_html_e('Skip PHP files larger than:','loco')?> 
+                                </label>
+                                <input type="text" size="5" name="opts[max_php_size]" id="loco--max_php_size" value="<?php echo esc_attr( $opts->max_php_size)?>" />
+                            </p>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
                     <th scope="row"><?php esc_html_e('Backing up PO files','loco')?></th>
                     <td>
                         <fieldset>
@@ -60,6 +76,9 @@ $this->extend('../layout');
                                     <?php esc_html_e('Remember in session','loco')?> 
                                 </label>
                             </p>
+                            <span class="description">
+                                <a href="<?php echo esc_url(apply_filters('loco_external','https://localise.biz/wordpress/plugin/manual/filesystem#remote'))?>" target="_blank">See security notes</a>
+                            </span>
                         </fieldset>
                     </td>
                 </tr>
