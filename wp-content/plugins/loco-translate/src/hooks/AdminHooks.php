@@ -28,6 +28,7 @@ class Loco_hooks_AdminHooks extends Loco_hooks_Hookable {
             // initialize Ajax router before hook fired so we can handle output buffering
             if( 'loco_' === substr($action,0,5)  && isset($_REQUEST['route']) ){
                 new Loco_mvc_AjaxRouter;
+                Loco_package_Listener::create();
             }
         }
         // @codeCoverageIgnoreEnd
@@ -66,13 +67,14 @@ class Loco_hooks_AdminHooks extends Loco_hooks_Hookable {
      */
     public function on_plugin_action_links( $links, $plugin = '' ){
          try {
-             if( $plugin && current_user_can('loco_admin') ){
+             if( $plugin && current_user_can('loco_admin') && Loco_package_Plugin::get_plugin($plugin) ){
+                // ok to add "translate" link into meta row
                 $href = Loco_mvc_AdminRouter::generate('plugin-view', array( 'bundle' => $plugin) );
                 $links[] = '<a href="'.esc_attr($href).'">'.esc_html__('Translate','loco').'</a>';
              }
          }
          catch( Exception $e ){
-             // shh..
+             // $links[] = esc_html( 'Debug: '.$e->getMessage() );
          }
          return $links;
     }

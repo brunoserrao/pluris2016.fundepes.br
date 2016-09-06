@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-07-28 08:50:57+0000\n"
+"PO-Revision-Date: 2016-09-01 09:30:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -107,11 +107,11 @@ msgstr "No hay descargas disponibles todavía."
 
 #: templates/myaccount/lost-password-confirmation.php:24
 msgid "Password reset email has been sent."
-msgstr "Correo electrónico de reinicio de contraseña enviado."
+msgstr "Correo electrónico de restablecimiento de contraseña enviado."
 
 #: templates/myaccount/lost-password-confirmation.php:27
 msgid "A password reset email has been sent to the email address on file for your account, but may take several minutes to show up in your inbox. Please wait at least 10 minutes before attempting another reset."
-msgstr "Se han enviado un correo electrónico de reinicio de contraseña a la dirección de correo electrónico de tu cuenta, pero puede llevar varios minutos que aparezca en tu bandeja de entrada. Por favor, espera al menos 10 minutos antes de intentar otro reinicio."
+msgstr "Se han enviado un correo electrónico de restablecimiento de contraseña a la dirección de correo electrónico de tu cuenta, pero puede llevar varios minutos que aparezca en tu bandeja de entrada. Por favor, espera al menos 10 minutos antes de intentar otro restablecimiento."
 
 #: templates/myaccount/orders.php:107
 msgid "Previous"
@@ -1371,11 +1371,11 @@ msgstr "El código del cupón es obligatorio."
 
 #: includes/api/class-wc-rest-orders-controller.php:837
 msgid "Cannot create coupon, try again."
-msgstr "No se puede crear el cupón, inténtalo de nuevo."
+msgstr "No se pudo crear el cupón, inténtalo de nuevo."
 
 #: includes/api/class-wc-rest-orders-controller.php:854
 msgid "Cannot update coupon, try again."
-msgstr "No se puede actualizar el cupón, inténtalo de nuevo."
+msgstr "No se pudo actualizar el cupón, inténtalo de nuevo."
 
 #: includes/api/class-wc-rest-orders-controller.php:941
 msgid "Order item ID provided is not associated with order."
@@ -1712,7 +1712,7 @@ msgstr "ID de producto no válida."
 
 #: includes/api/class-wc-rest-product-reviews-controller.php:226
 msgid "The date the review was created, in the site's timezone."
-msgstr "La fecha en la que la valoración fue creada, en la zona horaria del sitio."
+msgstr "La fecha en que fue creada la valoración, en la zona horaria del sitio."
 
 #: includes/api/class-wc-rest-product-reviews-controller.php:232
 msgid "Review rating (0 to 5)."
@@ -1855,7 +1855,7 @@ msgstr "Número de días que el cliente tiene para poder descargar el producto."
 
 #: includes/api/class-wc-rest-products-controller.php:2004
 msgid "Download type, this controls the schema on the front-end."
-msgstr "Tipo de descarga, controla el esquema en la tienda."
+msgstr "Tipo de descarga, esto controla el esquema en la tienda."
 
 #: includes/api/class-wc-rest-products-controller.php:2011
 msgid "Product external URL. Only for external products."
@@ -2327,7 +2327,7 @@ msgstr "Si se ignora la papelera y se fuerza el borrado."
 
 #: includes/api/class-wc-rest-coupons-controller.php:220
 msgid "The coupon code cannot be empty."
-msgstr "El código de cupón no puede estar vacío."
+msgstr "El código del cupón no puede estar vacío."
 
 #: includes/api/class-wc-rest-coupons-controller.php:436
 msgid "Unique identifier for the object."
@@ -2336,15 +2336,15 @@ msgstr "Identificador único para el objeto."
 #: includes/api/class-wc-rest-coupons-controller.php:442
 #: includes/api/class-wc-rest-orders-controller.php:1728
 msgid "Coupon code."
-msgstr "Código de cupón."
+msgstr "Código del cupón."
 
 #: includes/api/class-wc-rest-coupons-controller.php:447
 msgid "The date the coupon was created, in the site's timezone."
-msgstr "La fecha en la que el cupón fue creado, en la zona horaria del sitio."
+msgstr "La fecha en la que se creó el cupón, en la zona horaria del sitio."
 
 #: includes/api/class-wc-rest-coupons-controller.php:453
 msgid "The date the coupon was last modified, in the site's timezone."
-msgstr "La fecha en la que el cupón fue modificado por última vez, en la zona horaria del sitio."
+msgstr "La fecha en la que el cupón se modificó por última vez, en la zona horaria del sitio."
 
 #: includes/api/class-wc-rest-coupons-controller.php:459
 msgid "Coupon description."
@@ -2368,7 +2368,7 @@ msgstr "Número de veces que el cupón ha sido ya utilizado."
 
 #: includes/api/class-wc-rest-coupons-controller.php:487
 msgid "Whether coupon can only be used individually."
-msgstr "Si el cupón puede ser utilizado sólo individualmente."
+msgstr "Si el cupón sólo puede utilizarse individualmente."
 
 #: includes/api/class-wc-rest-coupons-controller.php:493
 msgid "List of product ID's the coupon can be used on."
@@ -2787,11 +2787,11 @@ msgstr "Zona europea = Cualquier país en Europa = Tarifa plana de envío"
 
 #: includes/admin/settings/views/html-admin-page-shipping-zones.php:73
 msgid "Add as many zones as you need &ndash; customers will only see the methods available for their address."
-msgstr "Añadir tantas zonas como necesites &ndash; los clientes sólo verán los métodos disponibles para su dirección."
+msgstr "Añade tantas zonas como necesites &ndash; los clientes sólo verán los métodos disponibles para su dirección."
 
 #: includes/admin/settings/views/html-admin-page-shipping-zones.php:100
 msgid "Select regions within this zone"
-msgstr "Seleccionar regiones dentro de esta zona"
+msgstr "Elige regiones dentro de esta zona"
 
 #: includes/admin/settings/views/html-admin-page-shipping-zones.php:119
 msgid "Limit to specific ZIP/postcodes"
@@ -2803,7 +2803,7 @@ msgstr "Enumera 1 código postal por línea"
 
 #: includes/admin/settings/views/html-admin-page-shipping-zones.php:122
 msgid "Postcodes containing wildcards (e.g. CB23*) and fully numeric ranges (e.g. <code>90210...99000</code>) are also supported."
-msgstr "Códigos postales que contengan comodines (p.ej. CB23*) y rangos numéricos completos (p.ej. <code>90210…99000</code>) también se permiten."
+msgstr "También se pueden utilizar códigos postales que contengan comodines (p.ej. CP23*) y rangos numéricos completos (p.ej. <code>90210…99000</code>)."
 
 #: includes/admin/settings/views/html-settings-tax.php:21
 msgid "Postcode for this rule. Semi-colon (;) separate multiple values. Leave blank to apply to all areas. Wildcards (*) and ranges for numeric postcodes (e.g. 12345...12350) can also be used."
@@ -2811,7 +2811,7 @@ msgstr "Código postal para esta regla. El punto y coma (;) separa múltiples va
 
 #: includes/admin/settings/views/html-webhooks-edit.php:103
 msgid "The Secret Key is used to generate a hash of the delivered webhook and provided in the request headers."
-msgstr "La Clave secreta es usada para generar un hash del webhook entregado y provisto en los encabezados de la petición."
+msgstr "La clave secreta se usa para generar un hash del webhook entregado y ofrecido en las cabeceras de la petición."
 
 #: includes/admin/views/html-admin-page-status-report.php:95
 msgid "WP Cron"
@@ -3442,7 +3442,7 @@ msgstr "Zonas de envío"
 #: includes/admin/class-wc-admin-help.php:73
 #: includes/admin/class-wc-admin-setup-wizard.php:608
 msgid "Bank Transfer (BACS) Payments"
-msgstr "Pagos por transferencia bancaria (BACS)"
+msgstr "Pagos por transferencia bancaria"
 
 #: includes/admin/class-wc-admin-help.php:89
 #: includes/admin/class-wc-admin-setup-wizard.php:567
@@ -4325,7 +4325,7 @@ msgstr "Seguir"
 
 #: templates/order/order-again.php:25
 msgid "Order Again"
-msgstr "Pedir nuevamente"
+msgstr "Hacer otro pedido"
 
 #: templates/order/order-details-customer.php:23
 msgid "Customer Details"
@@ -4417,7 +4417,7 @@ msgstr "Tu comentario está pendiente de aprobación"
 
 #: templates/single-product/review-meta.php:36
 msgid "verified owner"
-msgstr "usuario registrado"
+msgstr "propietario verificado"
 
 #: templates/single-product/up-sells.php:48
 msgid "You may also like&hellip;"
@@ -4433,7 +4433,7 @@ msgstr "Añadir una valoración"
 
 #: templates/single-product-reviews.php:70
 msgid "Leave a Reply to %s"
-msgstr "Deja un comentario para %s"
+msgstr "Deja una respuesta a %s"
 
 #: templates/single-product-reviews.php:78
 msgid "Submit"
@@ -4605,7 +4605,7 @@ msgstr "Cupón:"
 
 #: includes/wc-cart-functions.php:269
 msgid "Free shipping coupon"
-msgstr "Cupón para envío gratis"
+msgstr "Cupón de envío gratuito"
 
 #: includes/wc-cart-functions.php:274
 msgid "[Remove]"
@@ -4886,7 +4886,7 @@ msgstr "Información adicional"
 
 #: includes/wc-template-functions.php:1124
 msgid "Reviews (%d)"
-msgstr "Comentarios (%d)"
+msgstr "Valoraciones (%d)"
 
 #: includes/wc-template-functions.php:1257
 msgid "Use $args argument as an array instead. Deprecated argument will be removed in WC 2.2."
@@ -5168,7 +5168,7 @@ msgstr "Desc"
 
 #: includes/widgets/class-wc-widget-products.php:73
 msgid "Hide free products"
-msgstr "Ocultar productos gratis"
+msgstr "Ocultar productos gratuitos"
 
 #: includes/widgets/class-wc-widget-products.php:78
 msgid "Show hidden products"
@@ -5330,7 +5330,7 @@ msgstr "Volver al carrito"
 
 #: templates/checkout/form-billing.php:29
 msgid "Billing &amp; Shipping"
-msgstr "Facturación &amp; Envío"
+msgstr "Facturación y envío"
 
 #: templates/checkout/form-billing.php:52
 msgid "Create an account?"
@@ -5366,7 +5366,7 @@ msgstr "Haz clic aquí para acceder"
 
 #: templates/checkout/form-login.php:35
 msgid "If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing &amp; Shipping section."
-msgstr "Si ya eres cliente, por favor rellena tus datos a continuación. Si eres un nuevo cliente, continúa al formulario de facturación y  envío."
+msgstr "Si ya eres cliente, por favor, rellena tus datos a continuación. Si eres un nuevo cliente, continúa al formulario de facturación y  envío."
 
 #: templates/checkout/form-pay.php:79
 msgid "Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements."
@@ -5411,7 +5411,7 @@ msgstr "El pedido #%d desde %s ha sido cancelado. El pedido fue el siguiente:"
 
 #: templates/emails/admin-new-order.php:28
 msgid "You have received an order from %s. The order is as follows:"
-msgstr "Has recibido un pedido de %s. Su pedido es el siguiente:"
+msgstr "Has recibido un pedido de %s. El pedido es este:"
 
 #: templates/emails/customer-completed-order.php:28
 #: templates/emails/plain/customer-completed-order.php:25
@@ -5467,7 +5467,7 @@ msgstr "Hola. Tu pedido del %s ha sido reembolsado."
 #: templates/emails/customer-reset-password.php:27
 #: templates/emails/plain/customer-reset-password.php:25
 msgid "Someone requested that the password be reset for the following account:"
-msgstr "Alguien ha solicitado que la contraseña sea restablecida para la siguiente cuenta:"
+msgstr "Alguien ha solicitado que se restablezca la contraseña para la siguiente cuenta:"
 
 #: templates/emails/customer-reset-password.php:28
 #: templates/emails/plain/customer-reset-password.php:27
@@ -5477,7 +5477,7 @@ msgstr "Nombre de usuario: %s"
 #: templates/emails/customer-reset-password.php:29
 #: templates/emails/plain/customer-reset-password.php:28
 msgid "If this was a mistake, just ignore this email and nothing will happen."
-msgstr "Si esto fue un error, por favor ignora este correo y no pasará nada."
+msgstr "Si esto fue un error, por favor ignora este correo electrónico y no pasará nada."
 
 #: templates/emails/customer-reset-password.php:30
 #: templates/emails/plain/customer-reset-password.php:29
@@ -5556,7 +5556,7 @@ msgstr "No se encontraron productos que concuerden con la selección."
 msgid "Showing the single result"
 msgid_plural "Showing all %d results"
 msgstr[0] "Mostrando el único resultado"
-msgstr[1] "Mostrando todos los %d resultados"
+msgstr[1] "Mostrando todos los resultados (%d)"
 
 #: templates/loop/sale-flash.php:28 templates/single-product/sale-flash.php:28
 msgid "Sale!"
@@ -5564,7 +5564,7 @@ msgstr "¡Oferta!"
 
 #: templates/myaccount/form-add-payment-method.php:59
 msgid "Sorry, it seems that there are no payment methods which support adding a new payment method. Please contact us if you require assistance or wish to make alternate arrangements."
-msgstr "Lo sentimos, parece que no hay métodos de pago que soporten añadir un nuevo método de pago. Por favor, ponte en contacto con nosotros si necesitas ayuda."
+msgstr "Lo sentimos, parece que no hay métodos de pago que permitan añadir un nuevo método de pago. Por favor, ponte en contacto con nosotros si necesitas ayuda o si deseas solicitar unas condiciones diferentes."
 
 #: includes/class-wc-form-handler.php:195
 #: templates/myaccount/form-edit-account.php:40
@@ -5614,7 +5614,7 @@ msgstr "Anti-spam"
 
 #: templates/myaccount/form-lost-password.php:27
 msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
-msgstr "¿Perdiste tu constraseña? Por favor introduce tu nombre de usuario o correo electronico. Recibirás un enlace para crear una contraseña nueva por correo electronico. "
+msgstr "¿Perdiste tu contraseña? Por favor, introduce tu nombre de usuario o correo electrónico. Recibirás un enlace para crear una contraseña nueva por correo electrónico. "
 
 #: templates/myaccount/form-reset-password.php:27
 msgid "Enter a new password below."
@@ -5659,7 +5659,7 @@ msgstr "%1$s&ndash;%2$s"
 
 #: includes/class-wc-product-variable.php:43
 msgid "Select options"
-msgstr "Seleccionar opciones"
+msgstr "Ajustes de selección"
 
 #: includes/class-wc-product-variation.php:721
 msgid "%s &ndash; %s%s"
@@ -5832,7 +5832,7 @@ msgstr "Las facturas que se mandan por email al cliente pueden contener informac
 
 #: includes/emails/class-wc-email-customer-invoice.php:48
 msgid "Invoice for order {order_number} from {order_date}"
-msgstr "Factura del pedido # {order_number} de {order_date}"
+msgstr "Factura del pedido {order_number} del {order_date}"
 
 #: includes/emails/class-wc-email-customer-invoice.php:49
 msgid "Invoice for order {order_number}"
@@ -6059,7 +6059,7 @@ msgstr "¿Estás seguro que deseas eliminar este archivo de plantilla?"
 
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:31
 msgid "BACS"
-msgstr "BACS / Transferencia bancaria"
+msgstr "Transferencia bancaria"
 
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:32
 msgid "Allows payments by BACS, more commonly known as direct bank/wire transfer."
@@ -6185,7 +6185,7 @@ msgstr "BIC"
 
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:337
 msgid "Awaiting BACS payment"
-msgstr "Pendientes de pago"
+msgstr "Pendiente de pago por transferencia"
 
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:366
 msgid "BSB"
@@ -6264,7 +6264,7 @@ msgstr "Si deseas que el contra reembolso sólo esté disponible para ciertos m�
 
 #: includes/gateways/cod/class-wc-gateway-cod.php:99
 msgid "Select shipping methods"
-msgstr "Selecciona los métodos de envío"
+msgstr "Elige los métodos de envío"
 
 #: includes/gateways/cod/class-wc-gateway-cod.php:103
 msgid "Accept for virtual orders"
@@ -6289,7 +6289,7 @@ msgstr "PayPal"
 
 #: includes/gateways/paypal/class-wc-gateway-paypal.php:37
 msgid "PayPal standard sends customers to PayPal to enter their payment information. PayPal IPN requires fsockopen/cURL support to update order statuses after payment. Check the %ssystem status%s page for more details."
-msgstr "PayPal estándar funciona enviando al usuario a PayPal para que introduzca su información de pago. Comprueba la pagina %sEstado del Sistema%s para más detalles"
+msgstr "PayPal estándar funciona enviando al usuario a PayPal para que introduzca su información de pago. Comprueba la pagina %sestado del sistema%s para más detalles"
 
 #: includes/gateways/paypal/class-wc-gateway-paypal.php:95
 msgid "PayPal Acceptance Mark"
@@ -6449,7 +6449,7 @@ msgstr "Enviar los datos de envío a PayPal en lugar de los de facturación."
 
 #: includes/gateways/paypal/includes/settings-paypal.php:85
 msgid "PayPal allows us to send one address. If you are using PayPal for shipping labels you may prefer to send the shipping address rather than billing."
-msgstr "PayPal permite enviar una sóla dirección. Si utiliza PayPal para etiquetas de envío puede que usted prefiera enviar la dirección de envío en vez de la de facturación."
+msgstr "PayPal permite enviar una sola dirección. Si utilizas PayPal para etiquetas de envío puede que prefieras enviar la dirección de envío en vez de la de facturación."
 
 #: includes/gateways/paypal/includes/settings-paypal.php:89
 msgid "Address Override"
@@ -6485,7 +6485,7 @@ msgstr "Estilo de la página"
 
 #: includes/gateways/paypal/includes/settings-paypal.php:110
 msgid "Optionally enter the name of the page style you wish to use. These are defined within your PayPal account."
-msgstr "Opcionalmente ingrese el nombre del estilo de la página que desea utilizar. Estos están definidos en su cuenta de PayPal."
+msgstr "Opcionalmente introduce el nombre del estilo de la página que desees utilizar. Están definidos en tu cuenta de PayPal."
 
 #: includes/gateways/paypal/includes/settings-paypal.php:116
 msgid "API Credentials"
@@ -6717,7 +6717,7 @@ msgstr "Pagar ahora"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:646
 msgid "Cancel order &amp; restore cart"
-msgstr "Cancelar pedido &amp; restablecer carrito"
+msgstr "Cancelar pedido y restablecer carrito"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:730
 msgid "Refund was declined."
@@ -6761,7 +6761,7 @@ msgstr "Todos los países permitidos"
 #: includes/shipping/legacy-local-delivery/class-wc-shipping-legacy-local-delivery.php:170
 #: includes/shipping/legacy-local-pickup/class-wc-shipping-legacy-local-pickup.php:126
 msgid "Select some countries"
-msgstr "Selecciona algún país"
+msgstr "Elige algún país"
 
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:44
 #: includes/shipping/legacy-flat-rate/includes/settings-flat-rate.php:71
@@ -6829,7 +6829,7 @@ msgstr "El envío gratuito requiere..."
 #: includes/shipping/free-shipping/class-wc-shipping-free-shipping.php:87
 #: includes/shipping/legacy-free-shipping/class-wc-shipping-legacy-free-shipping.php:123
 msgid "A valid free shipping coupon"
-msgstr "Un envío de cupón gratis "
+msgstr "Un cupón válido de envío gratuito "
 
 #: includes/shipping/legacy-free-shipping/class-wc-shipping-legacy-free-shipping.php:124
 msgid "A minimum order amount (defined below)"
@@ -6853,7 +6853,7 @@ msgstr "Cantidad mínima de pedido"
 #: includes/shipping/free-shipping/class-wc-shipping-free-shipping.php:97
 #: includes/shipping/legacy-free-shipping/class-wc-shipping-legacy-free-shipping.php:133
 msgid "Users will need to spend this amount to get free shipping (if enabled above)."
-msgstr "Los usuarios tendrán que gastar esta cantidad para obtener el envío gratis. (Dejalo en blanco para desactivalo)."
+msgstr "Los usuarios tendrán que gastar esta cantidad para conseguir el envío gratuito (si está activo arriba)."
 
 #: includes/shipping/legacy-international-delivery/class-wc-shipping-legacy-international-delivery.php:51
 msgid "Selected countries"
@@ -6894,7 +6894,7 @@ msgstr "Gastos de envío"
 
 #: includes/shipping/legacy-local-delivery/class-wc-shipping-legacy-local-delivery.php:139
 msgid "What fee do you want to charge for local delivery, disregarded if you choose free. Leave blank to disable."
-msgstr "Qué cuota deseas cobrar para entregas locales, aunque haya elegido gratis. Dejar en blanco para desactivar."
+msgstr "Qué cuota deseas cobrar para entregas locales, aunque hayas elegido gratis. Déjalo en blanco para desactivar."
 
 #: includes/shipping/legacy-local-delivery/class-wc-shipping-legacy-local-delivery.php:145
 #: includes/shipping/legacy-local-pickup/class-wc-shipping-legacy-local-pickup.php:101
@@ -6956,7 +6956,7 @@ msgstr "El cupón ha sido eliminado."
 
 #: includes/class-wc-ajax.php:290
 msgid "Sorry, your session has expired."
-msgstr "Lo sentimos, su sesión ha caducado."
+msgstr "Lo sentimos, tu sesión ha caducado."
 
 #: includes/class-wc-ajax.php:1378
 msgid "No products had their stock reduced - they may not have stock management enabled."
@@ -7166,7 +7166,7 @@ msgstr "No se pudo añadir &quot;%s&quot; al carrito porque el producto está ag
 
 #: includes/class-wc-cart.php:945
 msgid "You cannot add that amount of &quot;%s&quot; to the cart because there is not enough stock (%s remaining)."
-msgstr "No se puede añadir esa cantidad de &quot;%s&quot; al carrito porque no hay suficientes existencias (%s restantes). "
+msgstr "No se puede añadir esa cantidad de &quot;%s&quot; al carrito porque no hay suficientes existencias (quedan %s). "
 
 #: includes/class-wc-cart.php:966
 msgid "You cannot add that amount to the cart &mdash; we have %s in stock and you already have %s in your cart."
@@ -7204,7 +7204,7 @@ msgstr "Error %d: Imposible crear el pedido. Por favor, inténtelo de nuevo"
 
 #: includes/class-wc-checkout.php:356
 msgid "We were unable to process your order, please try again."
-msgstr "No hemos podido procesar su pedido, por favor inténtelo de nuevo."
+msgstr "No hemos podido procesar tu pedido, por favor inténtalo de nuevo."
 
 #: includes/class-wc-checkout.php:369
 msgid "Sorry, your session has expired. <a href=\"%s\" class=\"wc-backward\">Return to shop</a>"
@@ -7234,7 +7234,7 @@ msgstr "no es válido. Por favor introduce uno de los siguientes:"
 
 #: includes/class-wc-checkout.php:562 includes/class-wc-form-handler.php:313
 msgid "You must accept our Terms &amp; Conditions."
-msgstr "Debes aceptar nuestros Términos y Condiciones."
+msgstr "Debes aceptar nuestros términos y condiciones."
 
 #: includes/class-wc-checkout.php:571
 msgid "Unfortunately <strong>we do not ship %s</strong>. Please enter an alternative shipping address."
@@ -7358,7 +7358,7 @@ msgstr "Correo electrónico"
 
 #: includes/class-wc-coupon.php:775
 msgid "Coupon code applied successfully."
-msgstr "Código de cupón aplicado correctamente."
+msgstr "El código de cupón aplicado correctamente."
 
 #: includes/class-wc-coupon.php:778
 msgid "Coupon code removed successfully."
@@ -7386,7 +7386,7 @@ msgstr "¡El código del cupón ya se ha aplicado!"
 
 #: includes/class-wc-coupon.php:811
 msgid "Sorry, coupon \"%s\" has already been applied and cannot be used in conjunction with other coupons."
-msgstr "Lo sentimos, el cupón \"%s\" ya ha sido aplicado y no puede ser utilizado en conjunto con otros cupones."
+msgstr "Lo sentimos, el cupón \"%s\" ya ha sido aplicado y no puede utilizarse en conjunto con otros cupones."
 
 #: includes/class-wc-coupon.php:814
 msgid "Coupon usage limit has been reached."
@@ -7406,7 +7406,7 @@ msgstr "El gasto máximo para usar este cupón es %s."
 
 #: includes/class-wc-coupon.php:826
 msgid "Sorry, this coupon is not applicable to your cart contents."
-msgstr "Lo sentimos, este cupón no es aplicable al contenido de tu carro."
+msgstr "Lo sentimos, este cupón no es aplicable al contenido de tu carrito."
 
 #: includes/class-wc-coupon.php:839
 msgid "Sorry, this coupon is not applicable to the products: %s."
@@ -7632,7 +7632,7 @@ msgstr "El campo Anti-spam fue rellenado."
 
 #: includes/class-wc-frontend-scripts.php:267
 msgid "Please select a rating"
-msgstr "Por favor selecciona una puntuación"
+msgstr "Por favor elige una puntuación"
 
 #: includes/class-wc-frontend-scripts.php:282
 msgid "Error processing checkout. Please try again."
@@ -7650,7 +7650,7 @@ msgstr "Lo sentimos, no hay productos que igualen tu selección. Por favor escog
 #: includes/class-wc-frontend-scripts.php:325
 #: templates/single-product/add-to-cart/variation.php:31
 msgid "Sorry, this product is unavailable. Please choose a different combination."
-msgstr "Lo sentimos, este producto no está disponible. Por favor selecciona otra combinación."
+msgstr "Lo sentimos, este producto no está disponible. Por favor elige otra combinación."
 
 #: includes/class-wc-install.php:294
 msgctxt "Page slug"
@@ -7660,7 +7660,7 @@ msgstr "tienda"
 #: includes/class-wc-install.php:299
 msgctxt "Page slug"
 msgid "cart"
-msgstr "carro"
+msgstr "carrito"
 
 #: includes/class-wc-install.php:304
 msgctxt "Page slug"
@@ -8189,7 +8189,7 @@ msgstr "Versión de WP"
 
 #: includes/admin/views/html-admin-page-status-report.php:57
 msgid "The version of WordPress installed on your site."
-msgstr "La versión de WordPress instalado en su sitio."
+msgstr "La versión de WordPress instalada en tu sitio."
 
 #: includes/admin/views/html-admin-page-status-report.php:61
 msgid "WP Multisite"
@@ -8249,7 +8249,7 @@ msgstr "No se pudo determinar la versión de PHP porque phpversion () no existe.
 
 #: includes/admin/views/html-admin-page-status-report.php:144
 msgid "PHP Post Max Size"
-msgstr "Tamaño máximo del Post PHP"
+msgstr "PHP Post Max Size"
 
 #: includes/admin/views/html-admin-page-status-report.php:145
 msgid "The largest filesize that can be contained in one post."
@@ -8257,19 +8257,19 @@ msgstr "El mayor tamaño de archivo que puede estar contenida en un solo post."
 
 #: includes/admin/views/html-admin-page-status-report.php:149
 msgid "PHP Time Limit"
-msgstr "Límite de Tiempo PHP"
+msgstr "PHP Time Limit"
 
 #: includes/admin/views/html-admin-page-status-report.php:150
 msgid "The amount of time (in seconds) that your site will spend on a single operation before timing out (to avoid server lockups)"
-msgstr "La cantidad de tiempo (en segundos) que su sitio va a gastar en una sola operación antes de tiempo de espera (para evitar bloqueos de servidor)"
+msgstr "La cantidad de tiempo (en segundos) que tu sitio va a consumir en una sola operación antes de agotarse el tiempo de espera (para evitar bloqueos de servidor)"
 
 #: includes/admin/views/html-admin-page-status-report.php:154
 msgid "PHP Max Input Vars"
-msgstr "Vars entrada PHP Max"
+msgstr "PHP Max Input Vars"
 
 #: includes/admin/views/html-admin-page-status-report.php:155
 msgid "The maximum number of variables your server can use for a single function to avoid overloads."
-msgstr "El número máximo de variables de su servidor puede utilizarlo para una sola función para evitar sobrecargas."
+msgstr "El número máximo de variables que tu servidor puede utilizar en cada función para evitar sobrecargas."
 
 #: includes/admin/views/html-admin-page-status-report.php:171
 msgid "SUHOSIN Installed"
@@ -8277,7 +8277,7 @@ msgstr " SUHOSIN Instalado"
 
 #: includes/admin/views/html-admin-page-status-report.php:172
 msgid "Suhosin is an advanced protection system for PHP installations. It was designed to protect your servers on the one hand against a number of well known problems in PHP applications and on the other hand against potential unknown vulnerabilities within these applications or the PHP core itself. If enabled on your server, Suhosin may need to be configured to increase its data submission limits."
-msgstr "Suhosin es un sistema de protección avanzado para instalaciones de PHP. Fue diseñado para proteger sus servidores, por un lado, contra varios problemas bien conocidos en aplicaciones PHP y por otro lado contra potenciales vulnerabilidades desconocidas dentro de estas aplicaciones o el propio núcleo de PHP. Si está activado en tu servidor, Suhosin puede necesitar ser configurado para aumentar sus límites de presentación de datos."
+msgstr "Suhosin es un sistema de protección avanzado para instalaciones de PHP. Fue diseñado para proteger tus servidores, por un lado frente a diversos problemas bien conocidos en aplicaciones PHP y, por otro lado, frente a potenciales vulnerabilidades desconocidas dentro de estas aplicaciones o el propio núcleo de PHP. Si está activado en tu servidor, Suhosin puede que necesite configurarse para aumentar sus límites de envío de datos."
 
 #: includes/admin/views/html-admin-page-status-report.php:185
 msgid "MySQL Version"
@@ -8285,7 +8285,7 @@ msgstr "Versión de MySQL"
 
 #: includes/admin/views/html-admin-page-status-report.php:186
 msgid "The version of MySQL installed on your hosting server."
-msgstr "La versión de MySQL instalado en su servidor de alojamiento."
+msgstr "La versión de MySQL instalado en tu servidor de alojamiento."
 
 #: includes/admin/views/html-admin-page-status-report.php:201
 msgid "Max Upload Size"
@@ -8293,7 +8293,7 @@ msgstr "Tamaño máximo de subida"
 
 #: includes/admin/views/html-admin-page-status-report.php:202
 msgid "The largest filesize that can be uploaded to your WordPress installation."
-msgstr "El mayor tamaño de archivo que se puede cargar a su instalación de WordPress."
+msgstr "El mayor tamaño de archivo que se puede subir a tu instalación de WordPress."
 
 #: includes/admin/views/html-admin-page-status-report.php:206
 msgid "Default Timezone is UTC"
@@ -8313,7 +8313,7 @@ msgstr "Las pasarelas de pago pueden utilizar CURL para comunicarse con servidor
 
 #: includes/admin/views/html-admin-page-status-report.php:228
 msgid "Your server does not have fsockopen or cURL enabled - PayPal IPN and other scripts which communicate with other servers will not work. Contact your hosting provider."
-msgstr "Su servidor no tiene fsockopen o CURL habilitado - PayPal IPN y otras secuencias de comandos que se comunican con otros servidores no funcionará. Comuníquese con su proveedor de hosting."
+msgstr "Tu servidor no tiene habilitado fsockopen o CURL - PayPal IPN y otras secuencias de comandos que se comunican con otros servidores no funcionará. Ponte en contacto con tu proveedor de alojamiento."
 
 #: includes/admin/views/html-admin-page-status-report.php:233
 msgid "Some webservices like shipping use SOAP to get information from remote servers, for example, live shipping quotes from FedEx require SOAP to be installed."
@@ -8333,7 +8333,7 @@ msgstr "Gzip (gzopen) se utiliza para abrir la base de datos GEOIP de MaxMind."
 
 #: includes/admin/views/html-admin-page-status-report.php:276
 msgid "Remote Post"
-msgstr "Publicar remoto"
+msgstr "Publicación remota"
 
 #: includes/admin/views/html-admin-page-status-report.php:277
 msgid "PayPal uses this method of communicating when sending back transaction information."
@@ -8341,7 +8341,7 @@ msgstr "PayPal utiliza este método de comunicación al enviar de nuevo la infor
 
 #: includes/admin/views/html-admin-page-status-report.php:291
 msgid "wp_remote_post() failed. PayPal IPN won't work with your server. Contact your hosting provider."
-msgstr "wp_remote_post() falló. PayPal IPN no funcionará con el servidor. Comuníquese con su proveedor de hosting."
+msgstr "wp_remote_post() falló. PayPal IPN no funcionará con tu servidor. Ponte en contacto con tu proveedor de alojamiento."
 
 #: includes/admin/views/html-admin-page-status-report.php:293
 #: includes/admin/views/html-admin-page-status-report.php:311
@@ -8356,7 +8356,7 @@ msgstr "Código de provincia:%s"
 
 #: includes/admin/views/html-admin-page-status-report.php:301
 msgid "Remote Get"
-msgstr "Obtén remoto"
+msgstr "Obtención remota"
 
 #: includes/admin/views/html-admin-page-status-report.php:302
 msgid "WooCommerce plugins may use this method of communication when checking for plugin updates."
@@ -8376,7 +8376,7 @@ msgstr "Versión de la base de datos de WC"
 
 #: includes/admin/views/html-admin-page-status-report.php:346
 msgid "The version of WooCommerce that the database is formatted for. This should be the same as your WooCommerce Version."
-msgstr "La versión de WooCommerce que la base de datos está formateado para. Este debe ser el mismo que su versión WooCommerce."
+msgstr "La versión de WooCommerce para la que está formateada la base de datos. Debe ser la misma que la de tu versión de WooCommerce."
 
 #: includes/admin/views/html-admin-page-status-report.php:376
 msgid "Table does not exist"
@@ -8719,7 +8719,7 @@ msgstr "Visibilidad"
 #: includes/admin/views/html-bulk-edit-product.php:186
 #: includes/admin/views/html-quick-edit-product.php:143
 msgid "Catalog &amp; search"
-msgstr "Catálogo &amp; búsqueda"
+msgstr "Catálogo y búsqueda"
 
 #: includes/admin/views/html-bulk-edit-product.php:217
 #: includes/admin/views/html-quick-edit-product.php:161
@@ -8773,7 +8773,7 @@ msgstr "No, no me molestes de nuevo"
 
 #: includes/admin/views/html-notice-update.php:13
 msgid "Run the updater"
-msgstr "Ejecute el actualizador"
+msgstr "Ejecuta el actualizador"
 
 #: includes/admin/views/html-notice-update.php:17
 msgid "It is strongly recommended that you backup your database before proceeding. Are you sure you wish to run the updater now?"
@@ -8858,13 +8858,13 @@ msgstr "La clave de API proporcionada no tiene permisos de escritura"
 #: includes/api/legacy/v2/class-wc-api-coupons.php:120
 #: includes/api/legacy/v3/class-wc-api-coupons.php:120
 msgid "Invalid coupon ID"
-msgstr "ID de cupón incorrecto"
+msgstr "ID de cupón no válido"
 
 #: includes/api/legacy/v1/class-wc-api-coupons.php:153
 #: includes/api/legacy/v2/class-wc-api-coupons.php:166
 #: includes/api/legacy/v3/class-wc-api-coupons.php:166
 msgid "You do not have permission to read the coupons count"
-msgstr "No tienes permisos para leer el contador del cupón"
+msgstr "No tienes permisos para ver el contador de cupones"
 
 #: includes/api/legacy/v1/class-wc-api-coupons.php:172
 #: includes/api/legacy/v2/class-wc-api-coupons.php:192
@@ -9110,7 +9110,7 @@ msgstr "El ID del pedido no es válido"
 #: includes/api/legacy/v3/class-wc-api-orders.php:884
 #: includes/cli/class-wc-cli-order.php:891
 msgid "Order item ID provided is not associated with order"
-msgstr "El ID de producto del pedido no está asociado con su pedido"
+msgstr "El ID de producto del pedido no está asociado con el pedido"
 
 #: includes/api/legacy/v2/class-wc-api-orders.php:865
 #: includes/api/legacy/v3/class-wc-api-orders.php:907
@@ -9224,13 +9224,13 @@ msgstr "Se requiere el código de cupón"
 #: includes/api/legacy/v3/class-wc-api-orders.php:1214
 #: includes/cli/class-wc-cli-order.php:1227
 msgid "Cannot create coupon, try again"
-msgstr "No se puede crear el cupón, inténtelo de nuevo"
+msgstr "No se pudo crear el cupón, inténtalo de nuevo"
 
 #: includes/api/legacy/v2/class-wc-api-orders.php:1187
 #: includes/api/legacy/v3/class-wc-api-orders.php:1232
 #: includes/cli/class-wc-cli-order.php:1245
 msgid "Cannot update coupon, try again"
-msgstr "No se puede actualizar el cupón, inténtelo de nuevo"
+msgstr "No se pudo actualizar el cupón, inténtalo de nuevo"
 
 #: includes/api/legacy/v2/class-wc-api-orders.php:1252
 #: includes/api/legacy/v2/class-wc-api-orders.php:1360
@@ -9624,7 +9624,7 @@ msgstr "Calcular descuentos de cupones secuencialmente"
 
 #: includes/admin/settings/class-wc-settings-checkout.php:89
 msgid "When applying multiple coupons, apply the first coupon to the full price and the second coupon to the discounted price and so on."
-msgstr "Al aplicar múltiples cupones, aplicar el primer cupón para el precio completo y el segundo promocional para el precio de descuento y así sucesivamente."
+msgstr "Al aplicar múltiples cupones, se aplica el primer cupón al precio completo y el segundo cupón para el precio ya rebajado y así sucesivamente."
 
 #: includes/admin/settings/class-wc-settings-checkout.php:96
 msgid "Enable guest checkout"
@@ -10032,7 +10032,7 @@ msgstr "Mantener en inventario (en minutos)"
 
 #: includes/admin/settings/class-wc-settings-products.php:260
 msgid "Hold stock (for unpaid orders) for x minutes. When this limit is reached, the pending order will be cancelled. Leave blank to disable."
-msgstr "Mantener el inventario (para pedidos pendientes de pago) durante x minutos. Cuando se alcance este límite se cancelará el pedido pendiente. Dejar en blanco para desactivar."
+msgstr "Mantener el inventario (para pedidos pendientes de pago) durante x minutos. Cuando se alcance este límite se cancelará el pedido pendiente. Déjalo en blanco para desactivarlo."
 
 #: includes/admin/settings/class-wc-settings-products.php:273
 msgid "Notifications"
@@ -10076,11 +10076,11 @@ msgstr "Esto controla cómo se muestra el inventario en la tienda."
 
 #: includes/admin/settings/class-wc-settings-products.php:346
 msgid "Always show stock e.g. \"12 in stock\""
-msgstr "Mostrar siempre el inventario, por ejemplo: \"12 existencias\""
+msgstr "Mostrar siempre el inventario, por ejemplo: \"12 disponibles\""
 
 #: includes/admin/settings/class-wc-settings-products.php:347
 msgid "Only show stock when low e.g. \"Only 2 left in stock\" vs. \"In Stock\""
-msgstr "Mostrar el inventario solo cuando es bajo. Ejemplo: \"Solo quedan 2 existencias\" o \"Hay existencias\""
+msgstr "Mostrar el inventario solo cuando es bajo. Ejemplo: \"Solo quedan 2 disponibles\" o \"Hay existencias\""
 
 #: includes/admin/settings/class-wc-settings-products.php:348
 msgid "Never show stock amount"
@@ -10092,7 +10092,7 @@ msgstr "Método de descarga de archivos"
 
 #: includes/admin/settings/class-wc-settings-products.php:370
 msgid "Forcing downloads will keep URLs hidden, but some servers may serve large files unreliably. If supported, <code>X-Accel-Redirect</code>/ <code>X-Sendfile</code> can be used to serve downloads instead (server requires <code>mod_xsendfile</code>)."
-msgstr "Forzar descargas mantendrá ocultas las URLs, pero algunos servidores pueden servir archivos grandes de manera poco segura. Si es compatible, puedes usar en su lugar <code>X-Accel-Redirect</code> / <code>X-Sendfile</code> para servir descargas (el servidor requiere <code>mod_xsendfile</code> )."
+msgstr "Forzar descargas mantendrá ocultas las URLs, pero puede que algunos servidores sirvan archivos grandes de manera poco segura. Si es compatible, puedes usar en su lugar <code>X-Accel-Redirect</code> / <code>X-Sendfile</code> para servir descargas (el servidor requiere <code>mod_xsendfile</code> )."
 
 #: includes/admin/settings/class-wc-settings-products.php:378
 msgid "Force Downloads"
@@ -10120,7 +10120,7 @@ msgstr "Este ajuste no se aplica a las compras de los invitados."
 
 #: includes/admin/settings/class-wc-settings-products.php:397
 msgid "Grant access to downloadable products after payment"
-msgstr "Conceder acceso a los productos descargables después del pago"
+msgstr "Permitir acceso a los productos descargables después del pago"
 
 #: includes/admin/settings/class-wc-settings-products.php:401
 msgid "Enable this option to grant access to downloads when orders are \"processing\", rather than \"completed\"."
@@ -10160,11 +10160,11 @@ msgstr "Se requieren puntuaciones para dejar una valoración"
 
 #: includes/admin/settings/class-wc-settings-products.php:489
 msgid "Show \"verified owner\" label for customer reviews"
-msgstr "Mostrar etiqueta \"propietario verificado\" por comentarios de los clientes"
+msgstr "Mostrar la etiqueta \"propietario verificado\" en las valoraciones de los clientes"
 
 #: includes/admin/settings/class-wc-settings-products.php:499
 msgid "Only allow reviews from \"verified owners\""
-msgstr "Sólo permitir los comentarios de \"dueños verificados\""
+msgstr "Sólo permitir valoraciones de \"propietarios verificados\""
 
 #: includes/admin/class-wc-admin-help.php:61
 #: includes/admin/settings/class-wc-settings-shipping.php:49
@@ -10235,7 +10235,7 @@ msgstr "Propietario de estas claves."
 
 #: includes/admin/settings/views/html-keys-edit.php:41
 msgid "Select the access type of these keys."
-msgstr "Selecciona el tipo de acceso para estas claves."
+msgstr "Elige el tipo de acceso para estas claves."
 
 #: includes/admin/settings/views/html-keys-edit.php:92
 msgid "Generate API Key"
@@ -10354,7 +10354,7 @@ msgstr "Importar CSV"
 
 #: includes/admin/settings/class-wc-settings-tax.php:174
 msgid "No row(s) selected"
-msgstr "No fila (s) seleccionada"
+msgstr "Ninguna fila(s) seleccionada"
 
 #: includes/admin/settings/class-wc-settings-tax.php:177
 msgid "Country Code"
@@ -10643,7 +10643,7 @@ msgstr "Nuestro catálogo de extensiones WooCommerce se puede encontrar en WooTh
 
 #: includes/admin/views/html-admin-page-addons.php:51
 msgid "Looking for a WooCommerce theme?"
-msgstr "¿Buscando un tema para WooCommerce?"
+msgstr "¿Buscas un tema para WooCommerce?"
 
 #: includes/admin/views/html-admin-page-addons.php:52
 msgid "We recommend Storefront, the %sofficial%s WooCommerce theme."
@@ -10659,7 +10659,7 @@ msgstr "Lee todos los detalles"
 
 #: includes/admin/views/html-admin-page-addons.php:56
 msgid "Download &amp; install"
-msgstr "Descargar &amp; instalar"
+msgstr "Descargar e instalar"
 
 #: includes/admin/views/html-admin-page-status-logs.php:14
 msgid "Log file: %s (%s)"
@@ -10909,7 +10909,7 @@ msgstr "Los productos descargables"
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:696
 #: includes/admin/meta-boxes/views/html-variation-admin.php:298
 msgid "Download limit"
-msgstr "límite de descarga"
+msgstr "Límite de descargas"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:215
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:697
@@ -10942,7 +10942,7 @@ msgstr "Ir a la anterior página"
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:712
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:746
 msgid "Select Page"
-msgstr "Seleccionar página"
+msgstr "Elegir página"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:713
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:747
@@ -11013,7 +11013,7 @@ msgstr "Añadir a la galería"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-images.php:78
 msgid "Add product gallery images"
-msgstr "Añadir galería producto imágenes"
+msgstr "Añadir imágenes a la galería del producto "
 
 #: includes/admin/meta-boxes/views/html-order-download-permission.php:10
 msgid "Revoke Access"
@@ -11263,7 +11263,7 @@ msgstr "\"%s\" términos separados"
 
 #: includes/admin/meta-boxes/views/html-product-attribute.php:63
 msgid "Enter some text, or some attributes by \"%s\" separating values."
-msgstr "Escriba un texto, o algunos atributos de \"%s\" la separación de valores."
+msgstr "Escribe algo de texto, o algunos atributos separando los valores con \"%s\"."
 
 #: includes/admin/meta-boxes/views/html-product-download.php:3
 #: includes/admin/meta-boxes/views/html-product-variation-download.php:2
@@ -11352,7 +11352,7 @@ msgstr "Fecha de finalización de la oferta"
 
 #: includes/admin/meta-boxes/views/html-variation-admin.php:129
 msgid "Enter a quantity to enable stock management at variation level, or leave blank to use the parent product's options."
-msgstr "Introduzca una cantidad para permitir la gestión de existencias por cada variación, o déjalo en blanco para utilizar los ajustes de los productos superiores."
+msgstr "Introduce una cantidad para permitir la gestión de existencias para cada variación, o déjalo en blanco para utilizar los ajustes del producto padre."
 
 #: includes/admin/meta-boxes/views/html-variation-admin.php:175
 msgid "Enter a weight for this variation or leave blank to use the parent product weight."
@@ -11463,11 +11463,11 @@ msgstr "Más popular"
 #: includes/admin/reports/class-wc-report-coupon-usage.php:262
 #: includes/admin/reports/class-wc-report-coupon-usage.php:309
 msgid "No coupons found in range"
-msgstr "No se encuentran en el rango de cupones"
+msgstr "Ningún cupón en este rango"
 
 #: includes/admin/reports/class-wc-report-coupon-usage.php:267
 msgid "Most Discount"
-msgstr "Mayor descuento"
+msgstr "Con más descuento"
 
 #: includes/admin/reports/class-wc-report-coupon-usage.php:352
 #: includes/admin/reports/class-wc-report-customers.php:229
@@ -11655,11 +11655,11 @@ msgstr "%s artículos comprados"
 
 #: includes/admin/reports/class-wc-report-sales-by-date.php:417
 msgid "%s charged for shipping"
-msgstr "%s se cobra por el envío"
+msgstr "%s cobrado por envío"
 
 #: includes/admin/reports/class-wc-report-sales-by-date.php:422
 msgid "%s worth of coupons used"
-msgstr "%s valorado en cupones utilizados"
+msgstr "%s valor de cupones utilizados"
 
 #: includes/admin/reports/class-wc-report-sales-by-date.php:559
 #: includes/admin/reports/class-wc-report-sales-by-product.php:492
@@ -11688,11 +11688,11 @@ msgstr "Cantidad de ventas netas"
 
 #: includes/admin/reports/class-wc-report-sales-by-product.php:106
 msgid "%s sales for the selected items"
-msgstr "%s las ventas de los elementos seleccionados"
+msgstr "%s ventas de los artículos seleccionados"
 
 #: includes/admin/reports/class-wc-report-sales-by-product.php:112
 msgid "%s purchases for the selected items"
-msgstr "%s compras para los elementos seleccionados"
+msgstr "%s compras de los artículos seleccionados"
 
 #: includes/admin/reports/class-wc-report-sales-by-product.php:158
 msgid "Showing reports for:"
@@ -11700,7 +11700,7 @@ msgstr "Mostrando informes para:"
 
 #: includes/admin/reports/class-wc-report-sales-by-product.php:190
 msgid "Reset"
-msgstr "Limpiar"
+msgstr "Restablecer"
 
 #: includes/admin/reports/class-wc-report-sales-by-product.php:198
 msgid "Product Search"
@@ -11714,7 +11714,7 @@ msgstr "Los más vendidos"
 #: includes/admin/reports/class-wc-report-sales-by-product.php:296
 #: includes/admin/reports/class-wc-report-sales-by-product.php:336
 msgid "No products found in range"
-msgstr "No hay productos en ese rango"
+msgstr "Ningún producto en este rango"
 
 #: includes/admin/reports/class-wc-report-sales-by-product.php:253
 msgid "Top Freebies"
@@ -11900,7 +11900,7 @@ msgstr "Activa el registro en la página \"Mi cuenta\""
 
 #: includes/admin/settings/class-wc-settings-accounts.php:81
 msgid "Display returning customer login reminder on the \"Checkout\" page"
-msgstr "Mostrar un recordatorio en la página de finalizar compra para que el cliente ya registrado entre en su cuenta"
+msgstr "Muestra un recordatorio de acceso al cliente ya registrado en la página de \"Finalizar compra\""
 
 #: includes/admin/settings/class-wc-settings-accounts.php:90
 msgid "Account Creation"
@@ -12001,11 +12001,11 @@ msgstr "Lee más acerca de cómo empezar"
 
 #: includes/admin/class-wc-admin-status.php:50
 msgid "Product Transients Cleared"
-msgstr "Transitorios de producto producto borrados"
+msgstr "Transitorios de producto borrados"
 
 #: includes/admin/class-wc-admin-status.php:75
 msgid "%d Transients Rows Cleared"
-msgstr "%d filas transitorias borradas"
+msgstr "%d filas de transitorios borradas"
 
 #: includes/admin/class-wc-admin-status.php:82
 msgid "Roles successfully reset"
@@ -12029,7 +12029,7 @@ msgstr "Tasas de impuestos eliminadas correctamente."
 
 #: includes/admin/class-wc-admin-status.php:120
 msgid "Usage tracking settings successfully reset."
-msgstr "Ajustes de seguimiento de uso restaurados con éxito."
+msgstr "Ajustes de seguimiento de uso restablecidos con éxito."
 
 #: includes/admin/class-wc-admin-status.php:129
 msgid "There was an error calling %s"
@@ -12073,7 +12073,7 @@ msgstr "Recontar los términos"
 
 #: includes/admin/class-wc-admin-status.php:163
 msgid "This tool will recount product terms - useful when changing your settings in a way which hides products from the catalog."
-msgstr "Esta herramienta va a recontar términos de productos - útil cuando se cambia la configuración de una manera que oculta productos del catálogo."
+msgstr "Esta herramienta recontará términos de productos - útil cuando cambias algún ajuste y dejan de mostrarse productos del catálogo."
 
 #: includes/admin/class-wc-admin-status.php:166
 msgid "Capabilities"
@@ -12081,7 +12081,7 @@ msgstr "Capacidades"
 
 #: includes/admin/class-wc-admin-status.php:167
 msgid "Reset capabilities"
-msgstr "Restaurar capacidades"
+msgstr "Restablecer capacidades"
 
 #: includes/admin/class-wc-admin-status.php:168
 msgid "This tool will reset the admin, customer and shop_manager roles to default. Use this if your users cannot access all of the WooCommerce admin pages."
@@ -12097,7 +12097,7 @@ msgstr "Borrar todas las sesiones"
 
 #: includes/admin/class-wc-admin-status.php:173
 msgid "<strong class=\"red\">Warning:</strong> This tool will delete all customer session data from the database, including any current live carts."
-msgstr "<strong class=\"red\">Advertencia:</strong> Esta herramienta eliminará de la base de datos todos los datos de sesión de los clientes, incluyendo cualquier carro actualmente activo."
+msgstr "<strong class=\"red\">Advertencia:</strong> Esta herramienta eliminará de la base de datos todos los datos de sesión de los clientes, incluyendo cualquier carrito actualmente activo."
 
 #: includes/admin/class-wc-admin-status.php:176
 msgid "Install WooCommerce Pages"
@@ -12125,11 +12125,11 @@ msgstr "<strong class=\"red\">Nota:</strong> Esta opción eliminará TODAS tus t
 
 #: includes/admin/class-wc-admin-status.php:186
 msgid "Reset Usage Tracking Settings"
-msgstr "Restaurar ajustes de seguimiento de uso"
+msgstr "Restablecer ajustes de seguimiento de uso"
 
 #: includes/admin/class-wc-admin-status.php:187
 msgid "Reset usage tracking settings"
-msgstr "Restaura los ajustes de seguimiento de uso"
+msgstr "Restablece los ajustes de seguimiento de uso"
 
 #: includes/admin/class-wc-admin-status.php:188
 msgid "This will reset your usage tracking settings, causing it to show the opt-in banner again and not sending any data."
@@ -12335,7 +12335,7 @@ msgstr "Plantilla de correo electrónico HTML"
 
 #: includes/admin/class-wc-admin.php:229
 msgid "If you like <strong>WooCommerce</strong> please leave us a %s&#9733;&#9733;&#9733;&#9733;&#9733;%s rating. A huge thanks in advance!"
-msgstr "Si te gusta <strong>WooCommerce</strong> déjanos una %s&#9733;&#9733;&#9733;&#9733;&#9733;%s puntuación. ¡Muchísimas gracias por adelantado!"
+msgstr "Si te gusta <strong>WooCommerce</strong> déjanos una puntuación de %s&#9733;&#9733;&#9733;&#9733;&#9733;%s. ¡Muchísimas gracias por adelantado!"
 
 #: includes/admin/class-wc-admin.php:229
 msgid "Thanks :)"
@@ -12379,7 +12379,7 @@ msgstr "Es necesario definir las tasas de impuestos por columnas en un orden esp
 
 #: includes/admin/importers/class-wc-tax-rate-importer.php:240
 msgid "Before you can upload your import file, you will need to fix the following error:"
-msgstr "Antes de que usted pueda subir su archivo, tendrá que arreglar el error siguiente:"
+msgstr "Antes de que puedas subir tu archivo de importación tendrás que arreglar el error siguiente:"
 
 #: includes/admin/importers/class-wc-tax-rate-importer.php:249
 msgid "Choose a file from your computer:"
@@ -12434,7 +12434,7 @@ msgstr "Permitir el envío gratuito"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:73
 msgid "Check this box if the coupon grants free shipping. A <a href=\"%s\">free shipping method</a> must be enabled in your shipping zone and be set to require \"a valid free shipping coupon\" (see the \"Free Shipping Requires\" setting)."
-msgstr "Marca esta casilla si el cupón ofrece envío gratuito. El <a href=\"%s\">método de envío gratuito</a> debe estar activo y tener también seleccionado \"un cupón de envío gratuito\" (ver los ajustes de \"El envío gratuito requiere\")."
+msgstr "Marca esta casilla si el cupón ofrece envío gratuito. El <a href=\"%s\">método de envío gratuito</a> debe estar activo y tener también establecido que requiera \"un cupón de envío gratuito\" (ver los ajustes de \"El envío gratuito requiere\")."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:76
 msgid "Coupon expiry date"
@@ -12467,7 +12467,7 @@ msgstr "Uso individual"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:92
 msgid "Check this box if the coupon cannot be used in conjunction with other coupons."
-msgstr "Marque esta casilla si el cupón no se puede utilizar en combinación con otros cupones."
+msgstr "Marca esta casilla si el cupón no se puede utilizar en combinación con otros cupones."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:95
 msgid "Exclude sale items"
@@ -12475,7 +12475,7 @@ msgstr "Excluir los artículos rebajados"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:95
 msgid "Check this box if the coupon should not apply to items on sale. Per-item coupons will only work if the item is not on sale. Per-cart coupons will only work if there are no sale items in the cart."
-msgstr "Marca esta casilla si el cupón no debería aplicarse a artículos rebajados. Los cupones para artículos sólo funcionarán si el artículo no está rebajado. Los cupones para carrito sólo funcionarán si no hay artículos rebajados en el carrito."
+msgstr "Marca esta casilla si el cupón no debería aplicarse a artículos rebajados. Los cupones para artículos concretos sólo funcionarán si el artículo no está rebajado. Los cupones para carrito completo sólo funcionarán si no hay artículos rebajados en el carrito."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:102
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:120
@@ -12489,7 +12489,7 @@ msgstr "Busca un producto&hellip;"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:114
 msgid "Products which need to be in the cart to use this coupon or, for \"Product Discounts\", which products are discounted."
-msgstr "Los productos que necesitan estar en el carro para utilizar el cupón o, por \"Descuentos del producto\", los productos que se descuentan."
+msgstr "Productos que tienen que estar en el carrito para poder utilizar el cupón o, para \"Descuentos del producto\", cuyos productos tienen descuento."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:119
 msgid "Exclude products"
@@ -12497,7 +12497,7 @@ msgstr "Productos excluidos"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:132
 msgid "Products which must not be in the cart to use this coupon or, for \"Product Discounts\", which products are not discounted."
-msgstr "Los productos que no deben estar en el carro para utilizar el cupón o, por \"Descuentos producto \", que los productos no se descuentan."
+msgstr "Productos que no deben estar en el carrito para poder utilizar el cupón o, para \"Descuentos producto \", cuyos productos no tienen descuento."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:139
 msgid "Product categories"
@@ -12509,7 +12509,7 @@ msgstr "Cualquier categoría"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:149
 msgid "A product must be in this category for the coupon to remain valid or, for \"Product Discounts\", products in these categories will be discounted."
-msgstr "Un producto debe estar en esta categoría para el cupón siga siendo válido o, por \"Descuentos del producto\", productos en estas categorías serán descontados."
+msgstr "Un producto debe estar en esta categoría para que el cupón siga siendo válido o, en los \"Descuentos del producto\", los productos en estas categorías tendrán descuento."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:154
 msgid "Exclude categories"
@@ -12521,7 +12521,7 @@ msgstr "Sin categorías"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:164
 msgid "Product must not be in this category for the coupon to remain valid or, for \"Product Discounts\", products in these categories will not be discounted."
-msgstr "El producto no debe estar en esta categoría para el cupón siga siendo válido o, por \"Descuentos del producto\", productos de estas categorías no serán descontados."
+msgstr "El producto no debe estar en esta categoría para que el cupón siga siendo válido o, en los \"Descuentos del producto\", los productos de estas categorías no tendrán descuento."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:170
 msgid "Email restrictions"
@@ -12547,7 +12547,7 @@ msgstr "Uso ilimitado"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:184
 msgid "How many times this coupon can be used before it is void."
-msgstr "Cuántas veces se puede utilizar este cupón antes de que sea anulado."
+msgstr "Cuántas veces se puede utilizar este cupón antes de que se anule."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:190
 msgid "Limit usage to X items"
@@ -12556,11 +12556,11 @@ msgstr "Limitar el uso a X artículos"
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:190
 msgctxt "placeholder"
 msgid "Apply to all qualifying items in cart"
-msgstr "Aplicar a todos los elementos cualificados del carrito"
+msgstr "Aplicar a todos los artículos cualificados del carrito"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:190
 msgid "The maximum number of individual items this coupon can apply to when using product discounts. Leave blank to apply to all qualifying items in cart."
-msgstr "El número máximo de elementos individuales al que puede aplicarse este cupón al usar descuentos en productos. Dejar en blanco para que se aplique a todos los elementos cualificados del carrito."
+msgstr "El número máximo de artículos individuales al que puede aplicarse este cupón al usar descuentos en productos. Déjalo en blanco para que se aplique a todos los artículos válidos del carrito."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:196
 msgid "Usage limit per user"
@@ -12568,7 +12568,7 @@ msgstr "Límite de uso por usuario"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:196
 msgid "How many times this coupon can be used by an invidual user. Uses billing email for guests, and user ID for logged in users."
-msgstr "Cuántas veces puede utilizar este cupón por un solo usuario. Utiliza el correo electrónico de facturación para los invitados y el ID de usuario para los usuarios registrados."
+msgstr "Cuántas veces puede utilizar este cupón un solo usuario. Utiliza el correo electrónico de facturación para los invitados y el ID de usuario para los usuarios registrados."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:236
 msgid "Coupon code already exists - customers will use the latest coupon with this code."
@@ -12650,7 +12650,7 @@ msgstr "Detalles de facturación"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:250
 msgid "Load billing address"
-msgstr "Dirección de facturación de carga"
+msgstr "Usar la dirección de facturación"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:257
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:259
@@ -12662,7 +12662,7 @@ msgstr "Dirección"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:259
 msgid "No billing address set."
-msgstr "Sin dirección de facturación establecida."
+msgstr "No se ha establecido una dirección de facturación."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:299
 #: includes/admin/meta-boxes/views/html-order-shipping.php:25
@@ -12735,7 +12735,7 @@ msgstr "Permitir acceso"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-notes.php:58
 msgid "added on %1$s at %2$s"
-msgstr "añadido en %1$s en %2$s"
+msgstr "añadido el %1$s a las %2$s"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-notes.php:59
 msgid "by %s"
@@ -12752,11 +12752,11 @@ msgstr "No hay notas aún."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-notes.php:73
 msgid "Add note"
-msgstr "Añadir la nota"
+msgstr "Añadir nota"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-notes.php:73
 msgid "Add a note for your reference, or add a customer note (the user will be notified)."
-msgstr "Añadir una nota para su referencia, o poner una nota cliente (el usuario será notificado)."
+msgstr "Añade una nota para tu referencia, o añade una nota para el cliente (no se avisará al usuario)."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-notes.php:79
 msgid "Private note"
@@ -12832,7 +12832,7 @@ msgstr "URL del producto"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:134
 msgid "Enter the external URL to the product."
-msgstr "Escriba la dirección URL externa al producto."
+msgstr "Escribe la dirección URL externa al producto."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:137
 msgid "Button text"
@@ -12868,13 +12868,13 @@ msgstr "Fechas del precio rebajado"
 #: includes/admin/meta-boxes/views/html-variation-admin.php:104
 msgctxt "placeholder"
 msgid "From&hellip;"
-msgstr "De&hellip;"
+msgstr "Desde&hellip;"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:156
 #: includes/admin/meta-boxes/views/html-variation-admin.php:108
 msgctxt "placeholder"
 msgid "To&hellip;"
-msgstr "Para&hellip;"
+msgstr "Hasta&hellip;"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:157
 msgid "The sale will end at the beginning of the set date."
@@ -12934,7 +12934,7 @@ msgstr "Tipo de descarga"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:221
 msgid "Choose a download type - this controls the <a href=\"%s\">schema</a>."
-msgstr "Elegir un tipo de descarga - este controla el<a href=\"%s\">esquema</a>."
+msgstr "Elegir un tipo de descarga - este controla el <a href=\"%s\">esquema</a>."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:222
 msgid "Standard Product"
@@ -13021,11 +13021,11 @@ msgstr "Activa la gestión de inventario por cada producto"
 #: includes/admin/views/html-bulk-edit-product.php:271
 #: includes/admin/views/html-quick-edit-product.php:186
 msgid "Stock Qty"
-msgstr "Existencias disponibles"
+msgstr "Cantidad disponible"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:305
 msgid "Stock quantity. If this is a variable product this value will be used to control stock for all variations, unless you define stock at variation level."
-msgstr "Existencias disponibles. Si se trata de un producto variable este valor se utilizará para controlar el inventario de todas las variaciones, a menos que definas un inventario por cada variación."
+msgstr "Existencias disponibles. Si se trata de un producto variable este valor se utilizará para controlar el inventario de todas las variaciones, a menos que definas un inventario para cada variación."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:314
 #: includes/admin/meta-boxes/views/html-variation-admin.php:133
@@ -13544,7 +13544,7 @@ msgstr "Edición&nbsp;Rápida"
 #: includes/admin/class-wc-admin-post-types.php:578
 #: includes/admin/class-wc-admin-webhooks-table-list.php:104
 msgid "Restore this item from the Trash"
-msgstr "Recuperar este elemento de la papelera"
+msgstr "Recuperar este artículo de la papelera"
 
 #: includes/admin/class-wc-admin-post-types.php:451
 #: includes/admin/class-wc-admin-post-types.php:578
@@ -13557,7 +13557,7 @@ msgstr "Restaurar"
 #: includes/admin/class-wc-admin-post-types.php:580
 #: includes/admin/class-wc-admin-webhooks-table-list.php:106
 msgid "Move this item to the Trash"
-msgstr "Mover este elemento a la papelera"
+msgstr "Mover este artículo a la papelera"
 
 #: includes/admin/class-wc-admin-post-types.php:453
 #: includes/admin/class-wc-admin-post-types.php:580
@@ -13569,7 +13569,7 @@ msgstr "Papelera"
 #: includes/admin/class-wc-admin-post-types.php:584
 #: includes/admin/class-wc-admin-webhooks-table-list.php:109
 msgid "Delete this item permanently"
-msgstr "Eliminar este elemento permanentemente"
+msgstr "Eliminar este artículo permanentemente"
 
 #: includes/admin/class-wc-admin-post-types.php:457
 #: includes/admin/class-wc-admin-post-types.php:584
@@ -13582,7 +13582,7 @@ msgstr "Borrar permanentemente"
 
 #: includes/admin/class-wc-admin-post-types.php:463
 msgid "Preview &#8220;%s&#8221;"
-msgstr "Previsualizar &#8220;%s&#8221;"
+msgstr "Vista previa &#8220;%s&#8221;"
 
 #: includes/admin/class-wc-admin-post-types.php:463
 msgid "Preview"
@@ -13690,7 +13690,7 @@ msgstr "Estado del pedido cambiado por edición en lote:"
 #: includes/admin/class-wc-admin-post-types.php:1498
 msgid "Order status changed."
 msgid_plural "%s order statuses changed."
-msgstr[0] "Estado del pedido cambió."
+msgstr[0] "Cambiado el estado del pedido."
 msgstr[1] "%s estados de pedido cambiados."
 
 #: includes/admin/class-wc-admin-post-types.php:1595
@@ -13860,7 +13860,7 @@ msgstr "País"
 #: includes/wc-template-functions.php:1839
 #: templates/cart/shipping-calculator.php:39
 msgid "Select a country&hellip;"
-msgstr "Selecciona un país&hellip;"
+msgstr "Elige un país&hellip;"
 
 #: includes/admin/class-wc-admin-profile.php:79
 #: includes/admin/class-wc-admin-profile.php:132
@@ -14068,7 +14068,7 @@ msgstr "Carrito"
 
 #: includes/admin/class-wc-admin-setup-wizard.php:237
 msgid "The cart page will be where the customers go to view their cart and begin checkout."
-msgstr "La página del carrito será donde los clientes irán a ver su carrito y realizarán el proceso de pago."
+msgstr "La página del carrito será donde los clientes irán para ver su carrito y comenzar el proceso de pago."
 
 #: includes/admin/class-wc-admin-setup-wizard.php:240
 #: includes/class-wc-install.php:305
@@ -14359,7 +14359,7 @@ msgstr "%1$s %2$s"
 #: includes/class-wc-product-variable.php:362
 #: includes/class-wc-product-variation.php:326
 msgid "Free!"
-msgstr "¡Gratis!"
+msgstr "¡GRATIS!"
 
 #: includes/abstracts/abstract-wc-order.php:1934
 msgid "Subtotal:"
@@ -14477,11 +14477,11 @@ msgstr "Hay existencias"
 
 #: includes/abstracts/abstract-wc-product.php:702
 msgid "Only %s left in stock"
-msgstr "Sólo hay %s existencias"
+msgstr "Sólo quedan %s disponibles"
 
 #: includes/abstracts/abstract-wc-product.php:712
 msgid "%s in stock"
-msgstr "%s existencias"
+msgstr "%s disponibles"
 
 #: includes/abstracts/abstract-wc-product.php:694 templates/cart/cart.php:92
 msgid "Available on backorder"
@@ -14765,7 +14765,7 @@ msgstr "Última advertencia, ¿estás seguro?"
 #: includes/admin/class-wc-admin-taxonomies.php:130
 #: includes/admin/class-wc-admin-taxonomies.php:239
 msgid "Choose an image"
-msgstr "Selecciona una imagen"
+msgstr "Elige una imagen"
 
 #: includes/admin/class-wc-admin-assets.php:195
 msgid "Set variation image"
@@ -14908,15 +14908,15 @@ msgstr "¿Calcular los totales en base a los artículos pedidos, descuentos y ga
 
 #: includes/admin/class-wc-admin-assets.php:251
 msgid "Calculate line taxes? This will calculate taxes based on the customers country. If no billing/shipping is set it will use the store base country."
-msgstr "¿Calcular impuestos? Esto calculará los impuestos basándose en el país del cliente.Si no se especifica una dirección de facturación/envío se usará el país de la tienda."
+msgstr "¿Calcular líneas de impuestos? Esto calculará los impuestos basándose en el país del cliente. Si no se especifica una dirección de facturación/envío se usará el país de la tienda."
 
 #: includes/admin/class-wc-admin-assets.php:252
 msgid "Copy billing information to shipping information? This will remove any currently entered shipping information."
-msgstr "¿Copiar la información de facturación a la información de envío? Esto eliminará cualquier información de envío introducida."
+msgstr "¿Copiar la información de facturación a la información de envío? Esto eliminará cualquier información de envío previamente introducida."
 
 #: includes/admin/class-wc-admin-assets.php:253
 msgid "Load the customer's billing information? This will remove any currently entered billing information."
-msgstr "¿Cargar la información de facturación del cliente? Esto eliminará cualquier información de facturación introducida."
+msgstr "¿Usar la información de facturación del cliente? Esto eliminará cualquier información de facturación previamente introducida."
 
 #: includes/admin/class-wc-admin-assets.php:254
 msgid "Load the customer's shipping information? This will remove any currently entered shipping information."
@@ -14936,7 +14936,7 @@ msgstr "No se ha seleccionado ningún cliente"
 
 #: includes/admin/class-wc-admin-assets.php:283
 msgid "Could not grant access - the user may already have permission for this file or billing email is not set. Ensure the billing email is set, and the order has been saved."
-msgstr "No se puede conceder acceso - puede que el usuario ya tuviese acceso a este archivo o que no se haya establecido el correo electrónico de facturación. Asegúrate de haber establecido el correo electrónico de facturación y de que el pedido se haya guardado."
+msgstr "No se pudo permitir el acceso - puede que el usuario ya tuviese acceso a este archivo o que no haya especificado su correo electrónico de facturación. Asegúrate de haber establecido el correo electrónico de facturación y de que el pedido se haya guardado."
 
 #: includes/admin/class-wc-admin-assets.php:284
 msgid "Are you sure you want to revoke access to this download?"
@@ -15025,7 +15025,7 @@ msgstr "Tipo"
 #: includes/admin/class-wc-admin-attributes.php:321
 #: includes/admin/class-wc-admin-attributes.php:478
 msgid "Determines how you select attributes for products. Under admin panel -> products -> product data -> attributes -> values, <strong>Text</strong> allows manual entry whereas <strong>select</strong> allows pre-configured terms in a drop-down list."
-msgstr "Determina como seleccionas atributos para los productos. En el panel de administración -> productos -> datos de producto -> atributos -> valores, <strong>Texto</strong>permite la entrada manual mientras que <strong>seleccionar</strong> permite usar solo términos pre-configurados de una lista desplegable."
+msgstr "Determina cómo eliges atributos para los productos. En el panel de administración -> productos -> datos de producto -> atributos -> valores, <strong>Texto</strong> se permite la introducción manual mientras que en <strong>seleccionar</strong> solo se permite usar términos pre-configurados de una lista desplegable."
 
 #: includes/admin/class-wc-admin-attributes.php:326
 #: includes/admin/class-wc-admin-attributes.php:482
@@ -15145,13 +15145,13 @@ msgstr "<strong>%s</strong> ventas netas este mes"
 
 #: includes/admin/class-wc-admin-dashboard.php:136
 msgid "%s top seller this month (sold %d)"
-msgstr "%s es el máximo vendedor este mes (vendió %d)"
+msgstr "%s es el más vendido este mes (vendió %d)"
 
 #: includes/admin/class-wc-admin-dashboard.php:142
 msgid "<strong>%s order</strong> awaiting processing"
 msgid_plural "<strong>%s orders</strong> awaiting processing"
-msgstr[0] "<strong>%s pedido</strong> procesamiento en espera"
-msgstr[1] "<strong>%s pedidos</strong> esperan ser procesados"
+msgstr[0] "<strong>%s pedido</strong> en espera de procesar"
+msgstr[1] "<strong>%s pedidos</strong> en espera de procesar"
 
 #: includes/admin/class-wc-admin-dashboard.php:147
 msgid "<strong>%s order</strong> on-hold"
@@ -15479,13 +15479,13 @@ msgstr "Base del atributo de producto"
 #: includes/class-wc-post-types.php:87 includes/wc-update-functions.php:51
 msgctxt "slug"
 msgid "product-category"
-msgstr "producto-categoria"
+msgstr "categoria-producto"
 
 #: includes/admin/class-wc-admin-permalink-settings.php:78
 #: includes/class-wc-post-types.php:125 includes/wc-update-functions.php:52
 msgctxt "slug"
 msgid "product-tag"
-msgstr "producto-etiqueta"
+msgstr "etiqueta-producto"
 
 #: includes/admin/class-wc-admin-permalink-settings.php:103
 #: includes/admin/class-wc-admin-permalink-settings.php:204
@@ -18043,11 +18043,11 @@ msgstr "Xinjiang / &#26032;&#30086;"
 
 #: i18n/states/ES.php:13
 msgid "A Coru&ntilde;a"
-msgstr "A Coru&ntilde;a"
+msgstr "La Coru&ntilde;a"
 
 #: i18n/states/ES.php:14
 msgid "Araba/&Aacute;lava"
-msgstr "Araba/&Aacute;lava"
+msgstr "&Aacute;lava"
 
 #: i18n/states/ES.php:15
 msgid "Albacete"
@@ -18115,7 +18115,7 @@ msgstr "Cuenca"
 
 #: i18n/states/ES.php:32
 msgid "Girona"
-msgstr "Girona/Gerona"
+msgstr "Gerona"
 
 #: i18n/states/ES.php:33
 msgid "Granada"
@@ -18127,7 +18127,7 @@ msgstr "Guadalajara"
 
 #: i18n/states/ES.php:35
 msgid "Gipuzkoa"
-msgstr "Gipuzkoa/Guipúzcoa"
+msgstr "Guipúzcoa"
 
 #: i18n/states/ES.php:36
 msgid "Huelva"
@@ -18151,7 +18151,7 @@ msgstr "León"
 
 #: i18n/states/ES.php:42
 msgid "Lleida"
-msgstr "Lleida/Lérida"
+msgstr "Lérida"
 
 #: i18n/states/ES.php:43
 msgid "Lugo"
@@ -18179,7 +18179,7 @@ msgstr "Navarra"
 
 #: i18n/states/ES.php:49
 msgid "Ourense"
-msgstr "Ourense/Orense"
+msgstr "Orense"
 
 #: i18n/states/ES.php:50
 msgid "Palencia"
@@ -18231,7 +18231,7 @@ msgstr "Valladolid"
 
 #: i18n/states/ES.php:62
 msgid "Bizkaia"
-msgstr "Bizkaia/Vizcaya"
+msgstr "Vizcaya"
 
 #: i18n/states/ES.php:63
 msgid "Zamora"

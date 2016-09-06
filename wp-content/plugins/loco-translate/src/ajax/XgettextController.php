@@ -46,18 +46,26 @@ class Loco_ajax_XgettextController extends Loco_ajax_common_BundleController {
         $potsize = $potfile->putContents( (string) $data );
         
         // set response data for debugging
-        $this->set( 'debug', array (
-            'potname' => $potfile->basename(),
-            'potsize' => $potsize,
-        ) );
+        if( loco_debugging() ){
+            $this->set( 'debug', array (
+                'potname' => $potfile->basename(),
+                'potsize' => $potsize,
+                'total' => $ext->getTotal(),
+            ) );
+        }
 
         // push recent items on file creation
         // TODO push project and locale file
         Loco_data_RecentItems::get()->pushBundle( $bundle )->persist();
         
         // put flash message into session to be displayed on redirected page
-        Loco_data_Session::get()->flash('success', __('Template file created','loco') );
-        Loco_data_Session::close();
+        try {
+            Loco_data_Session::get()->flash('success', __('Template file created','loco') );
+            Loco_data_Session::close();
+        }
+        catch( Exception $e ){
+            Loco_error_AdminNotices::debug( $e->getMessage() );
+        }
         
         // redirect front end to bundle view. Discourages manual editing of template
         $type = strtolower( $bundle->getType() );   

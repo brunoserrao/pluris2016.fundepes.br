@@ -3,7 +3,7 @@ Contributors: timwhitlock
 Tags: translation, translators, localization, localisation, l10n, i18n, Gettext, PO, MO, productivity
 Requires at least: 4.0
 Tested up to: 4.6
-Stable tag: 2.0
+Stable tag: 2.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,14 +85,41 @@ Help is provided via the [plugin support forum](https://wordpress.org/support/pl
 
 == Changelog ==
 
-= 2.0 =
+= 2.0.5 =
+* Deferred missing tokenizer warning
+* Allows editing of files in unconfigured sets
+* Added maximum PHP file size for string extraction
+* Display of PHP fatal errors during Ajax
+
+= 2.0.4 =
+* Reduced session failures to debug notices
+* Added wp_roles support for WP < 4.3
+* Fixed domain listener bugs
+
+= 2.0.3 =
+* Added support for Windows servers
+* Removed incomplete config warning on bundle overview
+
+= 2.0.2 =
+* Fixed bug when absolute path used to get plugins
+* Added loco_plugins_data filter
+* Added theme Template Name header extraction
+* Minor copy amends
+
+= 2.0.1 =
+* Added help link in settings page
+* Fixed opendir warnings in legacy code
+* Catching session errors during init
+* Removing meta row link when plugin not found
+
+= 2.0.0 =
 * First release of completely rebuilt version 2
 
 
 == Upgrade Notice ==
 
-= 2.0 =
-* All new version!
+= 2.0.5 =
+* Various bug fixes and improvements
 
 
 == More info ==

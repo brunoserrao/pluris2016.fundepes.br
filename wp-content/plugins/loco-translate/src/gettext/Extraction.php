@@ -25,11 +25,19 @@ class Loco_gettext_Extraction {
 
 
     public function __construct( Loco_package_Bundle $bundle ){
+        if( ! loco_check_extension('tokenizer') ){
+            throw new Loco_error_Exception('String extraction not available without required extension');
+        }
         $this->bundle = $bundle;
         $this->extractor = loco_wp_extractor();
         $this->extras = array();
-        // pull bundle's default metadata. these are translations that may not be encountered in files
         if( $default = $bundle->getDefaultProject() ){
+            $domain = (string) $default->getDomain();
+            // extract headers from theme PHP files
+            if( $bundle->isTheme() ){
+                $this->extractor->set_wp_theme( $domain );
+            }
+            // pull bundle's default metadata. these are translations that may not be encountered in files
             $extras = array();
             $header = $bundle->getHeaderInfo();
             foreach( $bundle->getMetaTranslatable() as $prop => $notes ){
@@ -40,7 +48,6 @@ class Loco_gettext_Extraction {
                 }
             }
             if( $extras ){
-                $domain = (string) $default->getDomain();
                 $this->extras[$domain] = $extras;
             }
         }
@@ -52,8 +59,18 @@ class Loco_gettext_Extraction {
      */
     public function addProject( Loco_package_Project $project ){
         $base = $this->bundle->getDirectoryPath();
+        // skip files larger than configured maximum
+        $opts = Loco_data_Settings::get();
+        $max = wp_convert_hr_to_bytes( $opts->max_php_size );
+        // *attempt* to raise memory limit to WP_MAX_MEMORY_LIMIT
+        if( function_exists('wp_raise_memory_limit') ){
+            wp_raise_memory_limit('loco');
+        }
         /* @var $file Loco_fs_File */
         foreach( $project->findSourceFiles() as $file ){
+            if( $file->size() > $max ){
+                continue;
+            }
             $tokens = token_get_all( $file->getContents() );
             $this->extractor->extract( $tokens, $file->getRelativePath($base) );
         }
