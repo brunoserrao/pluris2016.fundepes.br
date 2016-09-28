@@ -938,7 +938,7 @@ class BrunoApi{
 		    'comment_post_ID' => $id,
 		    'comment_content' => $comentario,
 		    'comment_type' => 'dwqa-comment',
-		    'comment_approved' => 1,
+		    'comment_approved' => 0,
 		    'comment_author' => $user['first_name'][0] . ' ' . $user['last_name'][0],
 			'user_id' => get_current_user_id()
 		);
