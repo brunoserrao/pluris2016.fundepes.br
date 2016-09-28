@@ -88,6 +88,13 @@ class BrunoApi{
 			)
 		);
 
+		register_rest_route( $this->namespace, '/eventos/categorias',
+			array(
+				'methods'   => 'POST',
+				'callback'  => array($this, 'eventos_categorias')
+			)
+		);
+
 		register_rest_route( $this->namespace,'/eventos/enviar_pergunta',
 			array(
 				'methods'   => 'POST',
@@ -657,9 +664,19 @@ class BrunoApi{
 
 		$parse_result = $this->__parse_result($query_result);
 
+		$data = array();
+
+		foreach ($parse_result as $key => $value) {
+			$inicio = date('Y-m-d H:i:s', strtotime($value->metas['date_start'][0].' '.$value->metas['time_start'][0]));
+			$data[$inicio] = $parse_result[$key];
+		}
+
+		sort($data);
+
 		$result = array(
-			'data' => $parse_result
+			'data' => $data
 		);
+		
 		return $result;
 	}
 
@@ -752,19 +769,61 @@ class BrunoApi{
 
 		if (!empty($request['categoria_id'])) {
 			$args['term_id'] = $request['categoria_id'];
-			unset($args['parent']);
 		}
-
+	
 		$categorias = get_categories( $args );
 
-		foreach ($categorias as $key => $categoria) {
-			if ($subcategorias = $this->subcategorias($categoria)) {
-				$categorias[$key]->subcategory = $subcategorias;
-			} else {
-				$categorias[$key]->subcategory = false;
+		if (!empty($request['dia']) and $request['categoria_id'] == 12) {
+			$sub = 0;
+
+			switch ($request['dia']) {
+				case 5:
+					$sub = array(14, 15);
+					break;
+				case 6:
+					$sub = array(16,17,18);
+					break;
+				case 7:
+					$sub = array(19,20);
+					break;
+				default:
+					break;
+			}
+
+			foreach ($categorias as $key => $categoria) {
+				if ($categorias[$key]->cat_ID == 12) {
+
+					$categorias[$key]->subcategoria = array();
+					
+					foreach ($sub as $key2 => $sub_term_id) {
+						$subcategoria =  get_term( $sub_term_id );
+
+						if ($subcategoria) {
+							$categorias[$key]->subcategoria[] = $subcategoria;
+						}
+					}
+
+					if (!empty($categorias[$key]->subcategoria)) {
+						foreach ($categorias[$key]->subcategoria as $key2 => $sub_id) {
+							$args = array(
+								'taxonomy'     => 'events_categories',
+								'hierarchical' => false,
+								'hide_empty'   => false,
+								'orderby' => 'name',
+								'child_of' => $sub_id->term_id
+							);
+
+							$subcategoria = get_categories( $args );
+
+							if (!empty($subcategoria)) {
+								$categorias[$key]->subcategoria[$key2]->subcategoria = $subcategoria;
+							}
+						}
+					}
+				}
 			}
 		}
-
+		
 		return array(
 			'data' => $categorias
 		);
@@ -779,6 +838,10 @@ class BrunoApi{
 			'parent' => $categoria->cat_ID
 		);
 
+		if ($sub) {
+			$args['parent'] = $sub;
+		}
+
 		$subcategorias = get_categories( $args );
 
 		if (empty($subcategorias)) {
@@ -786,7 +849,7 @@ class BrunoApi{
 		}
 
 		foreach ($subcategorias as $key => $subcategoria) {
-			$subcategorias[$key]->subcategory = $this->subcategorias($subcategoria);
+			$subcategorias[$key]->subcategoria = $this->subcategorias($subcategoria);
 		}
 
 		return $subcategorias;

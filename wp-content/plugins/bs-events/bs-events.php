@@ -141,8 +141,8 @@ class bsEvents {
 				'label'				=> __('Categories'),
 				'query_var'			=> true,
 				'rewrite'			=> array(
-				'slug'				=> 'events_categories',
-				'with_front'		=> true
+					'slug'				=> 'events_categories',
+					'with_front'		=> true
 				)
 			)
 		);
