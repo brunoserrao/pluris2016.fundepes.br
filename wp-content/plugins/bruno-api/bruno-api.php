@@ -1021,6 +1021,8 @@ class BrunoApi{
 		$query_args['post_type'] = 'bs_posts_articles';
 		$query_args['paged'] = $paged;
 		$query_args['posts_per_page'] = -1;
+		$query_args['orderby'] = 'title';
+		$query_args['order'] = 'ASC';
 
 		$posts_query = new WP_Query();
 		$query_result = $posts_query->query( $query_args );
