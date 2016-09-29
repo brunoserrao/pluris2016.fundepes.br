@@ -976,14 +976,10 @@ class BrunoApi{
 		$assunto = sanitize_text_field($request['assunto']);
 		$mensagem = $request['mensagem'];
 
-		$admin_emails = get_users(array(
-			'role' => 'Administrator'
-		));
+		$emails = str_replace(' ','',get_option('bs_events_email'));
 
-		$emails = array();
-
-		foreach ($admin_emails as $admin) {
-			array_push($emails, $admin->data->user_email);
+		if (strpos($emails, ',')) {
+			$emails = explode(',', $emails);
 		}
 
 		$send = wp_mail( $emails, $assunto, $mensagem );
