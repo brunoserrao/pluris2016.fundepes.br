@@ -706,11 +706,12 @@ class BrunoApi{
 		$user_data = get_user_by('id', $user_id);
 		$user_meta = get_user_meta($user_id);
 		$assunto   = 'Pergunta ao palestrante';
+		$mensagem = '';
 		$mensagem .= '<h3>Palestra</h3>';
 		$mensagem .= $palestra[0]->post_title.'<br />';
 		$mensagem .= '<h3>Parcicipante</h3>';
-		$mensagem .= 'De :'. $user_data->display_name.'<br />';
-		$mensagem .= 'E-mail :'. $user_data->user_email.'<br />';
+		$mensagem .= 'De: '. $user_data->display_name.'<br />';
+		$mensagem .= 'E-mail: '. $user_data->user_email.'<br />';
 		$mensagem .= '<h3>Mensagem</h3>';
 		$mensagem .= $request['form']['mensagem'].'<br />';
 		$headers = array('Content-Type: text/html; charset=UTF-8');
@@ -973,8 +974,13 @@ class BrunoApi{
 		$user_id = get_current_user_id();
 		$user_data = get_user_by('id', $user_id);
 		$user_meta = get_user_meta($user_id);
-		$assunto = sanitize_text_field($request['assunto']);
-		$mensagem = $request['mensagem'];
+		$mensagem = '';
+		$mensagem .= '<h3>Parcicipante</h3>';
+		$mensagem .= 'De: '. $user_data->display_name.'<br />';
+		$mensagem .= 'E-mail: '. $user_data->user_email.'<br />';
+		$mensagem .= '<h3>Mensagem</h3>';
+		$mensagem .= $request['mensagem'].'<br />';
+		$headers = array('Content-Type: text/html; charset=UTF-8');
 
 		$emails = str_replace(' ','',get_option('bs_events_email'));
 
@@ -982,7 +988,7 @@ class BrunoApi{
 			$emails = explode(',', $emails);
 		}
 
-		$send = wp_mail( $emails, $assunto, $mensagem );
+		$send = wp_mail( $emails, $assunto, $mensagem, $headers );
 
 		if (!$send) {
 			return new WP_Error( 'rest_type_invalid', __( 'Error sendmail.' ), array( 'status' => 401 ) );
