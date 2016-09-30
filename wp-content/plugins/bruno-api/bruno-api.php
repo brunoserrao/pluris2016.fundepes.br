@@ -974,6 +974,7 @@ class BrunoApi{
 		$user_id = get_current_user_id();
 		$user_data = get_user_by('id', $user_id);
 		$user_meta = get_user_meta($user_id);
+		$assunto   = 'Contato via Aplicativo: ' . $request['assunto'];
 		$mensagem = '';
 		$mensagem .= '<h3>Parcicipante</h3>';
 		$mensagem .= 'De: '. $user_data->display_name.'<br />';
