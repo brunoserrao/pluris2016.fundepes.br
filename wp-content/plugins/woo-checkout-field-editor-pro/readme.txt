@@ -3,8 +3,8 @@ Contributors: ThemeHigh
 Donate link: http://themehigh.com/
 Tags: checkout field editor, woocommerce checkout field editor, checkout manager, woocommerce checkout manager, checkout field customizer, checkout form editor, checkout form customizer, checkout, WooCommerce checkout, checkout form designer, checkout
 Requires at least: 3.0.1
-Tested up to: 4.5
-Stable tag: 1.1.0
+Tested up to: 4.6
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,7 +102,7 @@ Yes. There is a button 'reset to default fields' to go back to the WooCommerce d
 8. Newly added field
 
 == Changelog ==
-= 1.0.9 =
+= 1.1.1 =
 * Fix for 'Undefined index' warning/error message.
 
 = 1.0.9 =

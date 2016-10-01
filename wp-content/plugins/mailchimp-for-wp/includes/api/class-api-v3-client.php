@@ -92,7 +92,7 @@ class MC4WP_API_v3_Client {
 
         // don't bother if no API key was given.
         if( empty( $this->api_key ) ) {
-            throw new MC4WP_API_Exception( "Missing API key.", 001 );
+            throw new MC4WP_API_Exception( "Missing API key", 001 );
         }
 
         $url = $this->api_url . ltrim( $resource, '/' );
@@ -150,7 +150,7 @@ class MC4WP_API_v3_Client {
     private function parse_response( $response ) {
 
         if( $response instanceof WP_Error ) {
-            throw new MC4WP_API_Exception( 'Error connecting to MailChimp. ' . $response->get_error_message(), (int) $response->get_error_code() );
+            throw new MC4WP_API_Connection_Exception( $response->get_error_message(), (int) $response->get_error_code() );
         }
 
         // decode response body

@@ -122,7 +122,7 @@ class WC_Checkout_Field_Editor {
 			$fields = $this->get_fields($type);
 			
 			foreach($fields as $name => $field){
-				if(!empty($field['custom'])){
+				if(!empty($field['custom']) && isset($posted[$name])){
 					$value = wc_clean($posted[$name]);
 					if($value){
 						update_post_meta($order_id, $name, $value);

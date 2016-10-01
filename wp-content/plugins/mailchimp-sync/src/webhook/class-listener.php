@@ -90,7 +90,7 @@ class Listener {
 
 		$log = $this->get_log();
 		define( 'MC4WP_SYNC_DOING_WEBHOOK', true );
-		
+
 		// no parameters = MailChimp webhook validator
 		if( empty( $_POST['data'] ) || empty( $_POST['type'] ) ) {
 			echo "Listening..";
@@ -100,6 +100,14 @@ class Listener {
 
 		$data = stripslashes_deep( $_REQUEST['data'] );
 		$type = (string) $_REQUEST['type'];
+
+        /**
+         * Filter webhook data that is received by MailChimp.
+         *
+         * @param array $data
+         * @param string $type
+         */
+        $data = apply_filters( 'mailchimp_sync_webhook_data', $data, $type );
 
 		// parameters but incorrect: throw error status
 		if( empty( $data['web_id'] ) && empty( $data['id'] ) ) {
@@ -116,7 +124,7 @@ class Listener {
 		}
 
 		/**
-		 * Filters the user that is found by the webhook request
+		 * Filters the WordPress user that is found by the webhook request
 		 *
 		 * @param WP_User|null $user
 		 * @param array $data
@@ -136,6 +144,9 @@ class Listener {
 			// exit early
 			return false;
 		}
+
+		// we have a user at this point
+        $log->info( sprintf( "Webhook: Request of type %s received for user #%d", $type, $user->ID ) );
 
 		$updated = false;
 

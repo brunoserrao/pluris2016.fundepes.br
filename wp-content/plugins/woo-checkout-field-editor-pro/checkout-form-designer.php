@@ -3,7 +3,7 @@
  * Plugin Name: Woo Checkout Field Editor Pro
  * Description: Customize WooCommerce checkout fields(Add, Edit, Delete and re-arrange fields).
  * Author:      ThemeHiGH
- * Version:     1.1.0
+ * Version:     1.1.1
  * Author URI:  http://www.themehigh.com
  * Plugin URI:  http://www.themehigh.com
  * Text Domain: thwcfd
@@ -127,7 +127,7 @@ if(in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get
 						$fields['account'][ $name ]['label'] = __($fields['account'][ $name ]['label'], 'woocommerce');
 					}
 					if(isset($fields['account'][$name]['placeholder'])){
-						$fields['account'][ $name ]['placeholder'] = __($fields['account'][ $name ]['placeholder'], 'woocommerce');
+						$fields['account'][ $name ]['placeholder'] = _x($fields['account'][ $name ]['placeholder'], 'placeholder', 'woocommerce');
 					}
 				}
 			}
@@ -143,7 +143,7 @@ if(in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get
 							$fields['order'][ $name ]['label'] = __($fields['order'][ $name ]['label'], 'woocommerce');
 						}
 						if(isset($fields['order'][ $name ]['placeholder'])){
-							$fields['order'][ $name ]['placeholder'] = __($fields['order'][ $name ]['placeholder'], 'woocommerce');	
+							$fields['order'][ $name ]['placeholder'] = _x($fields['order'][ $name ]['placeholder'], 'placeholder', 'woocommerce');	
 						}
 					}	
 				}	
