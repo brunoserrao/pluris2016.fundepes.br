@@ -666,12 +666,22 @@ class BrunoApi{
 
 		$data = array();
 
-		foreach ($parse_result as $key => $value) {
-			$inicio = date('Y-m-d H:i:s', strtotime($value->metas['date_start'][0].' '.$value->metas['time_start'][0]));
-			$data[$inicio] = $parse_result[$key];
+		if ($request['categoria_id'] != 55) {
+			foreach ($parse_result as $key => $value) {
+				$inicio = date('Y-m-d H:i:s', strtotime($value->metas['date_start'][0].' '.$value->metas['time_start'][0]));
+				$data[$inicio] = $parse_result[$key];
+			}
+
+			sort($data);
+			
+		} else {
+			foreach ($parse_result as $key => $value) {
+				$inicio =$value->post_title;
+				$data[$inicio] = $parse_result[$key];
+			}
 		}
 
-		sort($data);
+		
 
 		$result = array(
 			'data' => $data
