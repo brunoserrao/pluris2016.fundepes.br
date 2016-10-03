@@ -676,14 +676,19 @@ class BrunoApi{
 				$inicio = strtotime(date('Y-m-d H:i:s', strtotime($value->metas['date_start'][0].' '.$value->metas['time_start'][0])));
 				$data[$inicio] = $parse_result[$key];
 			}
-			
-			if ($request['categoria_id'] == 13) {
-				rsort($data);
-			} else {
-				asort($data);
-			}
 		} else {
 			$data = $parse_result;
+		}
+
+		switch ($request['categoria_id']) {
+			case 11:
+				sort($data);
+				break;
+			case 55:
+				rsort($data);
+				break;
+			default:
+				break;
 		}
 
 		$result = array(
