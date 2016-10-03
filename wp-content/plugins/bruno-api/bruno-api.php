@@ -652,6 +652,9 @@ class BrunoApi{
 			);
 		}
 
+		$query_args['orderby'] = 'post_title';
+		$query_args['order'] = 'ASC';
+
 		$query_args['post_type'] = 'bs_posts_events';
 		$query_args['posts_per_page'] = -1;
 
@@ -673,15 +676,11 @@ class BrunoApi{
 			}
 
 			sort($data);
-			
+
 		} else {
-			foreach ($parse_result as $key => $value) {
-				$inicio =$value->post_title;
-				$data[$inicio] = $parse_result[$key];
-			}
+			$data = $parse_result;
 		}
 
-		
 
 		$result = array(
 			'data' => $data
