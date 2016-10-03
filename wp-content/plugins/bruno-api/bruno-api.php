@@ -671,7 +671,7 @@ class BrunoApi{
 
 		$data = array();
 
-		if ($request['categoria_id'] != 55) {
+		if ($request['categoria_id'] != 55 and !empty($request['categoria_id'])) {
 			foreach ($parse_result as $key => $value) {
 				$inicio = strtotime(date('Y-m-d H:i:s', strtotime($value->metas['date_start'][0].' '.$value->metas['time_start'][0])));
 				$data[$inicio] = $parse_result[$key];
