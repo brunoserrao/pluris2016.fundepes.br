@@ -682,9 +682,10 @@ class BrunoApi{
 
 		switch ($request['categoria_id']) {
 			case 11:
+				sort($data);
 				break;
 			case 55:
-				rsort($data);
+				asort($data);
 				break;
 			case 13:
 				rsort($data);
