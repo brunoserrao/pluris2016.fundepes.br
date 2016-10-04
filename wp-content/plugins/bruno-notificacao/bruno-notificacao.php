@@ -81,7 +81,7 @@ class brunoNotificacao {
 			))
 		);
 
-		// $response = wp_remote_request( $url, $args );
+		$response = wp_remote_request( $url, $args );
 		
 		if ( is_wp_error( $response ) ) {
 			echo $response->get_error_message();
@@ -93,8 +93,6 @@ class brunoNotificacao {
 		} else {
 			add_post_meta($id, 'notification_send', true);
 		}
-
-		die(var_dump($x));
 
 		wp_die();
 	}
