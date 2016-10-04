@@ -497,6 +497,28 @@ class BrunoApi{
 		wp_update_attachment_metadata( $attach_id, $attach_data );
 		update_post_meta( $attach_id, 'image_from_gallery', false );
 
+		$thumb_url = $thumb_url = wp_get_attachment_image_src( $attach_id, 'full' );
+
+		$user_id = get_current_user_id();
+		$user_data = get_user_by('id', $user_id);
+		$user_meta = get_user_meta($user_id);
+		$assunto   =  $user_data->display_name .' fez um upload para a galeria.';
+		$mensagem = '';
+		$mensagem .= '<h3>Parcicipante</h3>';
+		$mensagem .= 'De: '. $user_data->display_name.'<br />';
+		$mensagem .= 'E-mail: '. $user_data->user_email.'<br />';
+		$mensagem .= '<h3>Imagem</h3>';
+		$mensagem .=  $thumb_url[0];
+		$headers = array('Content-Type: text/html; charset=UTF-8');
+
+		$emails = str_replace(' ','',get_option('bs_events_email'));
+
+		if (strpos($emails, ',')) {
+			$emails = explode(',', $emails);
+		}
+
+		$send = wp_mail( $emails, $assunto, $mensagem, $headers );
+
 		$result = array(
 			'data' => $attach_id
 		);
