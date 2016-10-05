@@ -495,7 +495,7 @@ class BrunoApi{
 		$attach_id = wp_insert_attachment( $attachment, $filename );
 		$attach_data = wp_generate_attachment_metadata( $attach_id, $filename );
 		wp_update_attachment_metadata( $attach_id, $attach_data );
-		update_post_meta( $attach_id, 'image_from_gallery', false );
+		update_post_meta( $attach_id, 'image_from_gallery', true );
 
 		$thumb_url = $thumb_url = wp_get_attachment_image_src( $attach_id, 'full' );
 
@@ -1001,7 +1001,7 @@ class BrunoApi{
 		$mensagem .= 'De: '. $user_data->display_name.'<br />';
 		$mensagem .= 'E-mail: '. $user_data->user_email.'<br />';
 		$mensagem .= '<h3>Comentário</h3>';
-		$mensagem .= $request['mensagem'].'<br />';
+		$mensagem .= $comentario;
 		$headers = array('Content-Type: text/html; charset=UTF-8');
 
 		$emails = str_replace(' ','',get_option('bs_events_email'));
