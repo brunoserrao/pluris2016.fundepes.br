@@ -428,7 +428,7 @@ class BrunoApi{
 
 			$foto = array(
 				'thumb' => wp_get_attachment_image_src($post->ID, 'thumb_galeria' )[0],
-				'src' => $src,
+				'src' => $src[0],
 				'sub' => $attachment['title']
 			);
 
