@@ -422,9 +422,13 @@ class BrunoApi{
 		foreach ($media_query->posts as $post) {
 			$attachment = wp_prepare_attachment_for_js($post->ID);
 
+			$src = wp_get_attachment_image_src( $post->ID, 'full_galeria' );
+
+			// var_dump($src);
+
 			$foto = array(
 				'thumb' => wp_get_attachment_image_src($post->ID, 'thumb_galeria' )[0],
-				'src' => $attachment['sizes']['medium']['url'],
+				'src' => $src,
 				'sub' => $attachment['title']
 			);
 
@@ -497,7 +501,7 @@ class BrunoApi{
 		wp_update_attachment_metadata( $attach_id, $attach_data );
 		update_post_meta( $attach_id, 'image_from_gallery', true );
 
-		$thumb_url = $thumb_url = wp_get_attachment_image_src( $attach_id, 'full' );
+		$thumb_url = wp_get_attachment_image_src( $attach_id, 'full' );
 
 		$user_id = get_current_user_id();
 		$user_data = get_user_by('id', $user_id);

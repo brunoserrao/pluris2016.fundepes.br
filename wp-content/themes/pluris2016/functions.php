@@ -128,6 +128,7 @@ function pluris2016_setup() {
  * Thumb Cropped
  */
 add_image_size( 'thumb_galeria', 200, 200, true );
+add_image_size( 'full_galeria', 800, 800, true );
 
 
 endif; // pluris2016_setup
