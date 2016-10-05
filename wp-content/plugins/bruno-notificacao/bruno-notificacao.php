@@ -75,7 +75,7 @@ class brunoNotificacao {
 					'pt' => $qtx->translate_text($post[0]->post_title, 'pb'),
 					'es' => $qtx->translate_text($post[0]->post_title, 'es')
 				),
-				'large_icon' => 'pushicon',
+				// 'large_icon' => 'pushicon',
 				'ios_badgeType' => 'Increase',
 				'ios_badgeCount' => 1
 			))
