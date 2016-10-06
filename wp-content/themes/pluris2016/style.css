@@ -5756,3 +5756,7 @@ p.price del {
 .woocommerce-message .wc-forward{
 	display: none !important;
 }
+
+li.last, .woocommerce-page ul.products li.last {
+    margin-right: 0 !important;
+}
