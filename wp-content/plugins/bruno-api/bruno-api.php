@@ -420,16 +420,10 @@ class BrunoApi{
 		$fotos = array();
 		
 		foreach ($media_query->posts as $post) {
-			$attachment = wp_prepare_attachment_for_js($post->ID);
-
-			$src = wp_get_attachment_image_src( $post->ID, 'full_galeria' );
-
-			// var_dump($src);
-
 			$foto = array(
-				'thumb' => wp_get_attachment_image_src($post->ID, 'thumb_galeria' )[0],
-				'src' => $src[0],
-				'sub' => $attachment['title']
+				'thumb' => wp_get_attachment_image_src($post->ID)[0],
+				'src' => wp_get_attachment_image_src( $post->ID, 'full_galeria' )[0],
+				'sub' => get_the_title($post->ID)
 			);
 
 			array_push($fotos, $foto);
