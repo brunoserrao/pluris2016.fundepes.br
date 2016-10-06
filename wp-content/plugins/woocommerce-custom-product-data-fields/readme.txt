@@ -3,8 +3,8 @@ Contributors: kharisblank
 Tags: custom fields, product meta, product data, meta, framework
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ACYNA5XNUGBUL
 Requires at least: 3.1
-Tested up to: 4.5.2
-Stable tag: 1.2.3
+Tested up to: 4.6.1
+Stable tag: 1.2.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,7 +16,7 @@ WooCommerce Custom Product Data Fields is a simple framework which will help you
 
 You can use this plugin as a library of your ‘brand-new’ WooCommerce Extension.
 
-It works with the latest version of WooCommerce (2.6).
+It works with the latest version of WooCommerce (2.6.4).
 
 = Available Fields =
 
@@ -64,6 +64,9 @@ P.S: Don't worry, I always reply. :)
 1. WooCommerce Custom Product Data Fields
 
 == Changelog ==
+
+= 1.2.4 =
+* Fix undefined index: tab_name
 
 = 1.2.3 =
 * Fix missing minified JS and CSS files
